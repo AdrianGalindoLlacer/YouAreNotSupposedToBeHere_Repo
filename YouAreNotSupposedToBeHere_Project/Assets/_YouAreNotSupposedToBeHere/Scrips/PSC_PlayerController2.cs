@@ -7,8 +7,6 @@ public class PSC_PlayerController2 : MonoBehaviour
     #region General variables
     [Header("Movement")]
     [SerializeField] float Speed = 3f;
-    [SerializeField] float SprintSpeed = 4f;
-    [SerializeField] float CrouchSpeed = 2f;
     [SerializeField] float MaxForce = 1f;
     [SerializeField] Vector2 moveInput;
     [SerializeField] float RotationSpeed = 10f;
@@ -17,12 +15,12 @@ public class PSC_PlayerController2 : MonoBehaviour
     [SerializeField] Transform ShootPoint;
     [SerializeField] int Ammo;
     [SerializeField] int SpecialAmmo;
-    [SerializeField] bool Sprinting;
-    [SerializeField] bool Crouching;
+    [SerializeField] bool Hide;
 
-    [Header("Movidas que traer")]
+    [Header("Referencias a componentes")]
     Rigidbody rb;
     Animator anim;
+    [SerializeField] Transform Interactor;
 
     #endregion
 
@@ -46,7 +44,6 @@ public class PSC_PlayerController2 : MonoBehaviour
     {
         Vector3 currentVelocity = rb.linearVelocity;
         Vector3 targetVelocity = new Vector3(moveInput.x, 0, moveInput.y);
-        targetVelocity *= Sprinting ? SprintSpeed : Crouching ? CrouchSpeed : Speed; //Exclusivo del jugador 2
         Vector3 velocityChange = targetVelocity - currentVelocity;
         velocityChange = new Vector3(velocityChange.x, 0, velocityChange.z);
         velocityChange = Vector3.ClampMagnitude(velocityChange, MaxForce);
@@ -72,5 +69,19 @@ public class PSC_PlayerController2 : MonoBehaviour
     {
         moveInput = context.ReadValue<Vector2>();
     }
+
+    public void Interact(InputAction.CallbackContext context)
+    {
+        if (context.performed && InteractCheck == Hideout)
+        {
+            Hide = true;
+
+        }
+        else if (context.performed && Hide == true)
+        {
+            Hide = false;
+        }
+    }
+
     #endregion
 }
