@@ -1,3 +1,4 @@
+using System.Threading;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
@@ -10,12 +11,18 @@ public class PSC_PlayerController2 : MonoBehaviour
     [SerializeField] float MaxForce = 1f;
     [SerializeField] Vector2 moveInput;
     [SerializeField] float RotationSpeed = 10f;
+    [SerializeField] - InteractCheck;
+    private bool Block;
 
     [Header("mechanics")]
     [SerializeField] Transform ShootPoint;
     [SerializeField] int Ammo;
     [SerializeField] int SpecialAmmo;
-    [SerializeField] bool Hide;
+    private bool PostIt;
+    [SerializeField] - Bullet;  
+    [SerializeField] - SBullet; 
+    [SerializeField] bool CanShoot;
+    [SerializeField] bool Hide; 
 
     [Header("Referencias a componentes")]
     Rigidbody rb;
@@ -42,6 +49,12 @@ public class PSC_PlayerController2 : MonoBehaviour
 
     void Movement()
     {
+        if (Block)
+        {
+            return;
+        }
+        else 
+        { 
         Vector3 currentVelocity = rb.linearVelocity;
         Vector3 targetVelocity = new Vector3(moveInput.x, 0, moveInput.y);
         Vector3 velocityChange = targetVelocity - currentVelocity;
@@ -50,6 +63,7 @@ public class PSC_PlayerController2 : MonoBehaviour
         rb.AddForce(velocityChange, ForceMode.VelocityChange);
 
         Rotate();
+        }
     }
 
     void Rotate()
@@ -64,6 +78,18 @@ public class PSC_PlayerController2 : MonoBehaviour
         }
     }
 
+    void Shoot()
+    {
+        if (PostIt == true)
+        {
+
+        }
+        else 
+        {
+            
+        }
+    }
+
     #region Input Methods
     public void OnMove(InputAction.CallbackContext context)
     {
@@ -72,14 +98,47 @@ public class PSC_PlayerController2 : MonoBehaviour
 
     public void Interact(InputAction.CallbackContext context)
     {
-        if (context.performed && InteractCheck == Hideout)
+        if (InteractCheck == Buttons)
         {
-            Hide = true;
+
 
         }
-        else if (context.performed && Hide == true)
+        else if (Hide == true)
         {
-            Hide = false;
+            //Hide = false;
+            anim.SetBool("Hide", false);
+        }
+        else if (InteractCheck == Hideout)
+        {
+            //Hide = true;
+            Block = true;
+            anim.SetBool("Hide", true);
+        } 
+        else if (InteractCheck == Slide)
+        {
+
+        }
+        else if (PostIt == false && SpecialAmmo > 0)
+        {
+            PostIt = true;
+        }
+        else
+        {
+            PostIt = false;
+        }
+    }
+
+    public void Onshot(InputAction.CallbackContext context)
+    {
+        if (Ammo <= 0)
+        {
+            anim.SetTrigger("NoAmmo");
+            Block = true;
+        }
+        else
+        {
+            anim.SetTrigger("Shoot");
+            Block = true;
         }
     }
 
