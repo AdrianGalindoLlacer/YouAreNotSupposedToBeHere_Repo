@@ -11,23 +11,27 @@ public class PSC_PlayerController2 : MonoBehaviour
     [SerializeField] float MaxForce = 1f;
     [SerializeField] Vector2 moveInput;
     [SerializeField] float RotationSpeed = 10f;
-    [SerializeField] - InteractCheck;
+    [SerializeField] - Interact;
     private bool Block;
 
     [Header("mechanics")]
-    [SerializeField] Transform ShootPoint;
     [SerializeField] int Ammo;
     [SerializeField] int SpecialAmmo;
     private bool PostIt;
-    [SerializeField] - Bullet;  
-    [SerializeField] - SBullet; 
     [SerializeField] bool CanShoot;
-    [SerializeField] bool Hide; 
+    [SerializeField] bool Hide;
+    [SerializeField] float ShootForce;
+    [SerializeField] float ShootDistance;
+    [SerializeField] float ShootDuration;
 
     [Header("Referencias a componentes")]
     Rigidbody rb;
     Animator anim;
     [SerializeField] Transform Interactor;
+    [SerializeField] Transform ShootPoint;
+    [SerializeField] GameObject Bullet;
+    [SerializeField] GameObject SBullet;
+
 
     #endregion
 
@@ -41,6 +45,11 @@ public class PSC_PlayerController2 : MonoBehaviour
     {
         //Esto se pondra en el player controller1 Cursor.lockState = CursorLockMode.Locked;
         //Esto se pondra en el player controller1 Cursor.visible = false;
+    }
+
+    private void Update()
+    {
+        
     }
     private void FixedUpdate()
     {
@@ -82,6 +91,14 @@ public class PSC_PlayerController2 : MonoBehaviour
     {
         if (PostIt == true)
         {
+            Vector3 Direction = transform.forward;
+            Vector3 position = transform.position + Direction * ShootDistance;
+
+            GameObject Projectile = Instantiate(SBullet, position, Quaternion.LookRotation(Direction));
+
+            Rigidbody rbb = Projectile.GetComponent<Rigidbody>();
+            rbb.AddForce(Direction * ShootForce, ForceMode.VelocityChange);
+
 
         }
         else 
@@ -98,7 +115,7 @@ public class PSC_PlayerController2 : MonoBehaviour
 
     public void Interact(InputAction.CallbackContext context)
     {
-        if (InteractCheck == Buttons)
+        if (Interact == Buttons)
         {
 
 
@@ -108,13 +125,13 @@ public class PSC_PlayerController2 : MonoBehaviour
             //Hide = false;
             anim.SetBool("Hide", false);
         }
-        else if (InteractCheck == Hideout)
+        else if (Interact == Hideout)
         {
             //Hide = true;
             Block = true;
             anim.SetBool("Hide", true);
         } 
-        else if (InteractCheck == Slide)
+        else if (Interact == Slide)
         {
 
         }
