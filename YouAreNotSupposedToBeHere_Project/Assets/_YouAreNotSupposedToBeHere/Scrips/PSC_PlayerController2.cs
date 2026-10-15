@@ -13,6 +13,7 @@ public class PSC_PlayerController2 : MonoBehaviour
     [SerializeField] EN_IntTags interact = EN_IntTags.Null;
     [SerializeField] float RadioInter = 0.1f;
     public EN_IntTags Interact => interact;
+    private Collider interactCollider;
     private bool Block;
 
     [Header("mechanics")]
@@ -56,6 +57,7 @@ public class PSC_PlayerController2 : MonoBehaviour
         Collider[] collisions = Physics.OverlapSphere(origen.position, RadioInter, InteractLayer);
 
         interact = EN_IntTags.Null;
+        interactCollider = null;
         float MinDistance = float.MaxValue;
 
         foreach(Collider col in collisions)
@@ -69,6 +71,7 @@ public class PSC_PlayerController2 : MonoBehaviour
             {
                 MinDistance = distance;
                 interact = foundtag;
+                interactCollider = col;
             }
         }
     }
@@ -130,6 +133,8 @@ public class PSC_PlayerController2 : MonoBehaviour
 
             Rigidbody rbb = Projectile.GetComponent<Rigidbody>();
             rbb.AddForce(Direction * ShootForce, ForceMode.VelocityChange);
+            SpecialAmmo--;
+            Ammo--;
         }
         else 
         {
@@ -140,6 +145,7 @@ public class PSC_PlayerController2 : MonoBehaviour
 
             Rigidbody rbb = Projectile.GetComponent<Rigidbody>();
             rbb.AddForce(Direction * ShootForce, ForceMode.VelocityChange);
+            Ammo--;
         }
     }
 
@@ -155,8 +161,11 @@ public class PSC_PlayerController2 : MonoBehaviour
 
         if (Interact == EN_IntTags.Buttons)
         {
-            Debug.Log("Boton");
-
+            //if (interactCollider.TryGetComponent(out OBS_Button button))
+            //{
+                Debug.Log("Boton");
+                //button.Press();
+            //}
         }
         else if (Hide)
         {
@@ -174,6 +183,7 @@ public class PSC_PlayerController2 : MonoBehaviour
         else if (Interact == EN_IntTags.Slide)
         {
             Debug.Log("Tobogan");
+            //anim.SetTrigger("Slide");
         }
         else if (!PostIt && SpecialAmmo > 0)
         {

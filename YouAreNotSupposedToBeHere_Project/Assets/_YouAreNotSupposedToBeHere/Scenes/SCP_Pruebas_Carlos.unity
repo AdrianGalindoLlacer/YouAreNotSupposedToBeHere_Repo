@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 304163867}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Buttons
+  m_TagString: Slide
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -749,8 +749,8 @@ MonoBehaviour:
     m_Bits: 4294967295
   interact: 0
   RadioInter: 1
-  Ammo: 0
-  SpecialAmmo: 0
+  Ammo: 1
+  SpecialAmmo: 1
   CanShoot: 0
   Hide: 0
   ShootForce: 0
