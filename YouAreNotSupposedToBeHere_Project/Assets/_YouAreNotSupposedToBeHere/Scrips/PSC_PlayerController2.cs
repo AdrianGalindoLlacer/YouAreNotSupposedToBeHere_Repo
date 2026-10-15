@@ -25,12 +25,14 @@ public class PSC_PlayerController2 : MonoBehaviour
     [SerializeField] float ShootForce;
     [SerializeField] float ShootDistance;
     [SerializeField] float ShootDuration;
+    [SerializeField] bool SRotation = true;
 
     [Header("Referencias a componentes")]
     [SerializeField] Transform Interactor;
     [SerializeField] Transform ShootPoint;
     [SerializeField] GameObject Bullet;
     [SerializeField] GameObject SBullet;
+    Transform tr;
     Rigidbody rb;
     Animator anim;
 
@@ -40,6 +42,7 @@ public class PSC_PlayerController2 : MonoBehaviour
 
     private void Awake()
     {
+        tr = GetComponent<Transform>();
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
     }
@@ -149,6 +152,24 @@ public class PSC_PlayerController2 : MonoBehaviour
         }
     }
 
+    public void MSlide(Transform t)
+    {
+        MSlide(tr, t.position, SRotation ? t.rotation : tr.rotation);
+    }
+
+    public static void MSlide(Transform tr, Vector3 targetPosition, Quaternion targetRotation)
+    {
+        if (tr.TryGetComponent(out Rigidbody rb)) { 
+            rb.linearVelocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+            rb.position = targetPosition;
+            rb.rotation = targetRotation;
+        }
+
+        tr.SetPositionAndRotation(targetPosition, targetRotation);
+        Physics.SyncTransforms();
+    }
+
     #region Input Methods
     public void OnMove(InputAction.CallbackContext context)
     {
@@ -161,7 +182,7 @@ public class PSC_PlayerController2 : MonoBehaviour
 
         if (Interact == EN_IntTags.Buttons)
         {
-            //if (interactCollider.TryGetComponent(out OBS_Button button))
+            //if (interactCollider.TryGetComponent(out SOB_Button button))
             //{
                 Debug.Log("Boton");
                 //button.Press();
@@ -182,8 +203,12 @@ public class PSC_PlayerController2 : MonoBehaviour
         } 
         else if (Interact == EN_IntTags.Slide)
         {
+            //if (interactCollider.TryGetComponent(out SOB_Slide Slide))
+            //{
+                //anim.SetTrigger("Slide");
+                //Slide.Slide();
+            //}
             Debug.Log("Tobogan");
-            //anim.SetTrigger("Slide");
         }
         else if (!PostIt && SpecialAmmo > 0)
         {

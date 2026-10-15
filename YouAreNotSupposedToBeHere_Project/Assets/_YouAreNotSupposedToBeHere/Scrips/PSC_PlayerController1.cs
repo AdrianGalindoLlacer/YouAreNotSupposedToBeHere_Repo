@@ -128,7 +128,7 @@ public class PSC_PlayerController1 : MonoBehaviour
 
         if (Interact == EN_IntTags.Buttons)
         {
-            //if (interactCollider.TryGetComponent(out OBS_Button button))
+            //if (interactCollider.TryGetComponent(out SOB_Button button))
             //{
                 Debug.Log("Boton");
                 //button.Press();
