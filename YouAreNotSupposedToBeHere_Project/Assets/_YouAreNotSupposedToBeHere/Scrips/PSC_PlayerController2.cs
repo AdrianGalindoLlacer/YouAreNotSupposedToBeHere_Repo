@@ -5,7 +5,7 @@ public class PSC_PlayerController2 : MonoBehaviour
 {
     #region General variables
     [Header("Movement")]
-    [SerializeField] float Speed = 3f;
+    public float Speed = 3f;
     [SerializeField] float MaxForce = 1f;
     [SerializeField] Vector2 moveInput;
     [SerializeField] float RotationSpeed = 10f;
@@ -25,7 +25,6 @@ public class PSC_PlayerController2 : MonoBehaviour
     [SerializeField] float ShootForce;
     [SerializeField] float ShootDistance;
     [SerializeField] float ShootDuration;
-    [SerializeField] bool SRotation = true;
 
     [Header("Referencias a componentes")]
     [SerializeField] Transform Interactor;
@@ -152,24 +151,6 @@ public class PSC_PlayerController2 : MonoBehaviour
         }
     }
 
-    public void MSlide(Transform t)
-    {
-        MSlide(tr, t.position, SRotation ? t.rotation : tr.rotation);
-    }
-
-    public static void MSlide(Transform tr, Vector3 targetPosition, Quaternion targetRotation)
-    {
-        if (tr.TryGetComponent(out Rigidbody rb)) { 
-            rb.linearVelocity = Vector3.zero;
-            rb.angularVelocity = Vector3.zero;
-            rb.position = targetPosition;
-            rb.rotation = targetRotation;
-        }
-
-        tr.SetPositionAndRotation(targetPosition, targetRotation);
-        Physics.SyncTransforms();
-    }
-
     #region Input Methods
     public void OnMove(InputAction.CallbackContext context)
     {
@@ -182,32 +163,38 @@ public class PSC_PlayerController2 : MonoBehaviour
 
         if (Interact == EN_IntTags.Buttons)
         {
-            //if (interactCollider.TryGetComponent(out SOB_Button button))
-            //{
+            if (interactCollider.TryGetComponent(out SOB_Button button))
+            {
                 Debug.Log("Boton");
-                //button.Press();
-            //}
+                button.Press();
+            }
         }
         else if (Hide)
         {
-            //Hide = false;
+            Hide = false;
+            Block = false;
             Debug.Log("NEscondite");
             //anim.SetBool("Hide", false);
         }
         else if (Interact == EN_IntTags.Hideout)
         {
-            //Hide = true;
+            Hide = true;
             Debug.Log("Escondite");
-            //Block = true;
+            Block = true;
             //anim.SetBool("Hide", true);
+            if (interactCollider.TryGetComponent(out SOB_Hideout Hideout))
+            {
+                //anim.SetTrigger("Slide");
+                Hideout.Hiding = true;
+            }
         } 
         else if (Interact == EN_IntTags.Slide)
         {
-            //if (interactCollider.TryGetComponent(out SOB_Slide Slide))
-            //{
+            if (interactCollider.TryGetComponent(out SOB_Slide Slide))
+            {
                 //anim.SetTrigger("Slide");
-                //Slide.Slide();
-            //}
+                Slide.Slide();
+            }
             Debug.Log("Tobogan");
         }
         else if (!PostIt && SpecialAmmo > 0)

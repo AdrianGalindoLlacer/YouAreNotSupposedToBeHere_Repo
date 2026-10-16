@@ -11,7 +11,7 @@ public class SOB_Button : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
-    private void Press()
+    public void Press()
     {
         anim.SetTrigger("Press");
         Door.SetTrigger("Open");
