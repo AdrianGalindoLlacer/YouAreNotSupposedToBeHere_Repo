@@ -11,6 +11,8 @@ TagManager:
   - Robot
   - Bullet
   - SBullet
+  - Guard
+  - Wall
   layers:
   - Default
   - TransparentFX

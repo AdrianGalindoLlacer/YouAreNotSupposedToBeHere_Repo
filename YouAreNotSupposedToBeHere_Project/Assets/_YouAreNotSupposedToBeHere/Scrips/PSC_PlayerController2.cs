@@ -128,25 +128,13 @@ public class PSC_PlayerController2 : MonoBehaviour
     {
         if (PostIt)
         {
-            Vector3 Direction = transform.forward;
-            Vector3 position = transform.position + Direction * ShootDistance;
-
-            GameObject Projectile = Instantiate(SBullet, position, Quaternion.LookRotation(Direction));
-
-            Rigidbody rbb = Projectile.GetComponent<Rigidbody>();
-            rbb.AddForce(Direction * ShootForce, ForceMode.VelocityChange);
+            Instantiate(SBullet, ShootPoint.position, tr.rotation);
             SpecialAmmo--;
             Ammo--;
         }
-        else 
+        else
         {
-            Vector3 Direction = transform.forward;
-            Vector3 position = transform.position + Direction * ShootDistance;
-
-            GameObject Projectile = Instantiate(Bullet, position, Quaternion.LookRotation(Direction));
-
-            Rigidbody rbb = Projectile.GetComponent<Rigidbody>();
-            rbb.AddForce(Direction * ShootForce, ForceMode.VelocityChange);
+            Instantiate(Bullet, ShootPoint.position, tr.rotation);
             Ammo--;
         }
     }
@@ -215,13 +203,15 @@ public class PSC_PlayerController2 : MonoBehaviour
 
         if (Ammo <= 0)
         {
-            anim.SetTrigger("NoAmmo");
+            //anim.SetTrigger("NoAmmo");
             Block = true;
         }
         else
         {
-            anim.SetTrigger("Shoot");
+
+            //anim.SetTrigger("Shoot");
             Block = true;
+            Shoot();
         }
     }
 
