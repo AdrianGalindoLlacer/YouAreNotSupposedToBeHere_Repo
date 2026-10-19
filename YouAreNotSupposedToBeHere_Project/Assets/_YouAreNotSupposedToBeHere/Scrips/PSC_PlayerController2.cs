@@ -128,14 +128,16 @@ public class PSC_PlayerController2 : MonoBehaviour
     {
         if (PostIt)
         {
-            Instantiate(SBullet, ShootPoint.position, tr.rotation);
+            GameObject Projectile = Instantiate(SBullet, ShootPoint.position, tr.rotation);
             SpecialAmmo--;
             Ammo--;
+            Block = false;
         }
         else
         {
             Instantiate(Bullet, ShootPoint.position, tr.rotation);
             Ammo--;
+            Block = false;
         }
     }
 

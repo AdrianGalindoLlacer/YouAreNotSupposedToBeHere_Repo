@@ -110,12 +110,12 @@ public class PSC_PlayerController1 : MonoBehaviour
     {
         if (!WalkRobot)
         {
-            Instantiate(RobotThrow, Spawn.position, tr.rotation);
+            RobotThrow.transform.position = Spawn.position;
         }
         else
         {
-            GameObject InteractableR = Instantiate(RobotThrow, Spawn.position, tr.rotation);
-            SOB_Robot controller = InteractableR.GetComponent<SOB_Robot>();
+            RobotThrow.transform.position = Spawn.position;
+            SOB_Robot controller = RobotThrow.GetComponent<SOB_Robot>();
             controller.Walk = true;
         }
     }

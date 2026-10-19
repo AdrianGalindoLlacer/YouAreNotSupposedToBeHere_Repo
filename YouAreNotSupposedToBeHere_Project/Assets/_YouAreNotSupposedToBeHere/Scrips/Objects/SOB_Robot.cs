@@ -3,15 +3,15 @@ using UnityEngine;
 public class SOB_Robot : MonoBehaviour
 {
 
-    Animator anim;
+    //[SerializeField]Animator anim;
     [SerializeField] float speed = 2f;
     public bool Walk = false;
-    private Rigidbody rb;
+    public bool sound = false;
+    Rigidbody rb;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     private void Awake()
     {
-        anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
     }
 
@@ -19,33 +19,33 @@ public class SOB_Robot : MonoBehaviour
     {
         if (!Walk)
         {
-            anim.SetBool("Movement", false);
+            //anim.SetBool("Movement", false);
             return;
         }
         else
         {
             Vector3 nextPosition = rb.position + transform.forward * speed * Time.fixedDeltaTime;
             rb.MovePosition(nextPosition);
-            anim.SetBool("Movement", true);
+            //anim.SetBool("Movement", true);
         }
 
+        if (sound)
+        {
+            //Se incluye un sonido
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
-            Sound();
+            sound = true;
         }
         if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Guard"))
         {
             Walk = false;
+            sound = false;
         }
-    }
-
-    private void Sound()
-    {
-
     }
 
 

@@ -10,11 +10,6 @@ public class SOB_PresurePRob : MonoBehaviour
     {
         anim = GetComponent<Animator>();
     }
-    // Update is called once per frame
-
-    private void Update()
-    {
-    }
     private void Press()
     {
         if (count <= 0)

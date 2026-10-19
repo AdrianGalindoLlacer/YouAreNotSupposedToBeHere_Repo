@@ -13,7 +13,7 @@ public class SOB_ButtonBullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Bullet"))
+        if (collision.gameObject.CompareTag("Bullet") || collision.gameObject.CompareTag("SBullet"))
         {
             Press();
         }
