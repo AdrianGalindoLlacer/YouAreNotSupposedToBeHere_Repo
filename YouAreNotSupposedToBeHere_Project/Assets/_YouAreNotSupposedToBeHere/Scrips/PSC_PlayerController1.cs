@@ -14,7 +14,7 @@ public class PSC_PlayerController1 : MonoBehaviour
     [SerializeField] float RadioInter = 0.5f;
     public EN_IntTags Interact => interact;
     private Collider interactCollider;
-    private bool Block;
+    private bool Block = false;
 
     [Header("mechanics")]
     bool HoldRobot = true;
@@ -24,7 +24,10 @@ public class PSC_PlayerController1 : MonoBehaviour
     [Header("Referencias a componentes")]
     [SerializeField] Transform Interactor;
     [SerializeField] GameObject Robot;
+    [SerializeField] Transform Spawn;
+    [SerializeField] GameObject RobotThrow;
     Rigidbody rb;
+    Transform tr;
     Animator anim;
 
 
@@ -80,7 +83,7 @@ public class PSC_PlayerController1 : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Transform origen = Interactor !=null ? Interactor : transform;
-        Gizmos.color = Color.yellow;
+        Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(origen.position, RadioInter);
     }
 
@@ -101,6 +104,20 @@ public class PSC_PlayerController1 : MonoBehaviour
         rb.AddForce(velocityChange, ForceMode.VelocityChange);
 
         Rotate();
+    }
+
+    void Lay()
+    {
+        if (!WalkRobot)
+        {
+            RobotThrow.transform.position = Spawn.position;
+        }
+        else
+        {
+            RobotThrow.transform.position = Spawn.position;
+            SOB_Robot controller = RobotThrow.GetComponent<SOB_Robot>();
+            controller.Walk = true;
+        }
     }
 
     void Rotate()
@@ -128,7 +145,7 @@ public class PSC_PlayerController1 : MonoBehaviour
 
         if (Interact == EN_IntTags.Buttons)
         {
-            //if (interactCollider.TryGetComponent(out OBS_Button button))
+            //if (interactCollider.TryGetComponent(out SOB_Button button))
             //{
                 Debug.Log("Boton");
                 //button.Press();
@@ -136,15 +153,14 @@ public class PSC_PlayerController1 : MonoBehaviour
         }
         else if (Interact == EN_IntTags.Box)
         {
-            //Hide = true;
-            Debug.Log("Caja");
             //Block = true;
-            //anim.SetBool("Hide", true);
+            Debug.Log("Caja");
         } 
         else if (Interact == EN_IntTags.Robot)
         {
             Debug.Log("Robot");
-            //anim.SetTrigger("Slide");
+            //anim.SetTrigger("Grab");
+
         }
         else if (!WalkRobot && HoldRobot)
         {

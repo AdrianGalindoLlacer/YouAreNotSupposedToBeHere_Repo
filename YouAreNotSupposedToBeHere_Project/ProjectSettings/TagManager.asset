@@ -9,6 +9,10 @@ TagManager:
   - Slide
   - Hideout
   - Robot
+  - Bullet
+  - SBullet
+  - Guard
+  - Wall
   layers:
   - Default
   - TransparentFX

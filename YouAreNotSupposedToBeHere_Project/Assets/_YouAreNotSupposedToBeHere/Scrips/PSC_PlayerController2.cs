@@ -5,7 +5,7 @@ public class PSC_PlayerController2 : MonoBehaviour
 {
     #region General variables
     [Header("Movement")]
-    [SerializeField] float Speed = 3f;
+    public float Speed = 3f;
     [SerializeField] float MaxForce = 1f;
     [SerializeField] Vector2 moveInput;
     [SerializeField] float RotationSpeed = 10f;
@@ -31,6 +31,7 @@ public class PSC_PlayerController2 : MonoBehaviour
     [SerializeField] Transform ShootPoint;
     [SerializeField] GameObject Bullet;
     [SerializeField] GameObject SBullet;
+    Transform tr;
     Rigidbody rb;
     Animator anim;
 
@@ -40,6 +41,7 @@ public class PSC_PlayerController2 : MonoBehaviour
 
     private void Awake()
     {
+        tr = GetComponent<Transform>();
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
     }
@@ -126,26 +128,16 @@ public class PSC_PlayerController2 : MonoBehaviour
     {
         if (PostIt)
         {
-            Vector3 Direction = transform.forward;
-            Vector3 position = transform.position + Direction * ShootDistance;
-
-            GameObject Projectile = Instantiate(SBullet, position, Quaternion.LookRotation(Direction));
-
-            Rigidbody rbb = Projectile.GetComponent<Rigidbody>();
-            rbb.AddForce(Direction * ShootForce, ForceMode.VelocityChange);
+            GameObject Projectile = Instantiate(SBullet, ShootPoint.position, tr.rotation);
             SpecialAmmo--;
             Ammo--;
+            Block = false;
         }
-        else 
+        else
         {
-            Vector3 Direction = transform.forward;
-            Vector3 position = transform.position + Direction * ShootDistance;
-
-            GameObject Projectile = Instantiate(Bullet, position, Quaternion.LookRotation(Direction));
-
-            Rigidbody rbb = Projectile.GetComponent<Rigidbody>();
-            rbb.AddForce(Direction * ShootForce, ForceMode.VelocityChange);
+            Instantiate(Bullet, ShootPoint.position, tr.rotation);
             Ammo--;
+            Block = false;
         }
     }
 
@@ -161,29 +153,39 @@ public class PSC_PlayerController2 : MonoBehaviour
 
         if (Interact == EN_IntTags.Buttons)
         {
-            //if (interactCollider.TryGetComponent(out OBS_Button button))
-            //{
+            if (interactCollider.TryGetComponent(out SOB_Button button))
+            {
                 Debug.Log("Boton");
-                //button.Press();
-            //}
+                button.Press();
+            }
         }
         else if (Hide)
         {
-            //Hide = false;
+            Hide = false;
+            Block = false;
             Debug.Log("NEscondite");
             //anim.SetBool("Hide", false);
         }
         else if (Interact == EN_IntTags.Hideout)
         {
-            //Hide = true;
+            Hide = true;
             Debug.Log("Escondite");
-            //Block = true;
+            Block = true;
             //anim.SetBool("Hide", true);
+            if (interactCollider.TryGetComponent(out SOB_Hideout Hideout))
+            {
+                //anim.SetTrigger("Slide");
+                Hideout.Hiding = true;
+            }
         } 
         else if (Interact == EN_IntTags.Slide)
         {
+            if (interactCollider.TryGetComponent(out SOB_Slide Slide))
+            {
+                //anim.SetTrigger("Slide");
+                Slide.Slide();
+            }
             Debug.Log("Tobogan");
-            //anim.SetTrigger("Slide");
         }
         else if (!PostIt && SpecialAmmo > 0)
         {
@@ -203,13 +205,15 @@ public class PSC_PlayerController2 : MonoBehaviour
 
         if (Ammo <= 0)
         {
-            anim.SetTrigger("NoAmmo");
+            //anim.SetTrigger("NoAmmo");
             Block = true;
         }
         else
         {
-            anim.SetTrigger("Shoot");
+
+            //anim.SetTrigger("Shoot");
             Block = true;
+            Shoot();
         }
     }
 
