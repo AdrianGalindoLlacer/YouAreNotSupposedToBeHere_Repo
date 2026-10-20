@@ -3,9 +3,9 @@ using UnityEngine;
 public class ENE_Camera : MonoBehaviour
 {
     Animator anim;
-    [SerializeField] GameObject postit;
-    [SerializeField] GameObject Vision;
-    [SerializeField] float stunTime = 8f;
+    [SerializeField] GameObject postit; //Guarda el objeto hijo el cual se le pone en la lente a la camara
+    [SerializeField] GameObject Vision; //Variable que guarda su rango de "daño"
+    //[SerializeField] float stunTime = 8f; //Duracion del PostIt en la lente
 
 
     private void Awake()
@@ -22,6 +22,7 @@ public class ENE_Camera : MonoBehaviour
             postit.SetActive(true);
             // Hacer rutina
             Vision.SetActive(true);
+            postit.SetActive(false);
 
         }
     }

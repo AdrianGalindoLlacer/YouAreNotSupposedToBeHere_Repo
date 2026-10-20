@@ -4,12 +4,12 @@ public class ENE_Guard : MonoBehaviour
 {
     Animator anim;
     [SerializeField] float speed = 2f;
-    [SerializeField] bool patrol = false;
-    [SerializeField] bool chase = true;
-    [SerializeField] GameObject RobotHold;
-    [SerializeField] GameObject RobotTarget;
-    [SerializeField] GameObject RobotStand;
-    [SerializeField] GameObject Vision;
+    [SerializeField] bool patrol = false; // Variable de la que depende que el guardia tenga o no movimuento
+    [SerializeField] bool chase = true; //Variable que indica que esta buscando el robot
+    [SerializeField] GameObject RobotHold; // Variable que guarda el objeto del robot en su mano
+    [SerializeField] GameObject RobotTarget; // Variable que guarda el robot al que busca cuando se active chase
+    [SerializeField] GameObject RobotStand; // Variable que guarda el stand en el que dejara el muñeco
+    [SerializeField] GameObject Vision; // Variable que guarda su rango de "daño"
     private SOB_Robot Target;
 
     private void Awake()

@@ -5,9 +5,10 @@ public class SOB_Robot : MonoBehaviour
 
     //[SerializeField]Animator anim;
     [SerializeField] float speed = 2f;
-    public bool Walk = false;
-    public bool sound = false;
+    public bool Walk = false; //Variable que indica si el robot se mueve o no
+    public bool sound = false; //Variable que activa el modo chase del guardia cuando es golpeado por una bala
     Rigidbody rb;
+    Animator anim;
 
 
     private void Awake()
@@ -39,10 +40,17 @@ public class SOB_Robot : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Bullet"))
         {
+            //anim.SetTrigger("Sinergy");
             sound = true;
         }
-        if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Guard"))
+        if (collision.gameObject.CompareTag("Wall"))
         {
+            //anim.SetTrigger("Idle");
+            Walk = false;
+            sound = false;
+        } if (collision.gameObject.CompareTag("Guard"))
+        {
+            //anim.SetTrigger("Trip");
             Walk = false;
             sound = false;
         }

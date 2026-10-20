@@ -28,6 +28,7 @@ public class SOB_Bullet : MonoBehaviour
         {
             Move = false;
             Destroy(gameObject, 0f); //se quitara cuando esten las animaciones
+            //anim.Settrigger("Impact");
         }
     }
 }

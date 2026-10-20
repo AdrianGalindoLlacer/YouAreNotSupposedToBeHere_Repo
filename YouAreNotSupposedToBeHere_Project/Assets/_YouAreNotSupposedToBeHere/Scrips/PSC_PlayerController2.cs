@@ -5,35 +5,31 @@ public class PSC_PlayerController2 : MonoBehaviour
 {
     #region General variables
     [Header("Movement")]
-    public float Speed = 3f;
-    [SerializeField] float MaxForce = 1f;
-    [SerializeField] Vector2 moveInput;
-    [SerializeField] float RotationSpeed = 10f;
-    [SerializeField] LayerMask InteractLayer;
-    [SerializeField] EN_IntTags interact = EN_IntTags.Null;
-    [SerializeField] float RadioInter = 0.1f;
+    public float Speed = 3f; 
+    [SerializeField] float MaxForce = 1f; //Fuerza de arranque
+    [SerializeField] Vector2 moveInput; 
+    [SerializeField] float RotationSpeed = 10f; // Velocidad de rotacion
+    [SerializeField] LayerMask InteractLayer; //Capa donde el interactor buscara colisiones
+    [SerializeField] EN_IntTags interact = EN_IntTags.Null; //Variable que guarda los tipos de colisiones con las que interactua el interactor
+    [SerializeField] float RadioInter = 0.1f; //Radio de busqueda del interactor
     public EN_IntTags Interact => interact;
-    private Collider interactCollider;
-    private bool Block;
+    private Collider interactCollider; // Almacena el collider del interactor
+    private bool Block; // Bool que bloque el movimiento por completo del jugador
 
     [Header("mechanics")]
-    [SerializeField] int Ammo;
-    [SerializeField] int SpecialAmmo;
-    private bool PostIt;
-    [SerializeField] bool CanShoot;
-    [SerializeField] bool Hide;
-    [SerializeField] float ShootForce;
-    [SerializeField] float ShootDistance;
-    [SerializeField] float ShootDuration;
+    [SerializeField] int Ammo; //Municion del arma total
+    [SerializeField] int SpecialAmmo; //PostIts que tiene el player
+    private bool PostIt; //Bool que activa el disparar postIts
+    [SerializeField] bool CanShoot; //Bool que impide al jugador disparar
+    [SerializeField] bool Hide; // bool que indica que el jugador esta escondido
 
     [Header("Referencias a componentes")]
-    [SerializeField] Transform Interactor;
-    [SerializeField] Transform ShootPoint;
-    [SerializeField] GameObject Bullet;
-    [SerializeField] GameObject SBullet;
-    Transform tr;
-    Rigidbody rb;
-    Animator anim;
+    [SerializeField] Transform Interactor; //almacena el transform del interactor
+    [SerializeField] Transform ShootPoint; //almacena el transform de donde salen las balas
+    [SerializeField] GameObject Bullet; //almacena las balas
+    [SerializeField] GameObject SBullet; //almacena las balas con PostIt
+    Rigidbody rb; //almacena el rigidbody del jugador
+    Animator anim; //almacena el animator del jugador
 
 
 
@@ -41,15 +37,8 @@ public class PSC_PlayerController2 : MonoBehaviour
 
     private void Awake()
     {
-        tr = GetComponent<Transform>();
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
-    }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        //Esto se pondra en el player controller1 Cursor.lockState = CursorLockMode.Locked;
-        //Esto se pondra en el player controller1 Cursor.visible = false;
     }
 
     private void Update()
@@ -128,14 +117,14 @@ public class PSC_PlayerController2 : MonoBehaviour
     {
         if (PostIt)
         {
-            GameObject Projectile = Instantiate(SBullet, ShootPoint.position, tr.rotation);
+            GameObject Projectile = Instantiate(SBullet, ShootPoint.position, transform.rotation);
             SpecialAmmo--;
             Ammo--;
             Block = false;
         }
         else
         {
-            Instantiate(Bullet, ShootPoint.position, tr.rotation);
+            Instantiate(Bullet, ShootPoint.position, transform.rotation);
             Ammo--;
             Block = false;
         }
@@ -174,7 +163,6 @@ public class PSC_PlayerController2 : MonoBehaviour
             //anim.SetBool("Hide", true);
             if (interactCollider.TryGetComponent(out SOB_Hideout Hideout))
             {
-                //anim.SetTrigger("Slide");
                 Hideout.Hiding = true;
             }
         } 
