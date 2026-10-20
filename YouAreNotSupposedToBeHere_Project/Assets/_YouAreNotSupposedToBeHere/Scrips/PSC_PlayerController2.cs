@@ -15,6 +15,7 @@ public class PSC_PlayerController2 : MonoBehaviour
     public EN_IntTags Interact => interact;
     private Collider interactCollider; // Almacena el collider del interactor
     private bool Block; // Bool que bloque el movimiento por completo del jugador
+    private bool Moving; //Bool que indica si el jugador se esta moviendo;
 
     [Header("mechanics")]
     [SerializeField] int Ammo; //Municion del arma total
@@ -43,6 +44,7 @@ public class PSC_PlayerController2 : MonoBehaviour
 
     private void Update()
     {
+        //AnimatorManager();
         Transform origen = Interactor != null ? Interactor : transform;
 
         Collider[] collisions = Physics.OverlapSphere(origen.position, RadioInter, InteractLayer);
@@ -130,10 +132,24 @@ public class PSC_PlayerController2 : MonoBehaviour
         }
     }
 
+    //private void AnimatorManager()
+        //{
+            //gestion del animator
+        //}
+
     #region Input Methods
     public void OnMove(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
+        if (context.performed)
+        {
+            Moving = true;
+
+        }
+        else if (context.canceled)
+        {
+            Moving = false;
+        }
     }
 
     public void OnInteract(InputAction.CallbackContext context)
