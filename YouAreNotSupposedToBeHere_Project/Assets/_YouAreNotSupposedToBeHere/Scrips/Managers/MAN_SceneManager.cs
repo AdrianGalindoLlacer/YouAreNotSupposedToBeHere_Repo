@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class MAN_SceneManager : MonoBehaviour
@@ -38,4 +39,12 @@ public class MAN_SceneManager : MonoBehaviour
         Cursor.visible = false;
         Paused = false;
     }
+
+    #region Input Methods
+    public void OnPause(InputAction.CallbackContext context)
+    {
+        if (Paused) pause();
+        else Resume();
+    }
+    #endregion
 }
