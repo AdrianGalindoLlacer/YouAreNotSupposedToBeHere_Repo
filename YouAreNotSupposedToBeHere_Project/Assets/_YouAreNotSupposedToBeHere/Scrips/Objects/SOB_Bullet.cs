@@ -5,10 +5,17 @@ public class SOB_Bullet : MonoBehaviour
     //[SerializeField]Animator anim;
     [SerializeField] float speed = 3f;
     [SerializeField] float damage = 30;
+    MAN_Health Health;
+    MAN_SceneManager Manager;
     private bool Move = true;
 
 
-    
+    private void Start()
+    {
+        Health = find
+    }
+
+
     private void Update()
     {
         if (!Move)
@@ -33,10 +40,10 @@ public class SOB_Bullet : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Guard"))
         {
-            health = health - damage;
-            if (health =< 0)
+            MAN_Health.health = MAN_Health.health - damage;
+            if (MAN_Health.health <= 0)
             {
-                Reset();
+                MAN_SceneManager.Restart();
             }
         }
     }

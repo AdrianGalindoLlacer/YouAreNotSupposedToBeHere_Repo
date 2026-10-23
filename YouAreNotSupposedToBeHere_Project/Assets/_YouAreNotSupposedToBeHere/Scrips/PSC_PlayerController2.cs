@@ -23,12 +23,15 @@ public class PSC_PlayerController2 : MonoBehaviour
     private bool PostIt; //Bool que activa el disparar postIts
     [SerializeField] bool CanShoot; //Bool que impide al jugador disparar
     [SerializeField] bool Hide; // bool que indica que el jugador esta escondido
+    [SerializeField] float damage = 1;
 
     [Header("Referencias a componentes")]
     [SerializeField] Transform Interactor; //almacena el transform del interactor
     [SerializeField] Transform ShootPoint; //almacena el transform de donde salen las balas
     [SerializeField] GameObject Bullet; //almacena las balas
     [SerializeField] GameObject SBullet; //almacena las balas con PostIt
+    MAN_Health Health;
+    MAN_SceneManager Manager;
     Rigidbody rb; //almacena el rigidbody del jugador
     Animator anim; //almacena el animator del jugador
 
@@ -132,10 +135,22 @@ public class PSC_PlayerController2 : MonoBehaviour
     }
 
     //private void AnimatorManager()
-        //{
-            //gestion del animator
-        //}
+    //{
+    //gestion del animator
+    //}
 
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Vision"))
+        {
+            MAN_Health.health = MAN_Health.health - damage;
+            if (MAN_Health.health <= 0)
+            {
+                MAN_SceneManager.Restart();
+            }
+        }
+    }
     #region Input Methods
     public void OnMove(InputAction.CallbackContext context)
     {

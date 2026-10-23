@@ -20,6 +20,7 @@ public class PSC_PlayerController1 : MonoBehaviour
     [Header("mechanics")]
     bool HoldRobot = true; //bool que guarda si el jugador lleva el robot
     bool WalkRobot; //Bool que guarda si el robot esta en walk
+    [SerializeField] float damage = 1;
 
 
     [Header("Referencias a componentes")]
@@ -144,15 +145,26 @@ public class PSC_PlayerController1 : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Box"))
         {
-            anim.SetBool("Push", true);
+            anim.SetBool("Push", false);
         }
     }
 
     //private void AnimatorManager()
     //{
-        //gestion del animator
+    //gestion del animator
     //}
 
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Vision"))
+        {
+            MAN_Health.health = MAN_Health.health - damage;
+            if (MAN_Health.health <= 0)
+            {
+                MAN_SceneManager.Restart();
+            }
+        }
+    }
 
     #region Input Methods
     public void OnMove(InputAction.CallbackContext context)
@@ -214,18 +226,6 @@ public class PSC_PlayerController1 : MonoBehaviour
             //anim.SetTrigger("Lay");
             Block = true;
             Lay();
-        }
-    }
-
-    private void OnCollisionStay(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Vision"))
-        {
-            health = health - damage
-            if (health =< 0)
-            {
-                Reset();
-            }
         }
     }
 
