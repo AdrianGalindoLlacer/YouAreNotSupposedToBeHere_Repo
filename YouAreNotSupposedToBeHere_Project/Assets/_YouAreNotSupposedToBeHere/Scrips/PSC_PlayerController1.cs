@@ -217,5 +217,17 @@ public class PSC_PlayerController1 : MonoBehaviour
         }
     }
 
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Vision"))
+        {
+            health = health - damage
+            if (health =< 0)
+            {
+                Reset();
+            }
+        }
+    }
+
     #endregion
 }
