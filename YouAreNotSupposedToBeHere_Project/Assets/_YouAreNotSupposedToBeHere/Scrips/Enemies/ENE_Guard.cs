@@ -3,8 +3,9 @@ using UnityEngine;
 public class ENE_Guard : MonoBehaviour
 {
     Animator anim;
-    [SerializeField] float speed = 2f;
-    [SerializeField] bool patrol = false; // Variable de la que depende que el guardia tenga o no movimuento
+    [SerializeField] float speed = 4f;
+    [SerializeField] float Rotate = 2f;
+    [SerializeField] bool patrol = false; // Variable de la que depende que el guardia tenga o no movimiento de patruya
     [SerializeField] bool chase = true; //Variable que indica que esta buscando el robot
     [SerializeField] GameObject RobotHold; // Variable que guarda el objeto del robot en su mano
     [SerializeField] GameObject RobotTarget; // Variable que guarda el robot al que busca cuando se active chase

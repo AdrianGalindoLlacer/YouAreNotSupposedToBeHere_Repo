@@ -76,7 +76,6 @@ public class PSC_PlayerController1 : MonoBehaviour
     {
         if (col.CompareTag("Robot")) return EN_IntTags.Robot;
         if (col.CompareTag("Buttons")) return EN_IntTags.Buttons;
-        if (col.CompareTag("Box")) return EN_IntTags.Box;
         return EN_IntTags.Null;
     }
 
@@ -110,12 +109,14 @@ public class PSC_PlayerController1 : MonoBehaviour
         if (!WalkRobot)
         {
             RobotThrow.transform.position = Spawn.position;
+            Block = false;
         }
         else
         {
             RobotThrow.transform.position = Spawn.position;
             SOB_Robot controller = RobotThrow.GetComponent<SOB_Robot>();
             controller.Walk = true;
+            Block = false;
         }
     }
 
@@ -157,6 +158,7 @@ public class PSC_PlayerController1 : MonoBehaviour
     public void OnMove(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
+        if (Block) return;
         if (context.performed)
         {
             Moving = true;
@@ -211,6 +213,7 @@ public class PSC_PlayerController1 : MonoBehaviour
         {
             //anim.SetTrigger("Lay");
             Block = true;
+            Lay();
         }
     }
 

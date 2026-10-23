@@ -14,9 +14,10 @@ public class SOB_Robot : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        anim = GetComponent<Animator>();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         if (!Walk)
         {
@@ -25,8 +26,7 @@ public class SOB_Robot : MonoBehaviour
         }
         else
         {
-            Vector3 nextPosition = rb.position + transform.forward * speed * Time.fixedDeltaTime;
-            rb.MovePosition(nextPosition);
+            transform.Translate(Vector3.forward * speed * Time.deltaTime);
             //anim.SetBool("Movement", true);
         }
 

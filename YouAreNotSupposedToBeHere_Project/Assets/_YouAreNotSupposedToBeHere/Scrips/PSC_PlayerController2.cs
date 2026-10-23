@@ -18,8 +18,8 @@ public class PSC_PlayerController2 : MonoBehaviour
     private bool Moving; //Bool que indica si el jugador se esta moviendo;
 
     [Header("mechanics")]
-    [SerializeField] int Ammo; //Municion del arma total
-    [SerializeField] int SpecialAmmo; //PostIts que tiene el player
+    public int Ammo; //Municion del arma total
+    public int SpecialAmmo; //PostIts que tiene el player
     private bool PostIt; //Bool que activa el disparar postIts
     [SerializeField] bool CanShoot; //Bool que impide al jugador disparar
     [SerializeField] bool Hide; // bool que indica que el jugador esta escondido
@@ -91,7 +91,6 @@ public class PSC_PlayerController2 : MonoBehaviour
 
     void Movement()
     {
-        if (Block) return;
 
         Vector3 currentVelocity = rb.linearVelocity;
         Vector3 targetVelocity = new Vector3(moveInput.x, 0, moveInput.y) * Speed;
@@ -141,6 +140,7 @@ public class PSC_PlayerController2 : MonoBehaviour
     public void OnMove(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
+        if (Block) return;
         if (context.performed)
         {
             Moving = true;
