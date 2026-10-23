@@ -4,8 +4,8 @@ public class SOB_Slide : MonoBehaviour
 {
 
     private Animator anim;
-    [SerializeField] Transform goal;
-    [SerializeField] GameObject Player;
+    [SerializeField] Transform goal; // Variable que guarda el transform del empty en el que el jugador se teletransportara
+    [SerializeField] GameObject Player; // Variable que guarda el player que se transportara
 
 
     private void Awake()

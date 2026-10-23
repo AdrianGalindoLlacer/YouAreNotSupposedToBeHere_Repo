@@ -3,9 +3,8 @@ using UnityEngine;
 public class SOB_ButtonBullet : MonoBehaviour
 {
     private Animator anim;
-    [SerializeField] Animator Door;
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [SerializeField] Animator Door; // Animator de la puerta para mandarle señales
+    private int count = 0; //Variable que guarda el estado en el que esta el boton (Cambiable por un bool)
     void Awake()
     {
         anim = GetComponent<Animator>();
@@ -21,8 +20,18 @@ public class SOB_ButtonBullet : MonoBehaviour
 
     public void Press()
     {
-        anim.SetTrigger("Press");
-        Door.SetTrigger("Open");
+        if (count >= 0)
+        {
+            anim.SetTrigger("Press");
+            Door.SetBool("Open", true);
+            count++;
+        }
+        else
+        {
+            anim.SetTrigger("Press");
+            Door.SetBool("Open", false);
+            count--;
+        }
     }
 
     

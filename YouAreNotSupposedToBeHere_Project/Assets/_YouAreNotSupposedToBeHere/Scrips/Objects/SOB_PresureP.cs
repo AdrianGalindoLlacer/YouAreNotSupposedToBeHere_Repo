@@ -3,8 +3,8 @@ using UnityEngine;
 public class SOB_PresureP : MonoBehaviour
 {
     Animator anim;
-    private int count = 0;
-    [SerializeField] Animator Door;
+    private int count = 0; //Variable que almacena la cantidad de colliders que tiene encima
+    [SerializeField] Animator Door; // Animator de la puerta para mandarle señales
 
     private void Awake()
     {
