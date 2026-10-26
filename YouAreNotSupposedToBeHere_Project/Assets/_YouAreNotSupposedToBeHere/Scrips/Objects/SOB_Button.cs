@@ -3,25 +3,32 @@ using UnityEngine;
 public class SOB_Button : MonoBehaviour
 {
     private Animator anim;
-    [SerializeField] Animator Door; // Animator de la puerta para mandarle señales
+    //[SerializeField] Animator Door; // Animator de la puerta para mandarle señales
     private int count = 0; //Variable que guarda el estado en el que esta el boton (Cambiable por un bool)
-    void Awake()
-    {
-        anim = GetComponent<Animator>();
-    }
+    [SerializeField] GameObject DoorRight;
+    [SerializeField] GameObject DoorLeft;
+
+    //void Awake()
+    //{
+    //    anim = GetComponent<Animator>();
+    //}
 
     public void Press()
     {
-        if (count >= 0)
+        if (count == 0)
         {
-            anim.SetTrigger("Press");
-            Door.SetBool("Open", true);
+            DoorLeft.SetActive(false);
+            DoorRight.SetActive(false);
+            //anim.SetTrigger("Press");
+            //Door.SetBool("Open", true);
             count++;
         }
         else
         {
-            anim.SetTrigger("Press");
-            Door.SetBool("Open", false);
+            DoorLeft.SetActive(true);
+            DoorRight.SetActive(true);
+            //anim.SetTrigger("Press");
+            //Door.SetBool("Open", false);
             count--;
         }
     }

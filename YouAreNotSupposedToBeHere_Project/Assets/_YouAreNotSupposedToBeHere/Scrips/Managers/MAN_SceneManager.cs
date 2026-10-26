@@ -6,7 +6,11 @@ public class MAN_SceneManager : MonoBehaviour
 {
     [SerializeField] PSC_PlayerController1 P1;
     [SerializeField] PSC_PlayerController2 P2;
+    [SerializeField] GameObject PauseMenu;
+    [SerializeField] GameObject UI;
     private bool Paused = false;
+    private string exit = "SCN_Menu";
+
 
     public void Restart()
     {
@@ -22,6 +26,8 @@ public class MAN_SceneManager : MonoBehaviour
 
     public void pause()
     {
+        PauseMenu.SetActive(true);
+        UI.SetActive(false);
         Time.timeScale = 0;
         P1.enabled = false;
         P2.enabled = false;
@@ -32,12 +38,19 @@ public class MAN_SceneManager : MonoBehaviour
 
     public void Resume()
     {
+        PauseMenu.SetActive(false);
+        UI.SetActive(true);
         Time.timeScale = 1;
         P1.enabled = true;
         P2.enabled = true;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         Paused = false;
+    }
+
+    public void Exit()
+    {
+        SceneManager.LoadScene(exit);
     }
 
     #region Input Methods

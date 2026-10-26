@@ -5,9 +5,9 @@ public class PSC_PlayerController2 : MonoBehaviour
 {
     #region General variables
     [Header("Movement")]
-    public float Speed = 3f; 
+    public float Speed = 3f;
     [SerializeField] float MaxForce = 1f; //Fuerza de arranque
-    [SerializeField] Vector2 moveInput; 
+    [SerializeField] Vector2 moveInput;
     [SerializeField] float RotationSpeed = 10f; // Velocidad de rotacion
     [SerializeField] LayerMask InteractLayer; //Capa donde el interactor buscara colisiones
     [SerializeField] EN_IntTags interact = EN_IntTags.Null; //Variable que guarda los tipos de colisiones con las que interactua el interactor
@@ -15,7 +15,6 @@ public class PSC_PlayerController2 : MonoBehaviour
     public EN_IntTags Interact => interact;
     private Collider interactCollider; // Almacena el collider del interactor
     private bool Block; // Bool que bloque el movimiento por completo del jugador
-    private bool Moving; //Bool que indica si el jugador se esta moviendo;
 
     [Header("mechanics")]
     public int Ammo; //Municion del arma total
@@ -23,12 +22,15 @@ public class PSC_PlayerController2 : MonoBehaviour
     private bool PostIt; //Bool que activa el disparar postIts
     [SerializeField] bool CanShoot; //Bool que impide al jugador disparar
     [SerializeField] bool Hide; // bool que indica que el jugador esta escondido
+    [SerializeField] float damage = 0.01f;
 
     [Header("Referencias a componentes")]
     [SerializeField] Transform Interactor; //almacena el transform del interactor
     [SerializeField] Transform ShootPoint; //almacena el transform de donde salen las balas
     [SerializeField] GameObject Bullet; //almacena las balas
     [SerializeField] GameObject SBullet; //almacena las balas con PostIt
+    [SerializeField] MAN_Health Health;
+    [SerializeField] MAN_SceneManager Manager;
     Rigidbody rb; //almacena el rigidbody del jugador
     Animator anim; //almacena el animator del jugador
 
@@ -53,7 +55,7 @@ public class PSC_PlayerController2 : MonoBehaviour
         interactCollider = null;
         float MinDistance = float.MaxValue;
 
-        foreach(Collider col in collisions)
+        foreach (Collider col in collisions)
         {
             EN_IntTags foundtag = ObtainTag(col);
 
@@ -79,7 +81,7 @@ public class PSC_PlayerController2 : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        Transform origen = Interactor !=null ? Interactor : transform;
+        Transform origen = Interactor != null ? Interactor : transform;
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(origen.position, RadioInter);
     }
@@ -121,35 +123,51 @@ public class PSC_PlayerController2 : MonoBehaviour
             GameObject Projectile = Instantiate(SBullet, ShootPoint.position, transform.rotation);
             SpecialAmmo--;
             Ammo--;
+            SOB_Bullet controller = Bullet.GetComponent<SOB_Bullet>();
+            controller.Move = true;
             Block = false;
         }
         else
         {
             Instantiate(Bullet, ShootPoint.position, transform.rotation);
             Ammo--;
+            SOB_Bullet controller = SBullet.GetComponent<SOB_Bullet>();
+            controller.Move = true;
             Block = false;
         }
     }
 
     //private void AnimatorManager()
-        //{
-            //gestion del animator
-        //}
+    //{
+    //gestion del animator
+    //}
 
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Vision") && !Hide)
+        {
+            Health.Health = Health.Health - damage;
+            if (Health.Health <= 0)
+            {
+                Manager.Restart();
+            }
+        }
+    }
     #region Input Methods
     public void OnMove(InputAction.CallbackContext context)
     {
-        moveInput = context.ReadValue<Vector2>();
         if (Block) return;
-        if (context.performed)
-        {
-            Moving = true;
-
-        }
-        else if (context.canceled)
-        {
-            Moving = false;
-        }
+        moveInput = context.ReadValue<Vector2>();
+        //if (context.performed)
+        //{
+        //    anim.SetBool("Move", true);
+        //
+        //}
+        //else if (context.canceled)
+        //{
+        //    anim.SetBool("Move", false);
+        //}
     }
 
     public void OnInteract(InputAction.CallbackContext context)
@@ -181,7 +199,7 @@ public class PSC_PlayerController2 : MonoBehaviour
             {
                 Hideout.Hiding = true;
             }
-        } 
+        }
         else if (Interact == EN_IntTags.Slide)
         {
             if (interactCollider.TryGetComponent(out SOB_Slide Slide))
