@@ -143,9 +143,9 @@ public class PSC_PlayerController2 : MonoBehaviour
     //}
 
 
-    private void OnCollisionStay(Collision collision)
+    private void OnTriggerStay(Collider other)
     {
-        if (collision.gameObject.CompareTag("Vision") && !Hide)
+        if (other.gameObject.CompareTag("Vision"))
         {
             Health.Health = Health.Health - damage;
             if (Health.Health <= 0)

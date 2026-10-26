@@ -26,6 +26,7 @@ public class PSC_PlayerController1 : MonoBehaviour
     [SerializeField] Transform Interactor; //transform del interactor
     [SerializeField] GameObject Robot; //el robot que el jugador lleva
     [SerializeField] Transform Spawn; //transform donde el robot aparecera
+    [SerializeField] GameObject Origin;
     [SerializeField] GameObject RobotThrow; //El robot que el jugador deja
     [SerializeField] MAN_Health Health;
     [SerializeField] MAN_SceneManager Manager;
@@ -108,19 +109,29 @@ public class PSC_PlayerController1 : MonoBehaviour
 
     void Lay()
     {
+        HoldRobot = false;
         if (!WalkRobot)
         {
+            Robot.SetActive(false);
             RobotThrow.transform.position = Spawn.position;
             Block = false;
         }
         else
         {
+            Robot.SetActive(false);
             RobotThrow.transform.position = Spawn.position;
             RobotThrow.transform.rotation = transform.rotation;
             SOB_Robot controller = RobotThrow.GetComponent<SOB_Robot>();
             controller.Walk = true;
             Block = false;
         }
+    }
+
+    private void grab()
+    {
+        RobotThrow.transform.position = Origin.transform.position;
+        Robot.SetActive(true);
+        HoldRobot = true;
     }
 
     void Rotate()
@@ -156,9 +167,9 @@ public class PSC_PlayerController1 : MonoBehaviour
     //gestion del animator
     //}
 
-    private void OnCollisionStay(Collision collision)
+    private void OnTriggerStay(Collider other)
     {
-        if (collision.gameObject.CompareTag("Vision"))
+        if (other.gameObject.CompareTag("Vision"))
         {
             Health.Health = Health.Health - damage;
             if (Health.Health <= 0)
@@ -190,16 +201,17 @@ public class PSC_PlayerController1 : MonoBehaviour
 
         if (Interact == EN_IntTags.Buttons)
         {
-            //if (interactCollider.TryGetComponent(out SOB_Button button))
-            //{
+            if (interactCollider.TryGetComponent(out SOB_Button button))
+            {
             Debug.Log("Boton");
-            //button.Press();
-            //}
+            button.Press();
+            }
         }
         else if (Interact == EN_IntTags.Robot)
         {
             Debug.Log("Robot");
             //anim.SetTrigger("Grab");
+            grab();
 
         }
         else if (!WalkRobot && HoldRobot)
