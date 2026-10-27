@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SOB_PresurePRob : MonoBehaviour
@@ -5,6 +6,10 @@ public class SOB_PresurePRob : MonoBehaviour
     Animator anim;
     private int count = 0;
     [SerializeField] Animator Door;
+    [SerializeField] GameObject Robot;
+    [SerializeField] GameObject RobotStand;
+    [SerializeField] Transform Origin;
+    [SerializeField] SOB_Robot RobotCont;
 
     private void Awake()
     {
@@ -24,17 +29,25 @@ public class SOB_PresurePRob : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Box") || collision.gameObject.CompareTag("Robot"))
+        if (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Box"))
         {
             count++;
             Press();
         }
+        if (other.gameObject.CompareTag("Robot"))
+        {
+            RobotCont.Walk = false;
+            Robot.transform.position = Origin.transform.position;
+            RobotStand.SetActive(true);
+        }
     }
-    private void OnCollisionExit(Collision collision)
+
+
+    private void OnTriggerExit(Collider other)
     {
-        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Box") || collision.gameObject.CompareTag("Robot"))
+        if (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Box"))
         {
             count--;
             Press();

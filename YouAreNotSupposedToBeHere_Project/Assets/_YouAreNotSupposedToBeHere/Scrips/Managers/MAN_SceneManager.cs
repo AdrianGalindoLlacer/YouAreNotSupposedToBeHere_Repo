@@ -16,6 +16,9 @@ public class MAN_SceneManager : MonoBehaviour
     {
         Scene Actual = SceneManager.GetActiveScene();
         SceneManager.LoadScene(Actual.name);
+        Time.timeScale = 1;
+        P1.enabled = true;
+        P2.enabled = true;
     }
     public void NextScene()
     {

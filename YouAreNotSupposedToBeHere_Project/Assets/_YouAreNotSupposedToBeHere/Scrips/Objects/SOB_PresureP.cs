@@ -33,17 +33,18 @@ public class SOB_PresureP : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Box"))
+        if (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Box"))
         {
             count++;
             Press();
         }
     }
-    private void OnCollisionExit(Collision collision)
+
+    private void OnTriggerExit(Collider other)
     {
-        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Box"))
+        if (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Box"))
         {
             count--;
             Press();

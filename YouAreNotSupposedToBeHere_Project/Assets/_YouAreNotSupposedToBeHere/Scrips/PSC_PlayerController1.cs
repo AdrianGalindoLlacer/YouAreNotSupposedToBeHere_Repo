@@ -30,6 +30,7 @@ public class PSC_PlayerController1 : MonoBehaviour
     [SerializeField] GameObject RobotThrow; //El robot que el jugador deja
     [SerializeField] MAN_Health Health;
     [SerializeField] MAN_SceneManager Manager;
+    SOB_Robot controller;
     Rigidbody rb;
     Animator anim;
 
@@ -44,6 +45,7 @@ public class PSC_PlayerController1 : MonoBehaviour
     }
     void Start()
     {
+        controller = RobotThrow.GetComponent<SOB_Robot>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
@@ -121,7 +123,6 @@ public class PSC_PlayerController1 : MonoBehaviour
             Robot.SetActive(false);
             RobotThrow.transform.position = Spawn.position;
             RobotThrow.transform.rotation = transform.rotation;
-            SOB_Robot controller = RobotThrow.GetComponent<SOB_Robot>();
             controller.Walk = true;
             Block = false;
         }
@@ -129,9 +130,11 @@ public class PSC_PlayerController1 : MonoBehaviour
 
     private void grab()
     {
+        controller.Walk = false;
         RobotThrow.transform.position = Origin.transform.position;
         Robot.SetActive(true);
         HoldRobot = true;
+        Block = false;
     }
 
     void Rotate()
