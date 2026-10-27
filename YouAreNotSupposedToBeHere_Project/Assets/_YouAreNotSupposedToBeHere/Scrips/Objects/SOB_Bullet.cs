@@ -4,11 +4,12 @@ public class SOB_Bullet : MonoBehaviour
 {
     //[SerializeField]Animator anim;
     [SerializeField] float speed = 3f;
-    [SerializeField] float damage = 30;
-    private bool Move = true;
+    [SerializeField] float damage = 0.30f;
+    [SerializeField] MAN_Health Health;
+    [SerializeField] MAN_SceneManager Manager;
+    public bool Move = false;
 
 
-    
     private void Update()
     {
         if (!Move)
@@ -25,7 +26,7 @@ public class SOB_Bullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Wall")|| collision.gameObject.CompareTag("Robot"))
+        if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Robot"))
         {
             Move = false;
             Destroy(gameObject, 0f); //se quitara cuando esten las animaciones
@@ -33,10 +34,10 @@ public class SOB_Bullet : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Guard"))
         {
-            health = health - damage;
-            if (health =< 0)
+            Health.Health = Health.Health - damage;
+            if (Health.Health <= 0)
             {
-                Reset();
+                Manager.Restart();
             }
         }
     }

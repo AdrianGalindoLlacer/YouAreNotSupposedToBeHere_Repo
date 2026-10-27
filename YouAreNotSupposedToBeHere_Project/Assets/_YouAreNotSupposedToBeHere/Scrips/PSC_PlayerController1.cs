@@ -15,18 +15,21 @@ public class PSC_PlayerController1 : MonoBehaviour
     public EN_IntTags Interact => interact;
     private Collider interactCollider; // Almacena el collider del interactor
     private bool Block; // Bool que bloque el movimiento por completo del jugador
-    private bool Moving; //Bool que indica si el jugador se esta moviendo;
 
     [Header("mechanics")]
-    bool HoldRobot = true; //bool que guarda si el jugador lleva el robot
+    public bool HoldRobot = true; //bool que guarda si el jugador lleva el robot
     bool WalkRobot; //Bool que guarda si el robot esta en walk
+    [SerializeField] float damage = 0.01f;
 
 
     [Header("Referencias a componentes")]
     [SerializeField] Transform Interactor; //transform del interactor
     [SerializeField] GameObject Robot; //el robot que el jugador lleva
     [SerializeField] Transform Spawn; //transform donde el robot aparecera
+    [SerializeField] GameObject Origin;
     [SerializeField] GameObject RobotThrow; //El robot que el jugador deja
+    [SerializeField] MAN_Health Health;
+    [SerializeField] MAN_SceneManager Manager;
     Rigidbody rb;
     Animator anim;
 
@@ -56,7 +59,7 @@ public class PSC_PlayerController1 : MonoBehaviour
         interactCollider = null;
         float MinDistance = float.MaxValue;
 
-        foreach(Collider col in collisions)
+        foreach (Collider col in collisions)
         {
             EN_IntTags foundtag = ObtainTag(col);
 
@@ -81,7 +84,7 @@ public class PSC_PlayerController1 : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        Transform origen = Interactor !=null ? Interactor : transform;
+        Transform origen = Interactor != null ? Interactor : transform;
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(origen.position, RadioInter);
     }
@@ -106,18 +109,29 @@ public class PSC_PlayerController1 : MonoBehaviour
 
     void Lay()
     {
+        HoldRobot = false;
         if (!WalkRobot)
         {
+            Robot.SetActive(false);
             RobotThrow.transform.position = Spawn.position;
             Block = false;
         }
         else
         {
+            Robot.SetActive(false);
             RobotThrow.transform.position = Spawn.position;
+            RobotThrow.transform.rotation = transform.rotation;
             SOB_Robot controller = RobotThrow.GetComponent<SOB_Robot>();
             controller.Walk = true;
             Block = false;
         }
+    }
+
+    private void grab()
+    {
+        RobotThrow.transform.position = Origin.transform.position;
+        Robot.SetActive(true);
+        HoldRobot = true;
     }
 
     void Rotate()
@@ -137,37 +151,48 @@ public class PSC_PlayerController1 : MonoBehaviour
         if (collision.gameObject.CompareTag("Box"))
         {
             anim.SetBool("Push", true);
-        }   
+        }
     }
 
     private void OnCollisionExit(Collision collision)
     {
         if (collision.gameObject.CompareTag("Box"))
         {
-            anim.SetBool("Push", true);
+            anim.SetBool("Push", false);
         }
     }
 
     //private void AnimatorManager()
     //{
-        //gestion del animator
+    //gestion del animator
     //}
 
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.CompareTag("Vision"))
+        {
+            Health.Health = Health.Health - damage;
+            if (Health.Health <= 0)
+            {
+                Manager.Restart();
+            }
+        }
+    }
 
     #region Input Methods
     public void OnMove(InputAction.CallbackContext context)
     {
-        moveInput = context.ReadValue<Vector2>();
         if (Block) return;
-        if (context.performed)
-        {
-            Moving = true;
-
-        }
-        else if (context.canceled)
-        {
-            Moving = false;
-        }
+        moveInput = context.ReadValue<Vector2>();
+        //if (context.performed)
+        //{
+        //    anim.SetBool("Move", true);
+        //
+        //}
+        //else if (context.canceled)
+        //{
+        //    anim.SetBool("Move", false);
+        //}
     }
 
     public void OnInteract(InputAction.CallbackContext context)
@@ -176,16 +201,17 @@ public class PSC_PlayerController1 : MonoBehaviour
 
         if (Interact == EN_IntTags.Buttons)
         {
-            //if (interactCollider.TryGetComponent(out SOB_Button button))
-            //{
-                Debug.Log("Boton");
-                //button.Press();
-            //}
+            if (interactCollider.TryGetComponent(out SOB_Button button))
+            {
+            Debug.Log("Boton");
+            button.Press();
+            }
         }
         else if (Interact == EN_IntTags.Robot)
         {
             Debug.Log("Robot");
             //anim.SetTrigger("Grab");
+            grab();
 
         }
         else if (!WalkRobot && HoldRobot)
@@ -214,18 +240,6 @@ public class PSC_PlayerController1 : MonoBehaviour
             //anim.SetTrigger("Lay");
             Block = true;
             Lay();
-        }
-    }
-
-    private void OnCollisionStay(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Vision"))
-        {
-            health = health - damage
-            if (health =< 0)
-            {
-                Reset();
-            }
         }
     }
 

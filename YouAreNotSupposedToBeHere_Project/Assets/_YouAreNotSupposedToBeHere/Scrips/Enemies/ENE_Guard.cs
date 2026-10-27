@@ -4,9 +4,10 @@ public class ENE_Guard : MonoBehaviour
 {
     Animator anim;
     [SerializeField] float speed = 4f;
-    [SerializeField] float Rotate = 2f;
+    //[SerializeField] float Rotate = 2f;
     [SerializeField] bool patrol = false; // Variable de la que depende que el guardia tenga o no movimiento de patruya
     [SerializeField] bool chase = true; //Variable que indica que esta buscando el robot
+    [SerializeField] bool Hold = false;
     [SerializeField] GameObject RobotHold; // Variable que guarda el objeto del robot en su mano
     [SerializeField] GameObject RobotTarget; // Variable que guarda el robot al que busca cuando se active chase
     [SerializeField] GameObject RobotStand; // Variable que guarda el stand en el que dejara el muñeco
@@ -28,7 +29,14 @@ public class ENE_Guard : MonoBehaviour
             {
                 Vision.SetActive(false);
                 anim.SetBool("Pick", true);
+                RobotTarget.SetActive(false); //quitable
+                //anim.SetBool("Pick", true);
                 chase = false;
+                Hold = true;
+            }
+            if (Hold == true)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, RobotStand.transform.position, speed * Time.deltaTime);
             }
         }
     }

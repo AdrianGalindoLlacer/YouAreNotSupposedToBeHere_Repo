@@ -1,9 +1,14 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MAN_Health : MonoBehaviour
 {
-    public float Health = 100f;
+    public float Health = 1f;
+    [SerializeField] Image image;
 
+    private void Update()
+    {
+        image.fillAmount = Health;
+    }
 
 }
