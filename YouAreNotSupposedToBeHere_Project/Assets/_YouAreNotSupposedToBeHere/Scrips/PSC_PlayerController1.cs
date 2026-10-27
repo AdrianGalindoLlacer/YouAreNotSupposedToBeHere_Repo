@@ -221,7 +221,7 @@ public class PSC_PlayerController1 : MonoBehaviour
         }
         else
         {
-            Debug.Log("NPostit");
+            Debug.Log("NormalMode");
             WalkRobot = false;
         }
     }

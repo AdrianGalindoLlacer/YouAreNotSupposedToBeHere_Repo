@@ -56,7 +56,7 @@ public class MAN_SceneManager : MonoBehaviour
     #region Input Methods
     public void OnPause(InputAction.CallbackContext context)
     {
-        if (Paused) pause();
+        if (!Paused) pause();
         else Resume();
     }
     #endregion
