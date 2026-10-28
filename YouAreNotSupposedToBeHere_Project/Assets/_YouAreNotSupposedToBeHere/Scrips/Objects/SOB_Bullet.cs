@@ -24,21 +24,17 @@ public class SOB_Bullet : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Wall") || collision.gameObject.CompareTag("Robot"))
+        if (other.gameObject.CompareTag("Wall") || other.gameObject.CompareTag("Robot"))
         {
             Move = false;
             Destroy(gameObject, 0f); //se quitara cuando esten las animaciones
             //anim.Settrigger("Impact");
         }
-        if (collision.gameObject.CompareTag("Guard"))
+        if (other.gameObject.CompareTag("Guard"))
         {
-            Health.Health = Health.Health - damage;
-            if (Health.Health <= 0)
-            {
                 Manager.Restart();
-            }
         }
     }
 }

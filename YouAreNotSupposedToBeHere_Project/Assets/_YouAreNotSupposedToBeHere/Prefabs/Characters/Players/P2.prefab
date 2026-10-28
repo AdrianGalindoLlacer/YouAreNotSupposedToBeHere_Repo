@@ -160,7 +160,7 @@ MonoBehaviour:
   Speed: 10
   MaxForce: 1
   moveInput: {x: 0, y: 0}
-  RotationSpeed: 10
+  RotationSpeed: 30
   InteractLayer:
     serializedVersion: 2
     m_Bits: 4294967295
