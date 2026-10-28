@@ -9,7 +9,7 @@ public class MAN_SceneManager : MonoBehaviour
     [SerializeField] GameObject PauseMenu;
     [SerializeField] GameObject UI;
     private bool Paused = false;
-    private string exit = "SCN_Menu";
+    private string exit = "SCE_Menu";
 
 
 

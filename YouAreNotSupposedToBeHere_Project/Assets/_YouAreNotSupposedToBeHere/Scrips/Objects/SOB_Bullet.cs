@@ -4,7 +4,6 @@ public class SOB_Bullet : MonoBehaviour
 {
     //[SerializeField]Animator anim;
     [SerializeField] float speed = 3f;
-    [SerializeField] float damage = 0.30f;
     [SerializeField] MAN_Health Health;
     [SerializeField] MAN_SceneManager Manager;
     public bool Move = false;
