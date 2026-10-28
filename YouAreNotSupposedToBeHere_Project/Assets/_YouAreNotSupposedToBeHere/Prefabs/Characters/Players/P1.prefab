@@ -173,17 +173,18 @@ MonoBehaviour:
   Speed: 3
   MaxForce: 1
   moveInput: {x: 0, y: 0}
-  RotationSpeed: 10
+  RotationSpeed: 30
   InteractLayer:
     serializedVersion: 2
     m_Bits: 4294967295
   interact: 0
-  RadioInter: 0.1
+  RadioInter: 1
   HoldRobot: 1
   damage: 0.01
   Interactor: {fileID: 4835473948211492862}
   Robot: {fileID: 0}
   Spawn: {fileID: 6703316769511463311}
+  Origin: {fileID: 0}
   RobotThrow: {fileID: 0}
   Health: {fileID: 0}
   Manager: {fileID: 0}
