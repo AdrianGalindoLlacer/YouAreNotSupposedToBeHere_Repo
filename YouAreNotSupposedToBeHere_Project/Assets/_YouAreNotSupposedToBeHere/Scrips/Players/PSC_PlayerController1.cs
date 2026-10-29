@@ -115,20 +115,19 @@ public class PSC_PlayerController1 : MonoBehaviour
         if (!WalkRobot)
         {
             Robot.SetActive(false);
-            RobotThrow.transform.position = Spawn.position;
+            RobotThrow.transform.SetPositionAndRotation(Spawn.position, transform.rotation);
             Block = false;
         }
         else
         {
             Robot.SetActive(false);
-            RobotThrow.transform.position = Spawn.position;
-            RobotThrow.transform.rotation = transform.rotation;
+            RobotThrow.transform.SetPositionAndRotation(Spawn.position, transform.rotation);
             controller.Walk = true;
             Block = false;
         }
     }
 
-    private void grab()
+    private void Grab()
     {
         controller.Walk = false;
         RobotThrow.transform.position = Origin.transform.position;
@@ -174,7 +173,7 @@ public class PSC_PlayerController1 : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Vision"))
         {
-            Health.Health = Health.Health - damage;
+            Health.Health -= damage;
             if (Health.Health <= 0)
             {
                 Manager.Restart();
@@ -214,7 +213,7 @@ public class PSC_PlayerController1 : MonoBehaviour
         {
             Debug.Log("Robot");
             //anim.SetTrigger("Grab");
-            grab();
+            Grab();
 
         }
         else if (!WalkRobot && HoldRobot)

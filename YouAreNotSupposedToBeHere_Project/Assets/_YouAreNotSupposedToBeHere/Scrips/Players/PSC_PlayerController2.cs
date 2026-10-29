@@ -120,7 +120,7 @@ public class PSC_PlayerController2 : MonoBehaviour
     {
         if (PostIt)
         {
-            GameObject Projectile = Instantiate(SBullet, ShootPoint.position, transform.rotation);
+            Instantiate(SBullet, ShootPoint.position, transform.rotation);
             SpecialAmmo--;
             Ammo--;
             SOB_Bullet controller = Bullet.GetComponent<SOB_Bullet>();
@@ -147,7 +147,7 @@ public class PSC_PlayerController2 : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Vision"))
         {
-            Health.Health = Health.Health - damage;
+            Health.Health -= damage;
             if (Health.Health <= 0)
             {
                 Manager.Restart();

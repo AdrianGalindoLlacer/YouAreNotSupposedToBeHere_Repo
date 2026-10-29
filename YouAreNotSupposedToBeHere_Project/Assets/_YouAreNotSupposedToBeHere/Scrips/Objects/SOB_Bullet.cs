@@ -19,7 +19,7 @@ public class SOB_Bullet : MonoBehaviour
         }
         else
         {
-            transform.Translate(Vector3.forward * speed * Time.deltaTime);
+            transform.Translate(speed * Time.deltaTime * Vector3.forward);
         }
     }
 
@@ -28,7 +28,7 @@ public class SOB_Bullet : MonoBehaviour
         if (other.gameObject.CompareTag("Wall") || other.gameObject.CompareTag("Robot"))
         {
             Move = false;
-            Destroy(gameObject, 0f); //se quitara cuando esten las animaciones
+            Destroy(gameObject); //se quitara cuando esten las animaciones
             //anim.Settrigger("Impact");
         }
         if (other.gameObject.CompareTag("Guard"))

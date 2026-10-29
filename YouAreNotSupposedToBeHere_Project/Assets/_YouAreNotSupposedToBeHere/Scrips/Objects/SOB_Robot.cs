@@ -26,7 +26,7 @@ public class SOB_Robot : MonoBehaviour
         }
         else
         {
-            transform.Translate(Vector3.forward * speed * Time.deltaTime);
+            transform.Translate(speed * Time.deltaTime * Vector3.forward);
             //anim.SetBool("Movement", true);
         }
 
@@ -38,11 +38,6 @@ public class SOB_Robot : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Bullet"))
-        {
-            //anim.SetTrigger("Sinergy");
-            sound = true;
-        }
         if (collision.gameObject.CompareTag("Wall"))
         {
             //anim.SetTrigger("Idle");
@@ -56,5 +51,13 @@ public class SOB_Robot : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Bullet"))
+        {
+            //anim.SetTrigger("Sinergy");
+            sound = true;
+        }
+    }
 
 }

@@ -50,7 +50,7 @@ public class ENE_Guard : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, GOrigin.transform.position, speed * Time.deltaTime);
         }
     }
-    private void pick()
+    private void Pick()
     {
         Target.sound = false;
         RobotHold.SetActive(true);
