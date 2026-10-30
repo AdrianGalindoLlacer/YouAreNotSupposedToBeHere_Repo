@@ -9,7 +9,7 @@ public class MAN_SceneManager : MonoBehaviour
     [SerializeField] GameObject PauseMenu;
     [SerializeField] GameObject UI;
     private bool Paused = false;
-    private string exit = "SCN_Menu";
+    private string exit = "SCE_Menu";
 
 
 
@@ -28,7 +28,7 @@ public class MAN_SceneManager : MonoBehaviour
         SceneManager.LoadScene(NextIndex);
     }
 
-    public void pause()
+    public void Pause()
     {
         PauseMenu.SetActive(true);
         UI.SetActive(false);
@@ -60,7 +60,7 @@ public class MAN_SceneManager : MonoBehaviour
     #region Input Methods
     public void OnPause(InputAction.CallbackContext context)
     {
-        if (!Paused) pause();
+        if (!Paused) Pause();
         else Resume();
     }
     #endregion

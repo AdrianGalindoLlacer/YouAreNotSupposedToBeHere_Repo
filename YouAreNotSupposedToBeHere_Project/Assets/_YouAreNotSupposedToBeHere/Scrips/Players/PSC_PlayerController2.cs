@@ -1,11 +1,11 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PSC_PlayerController1 : MonoBehaviour
+public class PSC_PlayerController2 : MonoBehaviour
 {
     #region General variables
     [Header("Movement")]
-    [SerializeField] float Speed = 3f;
+    public float Speed = 3f;
     [SerializeField] float MaxForce = 1f; //Fuerza de arranque
     [SerializeField] Vector2 moveInput;
     [SerializeField] float RotationSpeed = 10f; // Velocidad de rotacion
@@ -17,22 +17,22 @@ public class PSC_PlayerController1 : MonoBehaviour
     private bool Block; // Bool que bloque el movimiento por completo del jugador
 
     [Header("mechanics")]
-    public bool HoldRobot = true; //bool que guarda si el jugador lleva el robot
-    bool WalkRobot; //Bool que guarda si el robot esta en walk
+    public int Ammo; //Municion del arma total
+    public int SpecialAmmo; //PostIts que tiene el player
+    private bool PostIt; //Bool que activa el disparar postIts
+    [SerializeField] bool CanShoot; //Bool que impide al jugador disparar
+    [SerializeField] bool Hide; // bool que indica que el jugador esta escondido
     [SerializeField] float damage = 0.01f;
 
-
     [Header("Referencias a componentes")]
-    [SerializeField] Transform Interactor; //transform del interactor
-    [SerializeField] GameObject Robot; //el robot que el jugador lleva
-    [SerializeField] Transform Spawn; //transform donde el robot aparecera
-    [SerializeField] GameObject Origin;
-    [SerializeField] GameObject RobotThrow; //El robot que el jugador deja
+    [SerializeField] Transform Interactor; //almacena el transform del interactor
+    [SerializeField] Transform ShootPoint; //almacena el transform de donde salen las balas
+    [SerializeField] GameObject Bullet; //almacena las balas
+    [SerializeField] GameObject SBullet; //almacena las balas con PostIt
     [SerializeField] MAN_Health Health;
     [SerializeField] MAN_SceneManager Manager;
-    SOB_Robot controller;
-    Rigidbody rb;
-    Animator anim;
+    Rigidbody rb; //almacena el rigidbody del jugador
+    Animator anim; //almacena el animator del jugador
 
 
 
@@ -42,12 +42,6 @@ public class PSC_PlayerController1 : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
-    }
-    void Start()
-    {
-        controller = RobotThrow.GetComponent<SOB_Robot>();
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
     }
 
     private void Update()
@@ -79,15 +73,16 @@ public class PSC_PlayerController1 : MonoBehaviour
 
     private EN_IntTags ObtainTag(Collider col)
     {
-        if (col.CompareTag("Robot")) return EN_IntTags.Robot;
+        if (col.CompareTag("Slide")) return EN_IntTags.Slide;
         if (col.CompareTag("Buttons")) return EN_IntTags.Buttons;
+        if (col.CompareTag("Hideout")) return EN_IntTags.Hideout;
         return EN_IntTags.Null;
     }
 
     private void OnDrawGizmosSelected()
     {
         Transform origen = Interactor != null ? Interactor : transform;
-        Gizmos.color = Color.green;
+        Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(origen.position, RadioInter);
     }
 
@@ -98,7 +93,6 @@ public class PSC_PlayerController1 : MonoBehaviour
 
     void Movement()
     {
-        if (Block) return;
 
         Vector3 currentVelocity = rb.linearVelocity;
         Vector3 targetVelocity = new Vector3(moveInput.x, 0, moveInput.y) * Speed;
@@ -106,35 +100,8 @@ public class PSC_PlayerController1 : MonoBehaviour
         velocityChange = new Vector3(velocityChange.x, 0, velocityChange.z);
         velocityChange = Vector3.ClampMagnitude(velocityChange, MaxForce);
         rb.AddForce(velocityChange, ForceMode.VelocityChange);
+
         Rotate();
-    }
-
-    void Lay()
-    {
-        HoldRobot = false;
-        if (!WalkRobot)
-        {
-            Robot.SetActive(false);
-            RobotThrow.transform.position = Spawn.position;
-            Block = false;
-        }
-        else
-        {
-            Robot.SetActive(false);
-            RobotThrow.transform.position = Spawn.position;
-            RobotThrow.transform.rotation = transform.rotation;
-            controller.Walk = true;
-            Block = false;
-        }
-    }
-
-    private void grab()
-    {
-        controller.Walk = false;
-        RobotThrow.transform.position = Origin.transform.position;
-        Robot.SetActive(true);
-        HoldRobot = true;
-        Block = false;
     }
 
     void Rotate()
@@ -149,19 +116,24 @@ public class PSC_PlayerController1 : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    void Shoot()
     {
-        if (collision.gameObject.CompareTag("Box"))
+        if (PostIt)
         {
-            anim.SetBool("Push", true);
+            Instantiate(SBullet, ShootPoint.position, transform.rotation);
+            SpecialAmmo--;
+            Ammo--;
+            SOB_Bullet controller = Bullet.GetComponent<SOB_Bullet>();
+            controller.Move = true;
+            Block = false;
         }
-    }
-
-    private void OnCollisionExit(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Box"))
+        else
         {
-            anim.SetBool("Push", false);
+            Instantiate(Bullet, ShootPoint.position, transform.rotation);
+            Ammo--;
+            SOB_Bullet controller = SBullet.GetComponent<SOB_Bullet>();
+            controller.Move = true;
+            Block = false;
         }
     }
 
@@ -170,18 +142,18 @@ public class PSC_PlayerController1 : MonoBehaviour
     //gestion del animator
     //}
 
+
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("Vision"))
         {
-            Health.Health = Health.Health - damage;
+            Health.Health -= damage;
             if (Health.Health <= 0)
             {
                 Manager.Restart();
             }
         }
     }
-
     #region Input Methods
     public void OnMove(InputAction.CallbackContext context)
     {
@@ -206,43 +178,64 @@ public class PSC_PlayerController1 : MonoBehaviour
         {
             if (interactCollider.TryGetComponent(out SOB_Button button))
             {
-            Debug.Log("Boton");
-            button.Press();
+                Debug.Log("Boton");
+                button.Press();
             }
         }
-        else if (Interact == EN_IntTags.Robot)
+        else if (Hide)
         {
-            Debug.Log("Robot");
-            //anim.SetTrigger("Grab");
-            grab();
-
+            Hide = false;
+            Block = false;
+            Debug.Log("NEscondite");
+            //anim.SetBool("Hide", false);
         }
-        else if (!WalkRobot && HoldRobot)
+        else if (Interact == EN_IntTags.Hideout)
         {
-            Debug.Log("WalkMode");
-            WalkRobot = true;
+            Hide = true;
+            Debug.Log("Escondite");
+            Block = true;
+            //anim.SetBool("Hide", true);
+            if (interactCollider.TryGetComponent(out SOB_Hideout Hideout))
+            {
+                Hideout.Hiding = true;
+            }
+        }
+        else if (Interact == EN_IntTags.Slide)
+        {
+            if (interactCollider.TryGetComponent(out SOB_Slide Slide))
+            {
+                //anim.SetTrigger("Slide");
+                Slide.Slide();
+            }
+            Debug.Log("Tobogan");
+        }
+        else if (!PostIt && SpecialAmmo > 0)
+        {
+            Debug.Log("Postit");
+            PostIt = true;
         }
         else
         {
-            Debug.Log("NormalMode");
-            WalkRobot = false;
+            Debug.Log("NPostit");
+            PostIt = false;
         }
     }
 
-    public void OnLay(InputAction.CallbackContext context)
+    public void Onshot(InputAction.CallbackContext context)
     {
         if (!context.performed) return;
 
-        if (!HoldRobot)
+        if (Ammo <= 0)
         {
-            //anim.SetTrigger("NoRobot");
+            //anim.SetTrigger("NoAmmo");
             Block = true;
         }
         else
         {
-            //anim.SetTrigger("Lay");
+
+            //anim.SetTrigger("Shoot");
             Block = true;
-            Lay();
+            Shoot();
         }
     }
 
