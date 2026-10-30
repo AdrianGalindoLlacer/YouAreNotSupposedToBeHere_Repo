@@ -13,7 +13,7 @@ public class ENE_Camera : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
-    private void OnTriggerEnter(Collider collision)
+    private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("SBullet"))
         {
