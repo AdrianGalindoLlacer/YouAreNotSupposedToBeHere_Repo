@@ -592,6 +592,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_StraightWall_low (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a73455a6411eb844b4223ada275fef0, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3231,6 +3235,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5a73455a6411eb844b4223ada275fef0, type: 3}
       propertyPath: m_Name
       value: SM_StraightWall_low (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a73455a6411eb844b4223ada275fef0, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6462,6 +6470,7 @@ GameObject:
   - component: {fileID: 671727815}
   - component: {fileID: 671727818}
   - component: {fileID: 671727814}
+  - component: {fileID: 671727819}
   m_Layer: 0
   m_Name: Robot
   m_TagString: Robot
@@ -6577,6 +6586,33 @@ MonoBehaviour:
   speed: 2
   Walk: 0
   sound: 0
+--- !u!54 &671727819
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 671727813}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!114 &678094831 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9111803320937247920, guid: 2f27a7929a9863b48ba8a26b1a307bb9, type: 3}
@@ -9083,6 +9119,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5a73455a6411eb844b4223ada275fef0, type: 3}
       propertyPath: m_Name
       value: SM_StraightWall_low (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a73455a6411eb844b4223ada275fef0, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13765,6 +13805,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_StraightWall_low (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a73455a6411eb844b4223ada275fef0, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14761,6 +14805,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5a73455a6411eb844b4223ada275fef0, type: 3}
       propertyPath: m_Name
       value: SM_StraightWall_low (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a73455a6411eb844b4223ada275fef0, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17613,6 +17661,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_StraightWall_low (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a73455a6411eb844b4223ada275fef0, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18260,6 +18312,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5a73455a6411eb844b4223ada275fef0, type: 3}
       propertyPath: m_Name
       value: SM_StraightWall_low (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a73455a6411eb844b4223ada275fef0, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19955,6 +20011,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5a73455a6411eb844b4223ada275fef0, type: 3}
       propertyPath: m_Name
       value: SM_StraightWall_low (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a73455a6411eb844b4223ada275fef0, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

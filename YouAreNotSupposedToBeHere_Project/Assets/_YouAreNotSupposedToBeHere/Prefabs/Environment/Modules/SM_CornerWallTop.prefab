@@ -128,6 +128,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_CornerWallTop_low
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1a37c0b3c4216144d865295e0a43812d, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

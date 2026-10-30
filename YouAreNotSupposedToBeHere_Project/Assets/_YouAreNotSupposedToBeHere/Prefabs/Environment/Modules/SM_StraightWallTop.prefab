@@ -84,6 +84,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_StraightWallTop_low
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9088851a84a272d439f283401f8ffd6e, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

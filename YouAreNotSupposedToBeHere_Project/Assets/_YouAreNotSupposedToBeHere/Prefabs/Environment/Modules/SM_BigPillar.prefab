@@ -84,6 +84,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_BigPillar_low
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8173db48d964d2042ba8897c83f280fc, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
