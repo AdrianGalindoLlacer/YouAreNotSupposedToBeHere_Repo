@@ -102,6 +102,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 180156573898903047, guid: 540447893cffb9d4ab2fe2cb48e4d8f6, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f62a6e6d1a0b6f14ea5e7c715aa8c2b3, type: 2}
     - target: {fileID: 919132149155446097, guid: 540447893cffb9d4ab2fe2cb48e4d8f6, type: 3}
       propertyPath: m_Name
       value: SM_GwenToyShelf
