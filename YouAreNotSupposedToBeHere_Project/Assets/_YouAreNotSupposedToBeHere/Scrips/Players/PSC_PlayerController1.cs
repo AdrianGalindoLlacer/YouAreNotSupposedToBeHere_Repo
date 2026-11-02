@@ -178,6 +178,7 @@ public class PSC_PlayerController1 : MonoBehaviour
             if (Health.Health <= 0)
             {
                 Manager.Restart();
+                anim.SetTrigger("GameOver");
             }
         }
     }
@@ -229,7 +230,7 @@ public class PSC_PlayerController1 : MonoBehaviour
         {
             Debug.Log("WalkMode");
             WalkRobot = !WalkRobot;
-            //anim.SetTrigger("change");
+            //anim.SetTrigger("Change");
         }
 
     }
