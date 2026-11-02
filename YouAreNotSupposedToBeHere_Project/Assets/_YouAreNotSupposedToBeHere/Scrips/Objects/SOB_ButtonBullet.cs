@@ -10,14 +10,13 @@ public class SOB_ButtonBullet : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
-    private void OnTriggerEnter(Collider collision)
+    private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Bullet") || collision.gameObject.CompareTag("SBullet"))
         {
             Press();
         }
     }
-
     public void Press()
     {
         if (count >= 0)

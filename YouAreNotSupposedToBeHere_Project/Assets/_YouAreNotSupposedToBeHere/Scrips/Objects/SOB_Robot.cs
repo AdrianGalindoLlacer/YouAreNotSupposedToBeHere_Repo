@@ -22,6 +22,7 @@ public class SOB_Robot : MonoBehaviour
         if (!Walk)
         {
             //anim.SetBool("Movement", false);
+            //anim.SetTrigger("Idle");
             return;
         }
         else
@@ -48,7 +49,6 @@ public class SOB_Robot : MonoBehaviour
         {
             //anim.SetTrigger("Trip");
             Walk = false;
-            sound = false;
         }
         if (collision.gameObject.CompareTag("Bullet"))
         {

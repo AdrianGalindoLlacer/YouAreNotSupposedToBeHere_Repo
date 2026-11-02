@@ -81,6 +81,7 @@ public class PSC_PlayerController1 : MonoBehaviour
     {
         if (col.CompareTag("Robot")) return EN_IntTags.Robot;
         if (col.CompareTag("Buttons")) return EN_IntTags.Buttons;
+        if (col.CompareTag("Stand")) return EN_IntTags.Stand;
         return EN_IntTags.Null;
     }
 
@@ -207,25 +208,30 @@ public class PSC_PlayerController1 : MonoBehaviour
             {
             Debug.Log("Boton");
             button.Press();
+            anim.SetTrigger("Button");
             }
         }
         else if (Interact == EN_IntTags.Robot)
         {
             Debug.Log("Robot");
-            //anim.SetTrigger("Grab");
+            //anim.SetTrigger("GrabF");
             Grab();
 
         }
-        else if (!WalkRobot && HoldRobot)
+        else if (Interact == EN_IntTags.Stand)
+        {
+            Debug.Log("Robot");
+            //anim.SetTrigger("GrabS");
+            Grab();
+
+        }
+        else if (HoldRobot)
         {
             Debug.Log("WalkMode");
-            WalkRobot = true;
+            WalkRobot = !WalkRobot;
+            //anim.SetTrigger("change");
         }
-        else
-        {
-            Debug.Log("NormalMode");
-            WalkRobot = false;
-        }
+
     }
 
     public void OnLay(InputAction.CallbackContext context)
