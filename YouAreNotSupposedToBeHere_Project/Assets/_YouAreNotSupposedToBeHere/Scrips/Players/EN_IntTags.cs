@@ -7,5 +7,5 @@ public enum EN_IntTags
     Slide,
     Hideout,
     Robot,
-    
+    Stand,
 }

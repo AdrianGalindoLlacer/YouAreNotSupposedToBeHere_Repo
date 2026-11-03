@@ -80,9 +80,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6723905409599390794, guid: 72336028d513c654faf1142d22119e82, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1403394926758828009, guid: 72336028d513c654faf1142d22119e82, type: 3}
+      propertyPath: m_TagString
+      value: Vision
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 72336028d513c654faf1142d22119e82, type: 3}
       propertyPath: m_Name
       value: SM_2mCameraRange
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 72336028d513c654faf1142d22119e82, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

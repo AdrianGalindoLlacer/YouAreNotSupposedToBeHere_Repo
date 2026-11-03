@@ -3,33 +3,35 @@ using UnityEngine;
 public class SOB_ButtonBullet : MonoBehaviour
 {
     private Animator anim;
-    [SerializeField] Animator Door; // Animator de la puerta para mandarle señales
+    [SerializeField] Animator DoorRight;
+    [SerializeField] Animator DoorLeft;
     private int count = 0; //Variable que guarda el estado en el que esta el boton (Cambiable por un bool)
     void Awake()
     {
         anim = GetComponent<Animator>();
     }
 
-    private void OnTriggerEnter(Collider collision)
+    private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Bullet") || collision.gameObject.CompareTag("SBullet"))
         {
             Press();
         }
     }
-
     public void Press()
     {
         if (count >= 0)
         {
             anim.SetTrigger("Press");
-            Door.SetBool("Open", true);
+            DoorRight.SetBool("Open", false);
+            DoorLeft.SetBool("Open", false);
             count++;
         }
         else
         {
             anim.SetTrigger("Press");
-            Door.SetBool("Open", false);
+            DoorRight.SetBool("Open", true);
+            DoorLeft.SetBool("Open", true);
             count--;
         }
     }

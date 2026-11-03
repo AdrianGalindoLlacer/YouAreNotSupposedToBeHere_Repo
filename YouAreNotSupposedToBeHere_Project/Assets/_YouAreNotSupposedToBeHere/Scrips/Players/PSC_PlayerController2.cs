@@ -150,6 +150,7 @@ public class PSC_PlayerController2 : MonoBehaviour
             Health.Health -= damage;
             if (Health.Health <= 0)
             {
+                anim.SetTrigger("GameOver");
                 Manager.Restart();
             }
         }
@@ -180,6 +181,7 @@ public class PSC_PlayerController2 : MonoBehaviour
             {
                 Debug.Log("Boton");
                 button.Press();
+                anim.SetTrigger("Button");
             }
         }
         else if (Hide)
@@ -209,15 +211,11 @@ public class PSC_PlayerController2 : MonoBehaviour
             }
             Debug.Log("Tobogan");
         }
-        else if (!PostIt && SpecialAmmo > 0)
+        else if (SpecialAmmo > 0)
         {
             Debug.Log("Postit");
-            PostIt = true;
-        }
-        else
-        {
-            Debug.Log("NPostit");
-            PostIt = false;
+            PostIt = !PostIt;
+            //anim.SetTrigger("change");
         }
     }
 
