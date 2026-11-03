@@ -84,6 +84,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_TallShelf1
       objectReference: {fileID: 0}
+    - target: {fileID: 2727224168706265898, guid: aa644cadbc8a6de429be3e1f3d424a63, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: bcce46995f60de6448ea76ec735ad78f, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

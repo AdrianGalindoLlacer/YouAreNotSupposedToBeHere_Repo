@@ -92,6 +92,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 5129094161881805183, guid: 04fe84912b451f748b41ea88506a243e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6c5698effff872c4b92b1de3a286c88d, type: 2}
+    - target: {fileID: 7659071582982404270, guid: 04fe84912b451f748b41ea88506a243e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6c5698effff872c4b92b1de3a286c88d, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

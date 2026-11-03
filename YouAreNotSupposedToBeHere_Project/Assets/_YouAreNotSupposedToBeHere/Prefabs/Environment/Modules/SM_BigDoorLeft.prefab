@@ -80,6 +80,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5663013430948800276, guid: 6c47af887b3d832498995ecb6f181767, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6c5698effff872c4b92b1de3a286c88d, type: 2}
+    - target: {fileID: -1014071683285084592, guid: 6c47af887b3d832498995ecb6f181767, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6c5698effff872c4b92b1de3a286c88d, type: 2}
     - target: {fileID: 919132149155446097, guid: 6c47af887b3d832498995ecb6f181767, type: 3}
       propertyPath: m_Name
       value: SM_BigDoorLeft_low

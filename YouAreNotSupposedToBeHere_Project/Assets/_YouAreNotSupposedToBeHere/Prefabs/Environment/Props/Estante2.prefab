@@ -68,6 +68,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_SmallToyBox (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1171787676350506514, guid: 5f0646005feebde44b4f1be60e7b95ab, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 77de6353867c58b4fa91bc0f33cd1731, type: 2}
     - target: {fileID: 4573068666842676165, guid: 5f0646005feebde44b4f1be60e7b95ab, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.164
@@ -130,6 +134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_SmallToyBox (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1171787676350506514, guid: 5f0646005feebde44b4f1be60e7b95ab, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f2ad4aac6b34154499c5eb6c5019045d, type: 2}
     - target: {fileID: 4573068666842676165, guid: 5f0646005feebde44b4f1be60e7b95ab, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.164
@@ -192,6 +200,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_SmallToyBox
       objectReference: {fileID: 0}
+    - target: {fileID: 1171787676350506514, guid: 5f0646005feebde44b4f1be60e7b95ab, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e7c0b4ab10bb10b4d933f824640b8fa6, type: 2}
     - target: {fileID: 4573068666842676165, guid: 5f0646005feebde44b4f1be60e7b95ab, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.164
@@ -254,6 +266,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_SmallToyBox (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1171787676350506514, guid: 5f0646005feebde44b4f1be60e7b95ab, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9a2321bbedbc41e439e3bc2e6c16ebee, type: 2}
     - target: {fileID: 4573068666842676165, guid: 5f0646005feebde44b4f1be60e7b95ab, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.164
@@ -316,6 +332,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_SmallToyBox (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 1171787676350506514, guid: 5f0646005feebde44b4f1be60e7b95ab, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b780b93b824ecf14791f11d0f57962b2, type: 2}
     - target: {fileID: 4573068666842676165, guid: 5f0646005feebde44b4f1be60e7b95ab, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.164
@@ -378,6 +398,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_SmallToyBox (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 1171787676350506514, guid: 5f0646005feebde44b4f1be60e7b95ab, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9a2321bbedbc41e439e3bc2e6c16ebee, type: 2}
     - target: {fileID: 4573068666842676165, guid: 5f0646005feebde44b4f1be60e7b95ab, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.164
@@ -440,6 +464,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_SmallToyBox (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 1171787676350506514, guid: 5f0646005feebde44b4f1be60e7b95ab, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9a2321bbedbc41e439e3bc2e6c16ebee, type: 2}
     - target: {fileID: 4573068666842676165, guid: 5f0646005feebde44b4f1be60e7b95ab, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.164
@@ -502,6 +530,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_SmallToyBox (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 1171787676350506514, guid: 5f0646005feebde44b4f1be60e7b95ab, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 77de6353867c58b4fa91bc0f33cd1731, type: 2}
     - target: {fileID: 4573068666842676165, guid: 5f0646005feebde44b4f1be60e7b95ab, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.164
@@ -564,6 +596,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_SmallToyBox (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 1171787676350506514, guid: 5f0646005feebde44b4f1be60e7b95ab, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f2ad4aac6b34154499c5eb6c5019045d, type: 2}
     - target: {fileID: 4573068666842676165, guid: 5f0646005feebde44b4f1be60e7b95ab, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.164
@@ -626,6 +662,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_SmallToyBox (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 1171787676350506514, guid: 5f0646005feebde44b4f1be60e7b95ab, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e66bfc5d1146f5044a603effb24eb7a3, type: 2}
     - target: {fileID: 4573068666842676165, guid: 5f0646005feebde44b4f1be60e7b95ab, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.164
@@ -688,6 +728,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_SmallToyBox (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1171787676350506514, guid: 5f0646005feebde44b4f1be60e7b95ab, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e7c0b4ab10bb10b4d933f824640b8fa6, type: 2}
     - target: {fileID: 4573068666842676165, guid: 5f0646005feebde44b4f1be60e7b95ab, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.164
@@ -750,6 +794,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_SmallToyBox (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1171787676350506514, guid: 5f0646005feebde44b4f1be60e7b95ab, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e66bfc5d1146f5044a603effb24eb7a3, type: 2}
     - target: {fileID: 4573068666842676165, guid: 5f0646005feebde44b4f1be60e7b95ab, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.164
@@ -812,6 +860,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_SmallToyBox (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 1171787676350506514, guid: 5f0646005feebde44b4f1be60e7b95ab, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e7c0b4ab10bb10b4d933f824640b8fa6, type: 2}
     - target: {fileID: 4573068666842676165, guid: 5f0646005feebde44b4f1be60e7b95ab, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.164
@@ -874,6 +926,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_SmallToyBox (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 1171787676350506514, guid: 5f0646005feebde44b4f1be60e7b95ab, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e66bfc5d1146f5044a603effb24eb7a3, type: 2}
     - target: {fileID: 4573068666842676165, guid: 5f0646005feebde44b4f1be60e7b95ab, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.164
@@ -936,6 +992,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_SmallToyBox (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1171787676350506514, guid: 5f0646005feebde44b4f1be60e7b95ab, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f2ad4aac6b34154499c5eb6c5019045d, type: 2}
     - target: {fileID: 4573068666842676165, guid: 5f0646005feebde44b4f1be60e7b95ab, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.164
@@ -998,6 +1058,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_SmallToyBox (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1171787676350506514, guid: 5f0646005feebde44b4f1be60e7b95ab, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b780b93b824ecf14791f11d0f57962b2, type: 2}
     - target: {fileID: 4573068666842676165, guid: 5f0646005feebde44b4f1be60e7b95ab, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.164
@@ -1060,6 +1124,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_SmallToyBox (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 1171787676350506514, guid: 5f0646005feebde44b4f1be60e7b95ab, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b780b93b824ecf14791f11d0f57962b2, type: 2}
     - target: {fileID: 4573068666842676165, guid: 5f0646005feebde44b4f1be60e7b95ab, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.164
@@ -1122,6 +1190,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_SmallToyBox (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 1171787676350506514, guid: 5f0646005feebde44b4f1be60e7b95ab, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9a2321bbedbc41e439e3bc2e6c16ebee, type: 2}
     - target: {fileID: 4573068666842676165, guid: 5f0646005feebde44b4f1be60e7b95ab, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.164
@@ -1184,6 +1256,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_SmallToyBox (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1171787676350506514, guid: 5f0646005feebde44b4f1be60e7b95ab, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e66bfc5d1146f5044a603effb24eb7a3, type: 2}
     - target: {fileID: 4573068666842676165, guid: 5f0646005feebde44b4f1be60e7b95ab, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.164
@@ -1246,6 +1322,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_SmallToyBox (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 1171787676350506514, guid: 5f0646005feebde44b4f1be60e7b95ab, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f2ad4aac6b34154499c5eb6c5019045d, type: 2}
     - target: {fileID: 4573068666842676165, guid: 5f0646005feebde44b4f1be60e7b95ab, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.164
@@ -1308,6 +1388,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_SmallToyBox (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1171787676350506514, guid: 5f0646005feebde44b4f1be60e7b95ab, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b780b93b824ecf14791f11d0f57962b2, type: 2}
     - target: {fileID: 4573068666842676165, guid: 5f0646005feebde44b4f1be60e7b95ab, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.164
@@ -1370,6 +1454,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_SmallToyBox (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 1171787676350506514, guid: 5f0646005feebde44b4f1be60e7b95ab, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 77de6353867c58b4fa91bc0f33cd1731, type: 2}
     - target: {fileID: 4573068666842676165, guid: 5f0646005feebde44b4f1be60e7b95ab, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.164
@@ -1432,6 +1520,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_SmallToyBox (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 1171787676350506514, guid: 5f0646005feebde44b4f1be60e7b95ab, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 77de6353867c58b4fa91bc0f33cd1731, type: 2}
     - target: {fileID: 4573068666842676165, guid: 5f0646005feebde44b4f1be60e7b95ab, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.164
@@ -1534,6 +1626,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_LongShelf
       objectReference: {fileID: 0}
+    - target: {fileID: 7416269286369901682, guid: 86f4abb6af19fe84aafbecceffa7c902, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6c5698effff872c4b92b1de3a286c88d, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1556,6 +1652,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_SmallToyBox (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 1171787676350506514, guid: 5f0646005feebde44b4f1be60e7b95ab, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e7c0b4ab10bb10b4d933f824640b8fa6, type: 2}
     - target: {fileID: 4573068666842676165, guid: 5f0646005feebde44b4f1be60e7b95ab, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.164

@@ -80,6 +80,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7992044233593912936, guid: 8133bad307296724daa8344f51a97c78, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 759d7788013db4642a89b983e5a0ff67, type: 2}
     - target: {fileID: 919132149155446097, guid: 8133bad307296724daa8344f51a97c78, type: 3}
       propertyPath: m_Name
       value: SM_SmallRectangleToyBox
