@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 7989019065943419866}
   - component: {fileID: 3060045651513348932}
   - component: {fileID: 4413360167593370742}
+  - component: {fileID: 7210324665310829806}
   m_Layer: 0
   m_Name: P2
   m_TagString: Untagged
@@ -337,6 +338,19 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7210324665310829806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7640326067371095140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c75945db7f511b2478b79794f8945b94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PSC_PlayerTroughWall
+  heightOffset: -1.11
 --- !u!1 &7934816801793833955
 GameObject:
   m_ObjectHideFlags: 0
