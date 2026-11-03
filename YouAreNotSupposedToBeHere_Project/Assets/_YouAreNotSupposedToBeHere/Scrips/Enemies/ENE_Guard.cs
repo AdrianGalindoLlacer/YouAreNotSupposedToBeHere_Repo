@@ -6,6 +6,7 @@ public class ENE_Guard : MonoBehaviour
     [SerializeField] float speed = 4f;
     //[SerializeField] float Rotate = 2f;
     [SerializeField] bool patrol = false; // Variable de la que depende que el guardia tenga o no movimiento de patruya
+    [SerializeField] bool chase = false; // Variable de la que depende que el guardia este o no buscando al robot
     [SerializeField] bool Hold = false;
     [SerializeField] bool Block = false;
     [SerializeField] GameObject RobotHold; // Variable que guarda el objeto del robot en su mano
@@ -55,7 +56,6 @@ public class ENE_Guard : MonoBehaviour
         Target.sound = false;
         RobotHold.SetActive(true);
         RobotTarget.transform.position = ROrigin.transform.position;
-        //anim.SetBool("Pick", false);
     }
 
     void Blocked()
@@ -80,21 +80,24 @@ public class ENE_Guard : MonoBehaviour
             patrol = false;
             Vision.SetActive(false);
             //anim.SetTrigger("Trip");
-            //anim.SetBool("Pick", true);
         }
-        if (collision.gameObject.CompareTag("Robot"))
-        {
-            Blocked();
-            Vision.SetActive(false);
-            //anim.SetBool("Pick", true);
-            Block = true;
-            Hold = true;
-        }
-        if (collision.gameObject.CompareTag("Stand") && Hold)
+        else if (collision.gameObject.CompareTag("Stand") && Hold)
         {
             Blocked();
             //anim.SetTrigger("Lay");
+            Hold = false;
+        }
+    }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Robot") && !patrol)
+        {
+            Blocked();
+            Vision.SetActive(false);
+            anim.SetTrigger("Pick");
+            Block = true;
+            Hold = true;
         }
     }
 }
