@@ -77,7 +77,7 @@ GameObject:
   - component: {fileID: 2810800579271964799}
   - component: {fileID: 676358307906438632}
   - component: {fileID: 273902331752971518}
-  - component: {fileID: 5782446135106239752}
+  - component: {fileID: 8839302913386734676}
   m_Layer: 0
   m_Name: P1
   m_TagString: Untagged
@@ -313,7 +313,7 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5782446135106239752
+--- !u!114 &8839302913386734676
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -322,7 +322,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7557874308227640538}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c75945db7f511b2478b79794f8945b94, type: 3}
+  m_Script: {fileID: 11500000, guid: 368a172f15f6cd44084188e498e6a0f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PSC_PlayerTroughWall
-  heightOffset: -1.11
+  heightOffset: 0.14
