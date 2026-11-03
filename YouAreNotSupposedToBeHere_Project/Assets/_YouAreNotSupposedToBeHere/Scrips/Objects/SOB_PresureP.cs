@@ -3,33 +3,30 @@ using UnityEngine;
 
 public class SOB_PresureP : MonoBehaviour
 {
-    //Animator anim;
+    Animator anim;
     [SerializeField] int count = 0; //Variable que almacena la cantidad de colliders que tiene encima
-    //[SerializeField] Animator Door; // Animator de la puerta para mandarle señales
-    [SerializeField] GameObject DoorRight; 
-    [SerializeField] GameObject DoorLeft; 
+    [SerializeField] Animator DoorRight;
+    [SerializeField] Animator DoorLeft;
 
 
-    //private void Awake()
-    //{
-    //    anim = GetComponent<Animator>();
-    //}
+    private void Awake()
+    {
+        anim = GetComponent<Animator>();
+    }
 
     private void Press()
     {
         if (count > 0)
         {
-            DoorLeft.SetActive(false);
-            DoorRight.SetActive(false);
-            //anim.SetBool("Press", false);
-            //Door.SetTrigger("Close");
+            anim.SetBool("Press", false);
+            DoorRight.SetBool("Open", false);
+            DoorLeft.SetBool("Open", false);
         }
         else
         {
-            DoorLeft.SetActive(true);
-            DoorRight.SetActive(true);
-            //anim.SetBool("Press", true);
-            //Door.SetTrigger("Open");
+            anim.SetBool("Press", true);
+            DoorRight.SetBool("Open", true);
+            DoorLeft.SetBool("Open", true);
         }
     }
 

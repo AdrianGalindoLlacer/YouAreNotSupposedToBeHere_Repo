@@ -201,6 +201,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ENE_Guard
   speed: 4
   patrol: 0
+  chase: 0
   Hold: 0
   Block: 0
   RobotHold: {fileID: 1480618766365950337}

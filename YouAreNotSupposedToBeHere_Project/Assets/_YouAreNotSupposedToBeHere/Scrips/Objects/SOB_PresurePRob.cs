@@ -5,11 +5,12 @@ public class SOB_PresurePRob : MonoBehaviour
 {
     Animator anim;
     private int count = 0;
-    [SerializeField] Animator Door;
-    [SerializeField] GameObject Robot;
-    [SerializeField] GameObject RobotStand;
-    [SerializeField] Transform Origin;
-    [SerializeField] SOB_Robot RobotCont;
+    [SerializeField] Animator DoorRight;
+    [SerializeField] Animator DoorLeft;
+    [SerializeField] GameObject Robot; //Robot que se lanza y se deja caer por el mapa
+    [SerializeField] GameObject RobotStand; //Visual del robot que esta siempre encima pero generalmente desactivado
+    [SerializeField] Transform Origin; //origen del robot al cual se le manda cuando entra en contacto
+    [SerializeField] SOB_Robot RobotCont; //Script del robot que se le manda el bool Walk = false para que deje de caminar y se quede quieto
 
     private void Awake()
     {
@@ -20,12 +21,14 @@ public class SOB_PresurePRob : MonoBehaviour
         if (count <= 0)
         {
             anim.SetBool("Press", false);
-            Door.SetTrigger("Close");
+            DoorRight.SetBool("Open", false);
+            DoorLeft.SetBool("Open", false);
         }
         else
         {
             anim.SetBool("Press", true);
-            Door.SetTrigger("Open");
+            DoorRight.SetBool("Open", true);
+            DoorLeft.SetBool("Open", true);
         }
     }
 
@@ -38,6 +41,8 @@ public class SOB_PresurePRob : MonoBehaviour
         }
         if (other.gameObject.CompareTag("Robot"))
         {
+            count++;
+            Press();
             RobotCont.Walk = false;
             Robot.transform.position = Origin.transform.position;
             RobotStand.SetActive(true);

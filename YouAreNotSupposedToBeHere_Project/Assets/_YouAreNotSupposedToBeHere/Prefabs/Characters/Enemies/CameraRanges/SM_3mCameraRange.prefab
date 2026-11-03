@@ -80,9 +80,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7575928948630250107, guid: c6ea17fc74ef5654b8a68f459513e067, type: 3}
+      propertyPath: m_TagString
+      value: Vision
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c6ea17fc74ef5654b8a68f459513e067, type: 3}
       propertyPath: m_Name
       value: SM_3mCameraRange
+      objectReference: {fileID: 0}
+    - target: {fileID: 3863190170740963067, guid: c6ea17fc74ef5654b8a68f459513e067, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
