@@ -31,6 +31,7 @@ public class ENE_Guard : MonoBehaviour
         if (Target.sound)
         {
             patrol = false;
+            chase = true;
             transform.position = Vector3.MoveTowards(transform.position, RobotTarget.transform.position, speed * Time.deltaTime);
         }
         else if (Hold)
@@ -79,25 +80,26 @@ public class ENE_Guard : MonoBehaviour
             Blocked();
             patrol = false;
             Vision.SetActive(false);
-            //anim.SetTrigger("Trip");
+            anim.SetTrigger("Trip");
         }
         else if (collision.gameObject.CompareTag("Stand") && Hold)
         {
             Blocked();
-            //anim.SetTrigger("Lay");
+            anim.SetTrigger("Lay");
             Hold = false;
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Robot") && !patrol)
+        if (other.gameObject.CompareTag("Robot") && chase)
         {
             Blocked();
             Vision.SetActive(false);
             anim.SetTrigger("Pick");
             Block = true;
             Hold = true;
+            chase = false;
         }
     }
 }

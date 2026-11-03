@@ -8,6 +8,7 @@ public class MAN_SceneManager : MonoBehaviour
     [SerializeField] PSC_PlayerController2 P2;
     [SerializeField] GameObject PauseMenu;
     [SerializeField] GameObject UI;
+    private int count;
     private bool Paused = false;
     private string exit = "SCE_Menu";
 
@@ -57,6 +58,25 @@ public class MAN_SceneManager : MonoBehaviour
         SceneManager.LoadScene(exit);
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            count++;
+            if (count == 2 && P1.HoldRobot)
+            {
+                NextScene();
+            }
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            count--;
+        }
+    }
     #region Input Methods
     public void OnPause(InputAction.CallbackContext context)
     {

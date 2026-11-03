@@ -1572,6 +1572,7 @@ GameObject:
   - component: {fileID: 8310582368245143039}
   - component: {fileID: 6123701162043784709}
   - component: {fileID: 4737659241762742687}
+  - component: {fileID: 3396239738090231402}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -1622,8 +1623,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MAN_SceneManager
   P1: {fileID: 0}
   P2: {fileID: 0}
-  PauseMenu: {fileID: 0}
-  UI: {fileID: 0}
+  PauseMenu: {fileID: 6085556583411005869}
+  UI: {fileID: 7355396057137726120}
 --- !u!1 &7355396057137726120
 GameObject:
   m_ObjectHideFlags: 0
@@ -2033,5 +2034,29 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6823711865373740443, guid: 34c05d136653a714a95a644c19da48cc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3396239738090231402}
   m_SourcePrefab: {fileID: 100100000, guid: 34c05d136653a714a95a644c19da48cc, type: 3}
+--- !u!65 &3396239738090231402
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7218110670784953549}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
