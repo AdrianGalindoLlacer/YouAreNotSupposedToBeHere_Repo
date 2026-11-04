@@ -80,10 +80,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6351801915980522556, guid: b91d1e2ccd7af3f42b23e58e69bfd7b5, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f62a6e6d1a0b6f14ea5e7c715aa8c2b3, type: 2}
     - target: {fileID: 919132149155446097, guid: b91d1e2ccd7af3f42b23e58e69bfd7b5, type: 3}
       propertyPath: m_Name
       value: SM_NormalPresurePlate
       objectReference: {fileID: 0}
+    - target: {fileID: 7461637786808781266, guid: b91d1e2ccd7af3f42b23e58e69bfd7b5, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d2c07eaa808f1a742bc9359539de43f2, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

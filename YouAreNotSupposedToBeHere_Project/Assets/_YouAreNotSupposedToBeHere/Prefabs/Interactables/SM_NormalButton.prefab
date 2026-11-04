@@ -80,6 +80,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4348777839224596217, guid: e4e20d1afb8d4424fa6ccd2f6888c11c, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 22f5c8f9522b7804b8c56482351487b2, type: 2}
     - target: {fileID: 919132149155446097, guid: e4e20d1afb8d4424fa6ccd2f6888c11c, type: 3}
       propertyPath: m_Name
       value: SM_NormalButton
@@ -88,6 +92,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Buttons
       objectReference: {fileID: 0}
+    - target: {fileID: 6352881883669408331, guid: e4e20d1afb8d4424fa6ccd2f6888c11c, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f62a6e6d1a0b6f14ea5e7c715aa8c2b3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
