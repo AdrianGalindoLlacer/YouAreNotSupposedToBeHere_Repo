@@ -21,7 +21,7 @@ public class PSC_PlayerController2 : MonoBehaviour
     public int SpecialAmmo; //PostIts que tiene el player
     private bool PostIt; //Bool que activa el disparar postIts
     [SerializeField] bool CanShoot; //Bool que impide al jugador disparar
-    [SerializeField] bool Hide; // bool que indica que el jugador esta escondido
+    public bool Hide; // bool que indica que el jugador esta escondido
     [SerializeField] float damage = 0.01f;
 
     [Header("Referencias a componentes")]

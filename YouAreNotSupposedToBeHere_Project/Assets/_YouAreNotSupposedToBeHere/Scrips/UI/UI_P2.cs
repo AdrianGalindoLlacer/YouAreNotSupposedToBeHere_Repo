@@ -10,6 +10,7 @@ public class UI_P2 : MonoBehaviour
     [SerializeField] private TMP_Text PostIts;
     [SerializeField] private Image BulletSprite;
     [SerializeField] private Image SBulletSprite;
+    [SerializeField] private GameObject HideSprite;
 
 
 
@@ -34,6 +35,14 @@ public class UI_P2 : MonoBehaviour
         {
             PostIts.text = "";
             SBulletSprite.color = Color.gray;
+        }
+        if (Controller.Hide)
+        {
+            HideSprite.SetActive(true);
+        }
+        else
+        {
+            HideSprite.SetActive(false);
         }
     }
 }
