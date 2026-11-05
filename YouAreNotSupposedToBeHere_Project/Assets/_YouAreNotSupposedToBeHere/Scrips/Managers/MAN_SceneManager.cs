@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -8,9 +9,14 @@ public class MAN_SceneManager : MonoBehaviour
     [SerializeField] PSC_PlayerController2 P2;
     [SerializeField] GameObject PauseMenu;
     [SerializeField] GameObject UI;
+    [SerializeField] CanvasGroup GameoverCanva;
+    [SerializeField] float GameOverDuration = 1f;
+    private float GOtime = 0f;
     private int count;
     private bool Paused = false;
     private string exit = "SCE_Menu";
+
+
 
 
 
@@ -39,6 +45,29 @@ public class MAN_SceneManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
         Paused = true;
+    }
+
+    public void gameover()
+    {
+        P1.enabled = false;
+        P2.enabled = false;
+        StartCoroutine(GameOverFade());
+    }
+
+    private IEnumerator GameOverFade()
+    {
+        GameoverCanva.interactable = true;
+        GameoverCanva.blocksRaycasts = true;
+
+
+        while (GOtime < GameOverDuration)
+        {
+            GOtime += Time.deltaTime;
+            GameoverCanva.alpha = Mathf.Clamp01(GOtime / GameOverDuration);
+            yield return null;
+        }
+        GameoverCanva.alpha = 1f;
+        Restart();
     }
 
     public void Resume()

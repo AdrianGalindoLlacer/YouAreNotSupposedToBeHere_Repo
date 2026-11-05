@@ -30,7 +30,7 @@ public class SOB_Bullet : MonoBehaviour
         }
         if (other.gameObject.CompareTag("Guard"))
         {
-                Manager.Restart();
+                Manager.gameover();
         }
     }
 }
