@@ -2433,6 +2433,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2094444168983022364, guid: 6b86a168446ef474eb5b4ee09e10e495, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2094444168983022364, guid: 6b86a168446ef474eb5b4ee09e10e495, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2094444168983022364, guid: 6b86a168446ef474eb5b4ee09e10e495, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2094444168983022364, guid: 6b86a168446ef474eb5b4ee09e10e495, type: 3}
+      propertyPath: m_Intensity
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2094444168983022364, guid: 6b86a168446ef474eb5b4ee09e10e495, type: 3}
+      propertyPath: m_ColorTemperature
+      value: 4505
+      objectReference: {fileID: 0}
+    - target: {fileID: 2094444168983022364, guid: 6b86a168446ef474eb5b4ee09e10e495, type: 3}
+      propertyPath: m_UseColorTemperature
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6822104875374725608, guid: 6b86a168446ef474eb5b4ee09e10e495, type: 3}
       propertyPath: m_Name
       value: Foco (7)
@@ -19467,6 +19491,14 @@ PrefabInstance:
     - target: {fileID: 1690772883985620061, guid: 07a468918e5118b47aec9c18de357246, type: 3}
       propertyPath: m_Color.r
       value: 0.5067435
+      objectReference: {fileID: 0}
+    - target: {fileID: 1690772883985620061, guid: 07a468918e5118b47aec9c18de357246, type: 3}
+      propertyPath: m_Intensity
+      value: 0.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 1690772883985620061, guid: 07a468918e5118b47aec9c18de357246, type: 3}
+      propertyPath: m_ColorTemperature
+      value: 13914.63
       objectReference: {fileID: 0}
     - target: {fileID: 6690794123615711544, guid: 07a468918e5118b47aec9c18de357246, type: 3}
       propertyPath: m_Name
