@@ -46,8 +46,9 @@ GameObject:
   - component: {fileID: 9111803320937247920}
   - component: {fileID: 7989019065943419866}
   - component: {fileID: 3060045651513348932}
-  - component: {fileID: 4413360167593370742}
   - component: {fileID: 8071778191512504793}
+  - component: {fileID: 7663584426972448224}
+  - component: {fileID: 3876564953509696219}
   m_Layer: 0
   m_Name: P2
   m_TagString: Untagged
@@ -146,6 +147,7 @@ MonoBehaviour:
   PostIts: {fileID: 0}
   BulletSprite: {fileID: 0}
   SBulletSprite: {fileID: 0}
+  HideSprite: {fileID: 0}
 --- !u!114 &9111803320937247920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -315,7 +317,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 1
---- !u!136 &4413360167593370742
+--- !u!114 &8071778191512504793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7640326067371095140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 368a172f15f6cd44084188e498e6a0f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PSC_PlayerTroughWall
+  heightOffset: 0.14
+--- !u!136 &7663584426972448224
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -334,23 +349,32 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
+  m_Radius: 0.37538415
+  m_Height: 1.2979215
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8071778191512504793
-MonoBehaviour:
+  m_Center: {x: 0, y: 0.64398295, z: -0.09762348}
+--- !u!95 &3876564953509696219
+Animator:
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7640326067371095140}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 368a172f15f6cd44084188e498e6a0f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PSC_PlayerTroughWall
-  heightOffset: 0.14
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7f4610d714ab6fd43b08bfa2e13f96c9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7934816801793833955
 GameObject:
   m_ObjectHideFlags: 0

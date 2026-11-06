@@ -103,6 +103,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2271583637159042325, guid: e4e20d1afb8d4424fa6ccd2f6888c11c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3867564532384372665}
+    - targetCorrespondingSourceObject: {fileID: 2271583637159042325, guid: e4e20d1afb8d4424fa6ccd2f6888c11c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 783578707347557084}
   m_SourcePrefab: {fileID: 100100000, guid: e4e20d1afb8d4424fa6ccd2f6888c11c, type: 3}
 --- !u!4 &3059051213277595280 stripped
 Transform:
@@ -128,3 +131,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SOB_Button
   DoorRight: {fileID: 0}
   DoorLeft: {fileID: 0}
+--- !u!95 &783578707347557084
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3638661022126619758}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 525d35d5f98e3364bb967aab3c0b103b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

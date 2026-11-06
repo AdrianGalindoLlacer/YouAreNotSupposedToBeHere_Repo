@@ -965,7 +965,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.47097406, g: 0, b: 0.754717, a: 1}
+  m_Color: {r: 0, g: 0.03466097, b: 0.7529412, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1624,6 +1624,8 @@ MonoBehaviour:
   P2: {fileID: 0}
   PauseMenu: {fileID: 0}
   UI: {fileID: 0}
+  GameoverCanva: {fileID: 0}
+  GameOverDuration: 1
 --- !u!1 &7355396057137726120
 GameObject:
   m_ObjectHideFlags: 0

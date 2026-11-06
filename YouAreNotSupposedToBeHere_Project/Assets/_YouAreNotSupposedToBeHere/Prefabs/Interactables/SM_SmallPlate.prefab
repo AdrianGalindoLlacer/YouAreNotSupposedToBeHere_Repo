@@ -209,6 +209,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7598681974044683970, guid: 1e1af53149dca504db8049ff07f1f2ec, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1316246375442403292}
+    - targetCorrespondingSourceObject: {fileID: 7598681974044683970, guid: 1e1af53149dca504db8049ff07f1f2ec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4048308930243031902}
   m_SourcePrefab: {fileID: 100100000, guid: 1e1af53149dca504db8049ff07f1f2ec, type: 3}
 --- !u!1 &912403824646496609 stripped
 GameObject:
@@ -254,6 +257,28 @@ MonoBehaviour:
   RobotStand: {fileID: 5343377596901158828}
   Origin: {fileID: 0}
   RobotCont: {fileID: 0}
+--- !u!95 &4048308930243031902
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912403824646496609}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: db9ff94edf4585249b62fa5b74957e7c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &4759785490495333808 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2870012460009761299, guid: 1e1af53149dca504db8049ff07f1f2ec, type: 3}
