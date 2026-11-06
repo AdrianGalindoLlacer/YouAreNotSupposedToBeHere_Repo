@@ -3,9 +3,16 @@ using UnityEngine.UI;
 
 public class UI_PopUps : MonoBehaviour
 {
-    [SerializeField] private GameObject popUp;
-
+    [Header("Activation")]
+    [SerializeField] GameObject popUp;
     private int count;
+
+    [Header("Function")]
+    [SerializeField] Sprite[] popUpframes;
+    [SerializeField] float framerate;
+    [SerializeField] Image image;
+    private int currentFrame;
+    private float timer;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -15,9 +22,15 @@ public class UI_PopUps : MonoBehaviour
             if (count > 0)
             {
                 popUp.SetActive(true);
+                currentFrame = 0;
+                timer = 0f;
+
+                image.sprite = popUpframes[0];
             }
         }
     }
+
+
 
     private void OnTriggerExit(Collider other)
     {
@@ -29,5 +42,21 @@ public class UI_PopUps : MonoBehaviour
                 popUp.SetActive(false);
             }
         }
+    }
+
+    private void Update()
+    {
+
+        timer += Time.deltaTime;
+        float frameDuration = 1f / framerate;
+
+        if (timer >= frameDuration)
+        {
+            timer -= frameDuration;
+            currentFrame++;
+
+            if (currentFrame >= popUpframes.Length) currentFrame = 0;
+        }
+        image.sprite = popUpframes[currentFrame];
     }
 }
