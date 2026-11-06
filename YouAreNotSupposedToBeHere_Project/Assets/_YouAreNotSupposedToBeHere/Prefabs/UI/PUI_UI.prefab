@@ -2084,7 +2084,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MAN_Health
   Health: 1
-  image: {fileID: 0}
+  image: {fileID: 4906950406360490062}
 --- !u!114 &4737659241762742687
 MonoBehaviour:
   m_ObjectHideFlags: 0
