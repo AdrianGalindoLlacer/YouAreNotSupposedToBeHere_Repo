@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public enum EN_IntTags 
+public enum EN_IntTags
 {
     Null,
     Buttons,

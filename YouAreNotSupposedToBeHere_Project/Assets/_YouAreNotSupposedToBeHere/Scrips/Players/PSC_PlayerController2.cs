@@ -18,11 +18,13 @@ public class PSC_PlayerController2 : MonoBehaviour
 
     [Header("mechanics")]
     public int Ammo; //Municion del arma total
+
     public int SpecialAmmo; //PostIts que tiene el player
     private bool PostIt; //Bool que activa el disparar postIts
     [SerializeField] bool CanShoot; //Bool que impide al jugador disparar
-    [SerializeField] bool Hide; // bool que indica que el jugador esta escondido
+    public bool Hide; // bool que indica que el jugador esta escondido
     [SerializeField] float damage = 0.01f;
+    private bool Dcount;
 
     [Header("Referencias a componentes")]
     [SerializeField] Transform Interactor; //almacena el transform del interactor
@@ -148,10 +150,12 @@ public class PSC_PlayerController2 : MonoBehaviour
         if (other.gameObject.CompareTag("Vision"))
         {
             Health.Health -= damage;
-            if (Health.Health <= 0)
+            if (Health.Health <= 0 && !Dcount)
             {
-                anim.SetTrigger("GameOver");
-                Manager.Restart();
+                Dcount = true;
+                //anim.SetTrigger("GameOver");
+                Manager.gameover();
+
             }
         }
     }
@@ -221,6 +225,7 @@ public class PSC_PlayerController2 : MonoBehaviour
 
     public void Onshot(InputAction.CallbackContext context)
     {
+        if (Block) return;
         if (!context.performed) return;
 
         if (Ammo <= 0)

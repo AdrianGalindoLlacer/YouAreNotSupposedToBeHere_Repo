@@ -20,6 +20,7 @@ public class PSC_PlayerController1 : MonoBehaviour
     public bool HoldRobot = true; //bool que guarda si el jugador lleva el robot
     bool WalkRobot; //Bool que guarda si el robot esta en walk
     [SerializeField] float damage = 0.01f;
+    private bool Dcount;
 
 
     [Header("Referencias a componentes")]
@@ -175,10 +176,12 @@ public class PSC_PlayerController1 : MonoBehaviour
         if (other.gameObject.CompareTag("Vision"))
         {
             Health.Health -= damage;
-            if (Health.Health <= 0)
+            if (Health.Health <= 0 && !Dcount)
             {
-                Manager.Restart();
-                anim.SetTrigger("GameOver");
+                Dcount = true;
+                //anim.SetTrigger("GameOver");
+                Manager.gameover();
+
             }
         }
     }
@@ -207,9 +210,9 @@ public class PSC_PlayerController1 : MonoBehaviour
         {
             if (interactCollider.TryGetComponent(out SOB_Button button))
             {
-            Debug.Log("Boton");
-            button.Press();
-            anim.SetTrigger("Button");
+                Debug.Log("Boton");
+                button.Press();
+                anim.SetTrigger("Button");
             }
         }
         else if (Interact == EN_IntTags.Robot)

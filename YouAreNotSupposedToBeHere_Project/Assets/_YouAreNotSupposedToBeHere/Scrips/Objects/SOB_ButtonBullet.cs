@@ -36,5 +36,5 @@ public class SOB_ButtonBullet : MonoBehaviour
         }
     }
 
-    
+
 }

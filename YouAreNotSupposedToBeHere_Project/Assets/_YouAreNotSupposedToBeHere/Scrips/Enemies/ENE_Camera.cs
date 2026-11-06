@@ -19,10 +19,6 @@ public class ENE_Camera : MonoBehaviour
         if (collision.gameObject.CompareTag("SBullet"))
         {
             anim.SetTrigger("Hit");
-            if (stunroutine != null)
-            {
-                StopCoroutine(stunroutine);
-            }
             stunroutine = StartCoroutine(StunRoutine());
 
         }
