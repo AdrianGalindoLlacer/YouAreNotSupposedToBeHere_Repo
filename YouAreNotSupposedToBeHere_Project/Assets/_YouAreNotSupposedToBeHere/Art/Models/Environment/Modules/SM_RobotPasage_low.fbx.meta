@@ -3,7 +3,12 @@ guid: 93b8bc9e9a164484e93c432763c13d23
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MT_RobotVents
+    second: {fileID: 2100000, guid: 88811b8d84c39f8439c3a43be51824cb, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
