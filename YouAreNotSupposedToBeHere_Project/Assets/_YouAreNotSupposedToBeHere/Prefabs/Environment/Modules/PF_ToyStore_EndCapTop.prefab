@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2040568417075368837}
   - component: {fileID: 2251982946178633770}
   m_Layer: 0
-  m_Name: SM_EndCapTop
+  m_Name: PF_ToyStore_EndCapTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

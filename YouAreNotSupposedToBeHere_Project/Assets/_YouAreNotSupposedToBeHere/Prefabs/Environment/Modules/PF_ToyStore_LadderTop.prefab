@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3005885437680262327}
   m_Layer: 0
-  m_Name: SM_LadderTop
+  m_Name: PF_ToyStore_LadderTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

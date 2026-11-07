@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8667681489991524413}
   - component: {fileID: 7648211737576364111}
   m_Layer: 0
-  m_Name: SM_CornerWallTop
+  m_Name: PF_ToyStore_CornerWallTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

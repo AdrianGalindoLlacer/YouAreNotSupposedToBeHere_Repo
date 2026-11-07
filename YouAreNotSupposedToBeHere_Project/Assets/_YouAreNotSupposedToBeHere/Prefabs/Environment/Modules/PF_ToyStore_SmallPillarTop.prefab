@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4660813450190364502}
   m_Layer: 0
-  m_Name: SM_SmallPillarTop
+  m_Name: PF_ToyStore_SmallPillarTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

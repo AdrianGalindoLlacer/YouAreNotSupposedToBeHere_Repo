@@ -81,7 +81,7 @@ GameObject:
   m_Component:
   - component: {fileID: 301372367695098627}
   m_Layer: 0
-  m_Name: SM_SlideInWall
+  m_Name: PF_ToyStore_SlideInWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3945075675326126640}
   - component: {fileID: 6202836919442238239}
   m_Layer: 0
-  m_Name: SM_RobotPasageIn
+  m_Name: PF_ToyStore_RobotPasageIn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
