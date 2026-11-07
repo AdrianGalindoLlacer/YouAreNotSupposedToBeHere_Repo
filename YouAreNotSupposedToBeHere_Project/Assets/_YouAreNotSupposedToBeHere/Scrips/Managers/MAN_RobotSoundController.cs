@@ -3,7 +3,7 @@ using UnityEngine;
 public class Man_RobotSoundManager: MonoBehaviour
 {
 
-    public AudioSource audiosource;
+    [SerializeField] AudioSource audiosource;
     [SerializeField] AudioClip RobotSound;
     [SerializeField] AudioClip RobotWalk;
     [SerializeField] AudioClip Synergy;

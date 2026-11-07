@@ -53,7 +53,6 @@ public class PSC_PlayerController1 : MonoBehaviour
 
     private void Update()
     {
-        //AnimatorManager();
         Transform origen = Interactor != null ? Interactor : transform;
 
         Collider[] collisions = Physics.OverlapSphere(origen.position, RadioInter, InteractLayer);
