@@ -12,18 +12,17 @@ public class PSC_PlayerController2 : MonoBehaviour
     [SerializeField] LayerMask InteractLayer; //Capa donde el interactor buscara colisiones
     [SerializeField] EN_IntTags interact = EN_IntTags.Null; //Variable que guarda los tipos de colisiones con las que interactua el interactor
     [SerializeField] float RadioInter = 0.1f; //Radio de busqueda del interactor
-    public EN_IntTags Interact => interact;
-    private Collider interactCollider; // Almacena el collider del interactor
     private bool Block; // Bool que bloque el movimiento por completo del jugador
 
     [Header("mechanics")]
     public int Ammo; //Municion del arma total
-
     public int SpecialAmmo; //PostIts que tiene el player
     private bool PostIt; //Bool que activa el disparar postIts
     [SerializeField] bool CanShoot; //Bool que impide al jugador disparar
     public bool Hide; // bool que indica que el jugador esta escondido
     [SerializeField] float damage = 0.01f;
+    public EN_IntTags Interact => interact;
+    private Collider interactCollider; // Almacena el collider del interactor
     private bool Dcount;
 
     [Header("Referencias a componentes")]
@@ -33,6 +32,8 @@ public class PSC_PlayerController2 : MonoBehaviour
     [SerializeField] GameObject SBullet; //almacena las balas con PostIt
     [SerializeField] MAN_Health Health;
     [SerializeField] MAN_SceneManager Manager;
+    [SerializeField] MAN_Player2SoundController soundC;
+    private bool notwsound;
     Rigidbody rb; //almacena el rigidbody del jugador
     Animator anim; //almacena el animator del jugador
 
@@ -122,6 +123,8 @@ public class PSC_PlayerController2 : MonoBehaviour
     {
         if (PostIt)
         {
+            soundC.StopSound();
+            soundC.playShoot();
             Instantiate(SBullet, ShootPoint.position, transform.rotation);
             SpecialAmmo--;
             Ammo--;
@@ -131,6 +134,8 @@ public class PSC_PlayerController2 : MonoBehaviour
         }
         else
         {
+            soundC.StopSound();
+            soundC.playShoot();
             Instantiate(Bullet, ShootPoint.position, transform.rotation);
             Ammo--;
             SOB_Bullet controller = SBullet.GetComponent<SOB_Bullet>();
@@ -153,7 +158,9 @@ public class PSC_PlayerController2 : MonoBehaviour
             if (Health.Health <= 0 && !Dcount)
             {
                 Dcount = true;
-                //anim.SetTrigger("GameOver");
+                anim.SetTrigger("GameOver");
+                soundC.StopSound();
+                soundC.playGO();
                 Manager.gameover();
 
             }
@@ -164,15 +171,18 @@ public class PSC_PlayerController2 : MonoBehaviour
     {
         if (Block) return;
         moveInput = context.ReadValue<Vector2>();
-        //if (context.performed)
-        //{
-        //    anim.SetBool("Move", true);
-        //
-        //}
-        //else if (context.canceled)
-        //{
-        //    anim.SetBool("Move", false);
-        //}
+        if (context.performed)
+        {
+            anim.SetBool("Move", true);
+            if (!notwsound) soundC.playWalk();
+
+        }
+        else if (context.canceled)
+        {
+            anim.SetBool("Move", false);
+            //Habria que comprobar si el sonido que se esta haciendo en el manager es el de walk para si lo es que lo detenga
+            soundC.StopSound();
+        }
     }
 
     public void OnInteract(InputAction.CallbackContext context)
@@ -191,16 +201,18 @@ public class PSC_PlayerController2 : MonoBehaviour
         else if (Hide)
         {
             Hide = false;
-            Block = false;
+            Block = true;
             Debug.Log("NEscondite");
-            //anim.SetBool("Hide", false);
+            anim.SetBool("Hide", false);
         }
         else if (Interact == EN_IntTags.Hideout)
         {
             Hide = true;
             Debug.Log("Escondite");
             Block = true;
-            //anim.SetBool("Hide", true);
+            anim.SetBool("Hide", true);
+            soundC.StopSound();
+            soundC.playHide();
             if (interactCollider.TryGetComponent(out SOB_Hideout Hideout))
             {
                 Hideout.Hiding = true;
@@ -210,7 +222,6 @@ public class PSC_PlayerController2 : MonoBehaviour
         {
             if (interactCollider.TryGetComponent(out SOB_Slide Slide))
             {
-                //anim.SetTrigger("Slide");
                 Slide.Slide();
             }
             Debug.Log("Tobogan");
@@ -219,7 +230,8 @@ public class PSC_PlayerController2 : MonoBehaviour
         {
             Debug.Log("Postit");
             PostIt = !PostIt;
-            //anim.SetTrigger("change");
+            Block = true;
+            anim.SetTrigger("change");
         }
     }
 
@@ -230,15 +242,14 @@ public class PSC_PlayerController2 : MonoBehaviour
 
         if (Ammo <= 0)
         {
-            //anim.SetTrigger("NoAmmo");
+            anim.SetTrigger("NoAmmo");
             Block = true;
         }
         else
         {
 
-            //anim.SetTrigger("Shoot");
+            anim.SetTrigger("Shoot");
             Block = true;
-            Shoot();
         }
     }
 

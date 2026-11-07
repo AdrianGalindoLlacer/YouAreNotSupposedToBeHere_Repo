@@ -20,7 +20,7 @@ public class SOB_PresureP : MonoBehaviour
     {
         if (count == 0)
         {
-            //soundC.playClose();
+            soundC.playClose();
             anim.SetBool("Press", false);
             DoorRight.SetBool("Open", false);
             DoorLeft.SetBool("Open", false);

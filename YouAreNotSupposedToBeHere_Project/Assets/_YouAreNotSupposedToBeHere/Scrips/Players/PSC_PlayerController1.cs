@@ -12,8 +12,6 @@ public class PSC_PlayerController1 : MonoBehaviour
     [SerializeField] LayerMask InteractLayer; //Capa donde el interactor buscara colisiones
     [SerializeField] EN_IntTags interact = EN_IntTags.Null; //Variable que guarda los tipos de colisiones con las que interactua el interactor
     [SerializeField] float RadioInter = 0.1f; //Radio de busqueda del interactor
-    public EN_IntTags Interact => interact;
-    private Collider interactCollider; // Almacena el collider del interactor
     private bool Block; // Bool que bloque el movimiento por completo del jugador
 
     [Header("mechanics")]
@@ -21,6 +19,8 @@ public class PSC_PlayerController1 : MonoBehaviour
     bool WalkRobot; //Bool que guarda si el robot esta en walk
     [SerializeField] float damage = 0.01f;
     private bool Dcount;
+    public EN_IntTags Interact => interact;
+    private Collider interactCollider; // Almacena el collider del interactor
 
 
     [Header("Referencias a componentes")]
@@ -31,6 +31,8 @@ public class PSC_PlayerController1 : MonoBehaviour
     [SerializeField] GameObject RobotThrow; //El robot que el jugador deja
     [SerializeField] MAN_Health Health;
     [SerializeField] MAN_SceneManager Manager;
+    [SerializeField] MAN_Player1SoundController soundC;
+    private bool notwsound;
     SOB_Robot controller;
     Rigidbody rb;
     Animator anim;
@@ -115,6 +117,8 @@ public class PSC_PlayerController1 : MonoBehaviour
         HoldRobot = false;
         if (!WalkRobot)
         {
+            soundC.StopSound();
+            soundC.playLay();
             Robot.SetActive(false);
             RobotThrow.transform.SetPositionAndRotation(Spawn.position, transform.rotation);
             controller.soundenabled = true;
@@ -122,6 +126,8 @@ public class PSC_PlayerController1 : MonoBehaviour
         }
         else
         {
+            soundC.StopSound();
+            soundC.playLay();
             Robot.SetActive(false);
             RobotThrow.transform.SetPositionAndRotation(Spawn.position, transform.rotation);
             controller.Walk = true;
@@ -132,6 +138,8 @@ public class PSC_PlayerController1 : MonoBehaviour
 
     private void Grab()
     {
+        soundC.StopSound();
+        soundC.playGrab();
         controller.Walk = false;
         RobotThrow.transform.position = Origin.transform.position;
         Robot.SetActive(true);
@@ -156,7 +164,10 @@ public class PSC_PlayerController1 : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Box"))
         {
+            notwsound = true;
+            soundC.StopSound();
             anim.SetBool("Push", true);
+            soundC.playPush();
         }
     }
 
@@ -164,14 +175,11 @@ public class PSC_PlayerController1 : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Box"))
         {
+            soundC.StopSound();
+            notwsound = false;
             anim.SetBool("Push", false);
         }
     }
-
-    //private void AnimatorManager()
-    //{
-    //gestion del animator
-    //}
 
     private void OnTriggerStay(Collider other)
     {
@@ -182,6 +190,8 @@ public class PSC_PlayerController1 : MonoBehaviour
             {
                 Dcount = true;
                 //anim.SetTrigger("GameOver");
+                soundC.StopSound();
+                soundC.playGO();
                 Manager.gameover();
 
             }
@@ -193,15 +203,18 @@ public class PSC_PlayerController1 : MonoBehaviour
     {
         if (Block) return;
         moveInput = context.ReadValue<Vector2>();
-        //if (context.performed)
-        //{
-        //    anim.SetBool("Move", true);
-        //
-        //}
-        //else if (context.canceled)
-        //{
-        //    anim.SetBool("Move", false);
-        //}
+        if (context.performed)
+        {
+            anim.SetBool("Move", true);
+            if (!notwsound) soundC.playWalk();
+        
+        }
+        else if (context.canceled)
+        {
+            anim.SetBool("Move", false);
+            //Habria que comprobar si el sonido que se esta haciendo en el manager es el de walk para si lo es que lo detenga
+            soundC.StopSound();
+        }
     }
 
     public void OnInteract(InputAction.CallbackContext context)
@@ -220,22 +233,21 @@ public class PSC_PlayerController1 : MonoBehaviour
         else if (Interact == EN_IntTags.Robot)
         {
             Debug.Log("Robot");
-            //anim.SetTrigger("GrabF");
-            Grab();
+            anim.SetTrigger("GrabF");
 
         }
         else if (Interact == EN_IntTags.Stand)
         {
             Debug.Log("Robot");
-            //anim.SetTrigger("GrabS");
-            Grab();
+            anim.SetTrigger("GrabS");
 
         }
         else if (HoldRobot)
         {
+            Block = true;
             Debug.Log("WalkMode");
             WalkRobot = !WalkRobot;
-            //anim.SetTrigger("Change");
+            anim.SetTrigger("Change");
         }
 
     }
@@ -246,14 +258,13 @@ public class PSC_PlayerController1 : MonoBehaviour
 
         if (!HoldRobot)
         {
-            //anim.SetTrigger("NoRobot");
+            anim.SetTrigger("NoRobot");
             Block = true;
         }
         else
         {
-            //anim.SetTrigger("Lay");
+            anim.SetTrigger("Lay");
             Block = true;
-            Lay();
         }
     }
 
