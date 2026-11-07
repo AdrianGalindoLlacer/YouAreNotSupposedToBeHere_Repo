@@ -2,16 +2,18 @@ using UnityEngine;
 
 public class SOB_Bullet : MonoBehaviour
 {
+    //[SerializeField] MAN_BulletSoundController soundC;
     [SerializeField] float speed = 3f;
     [SerializeField] MAN_Health Health;
     [SerializeField] MAN_SceneManager Manager;
     public bool Move = false;
-
+    private bool soundenabled = true;
 
     private void Update()
     {
         if (!Move)
         {
+            transform.position = Vector3.zero;
             return;
 
         }
@@ -26,7 +28,11 @@ public class SOB_Bullet : MonoBehaviour
         if (other.gameObject.CompareTag("Wall") || other.gameObject.CompareTag("Robot"))
         {
             Move = false;
-            gameObject.SetActive(false);
+            if (soundenabled)
+            {
+                //soundC.playImpact();
+                soundenabled = false;
+            }
         }
         if (other.gameObject.CompareTag("Guard"))
         {

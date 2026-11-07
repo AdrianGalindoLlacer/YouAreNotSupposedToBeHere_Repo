@@ -1,11 +1,13 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SOB_ButtonBullet : MonoBehaviour
 {
+    [SerializeField] MAN_DoorSoundController soundC;
     private Animator anim;
     [SerializeField] Animator DoorRight;
     [SerializeField] Animator DoorLeft;
-    private int count = 0; //Variable que guarda el estado en el que esta el boton (Cambiable por un bool)
+    private int count = 1; //Variable que guarda el estado en el que esta el boton (Cambiable por un bool)
     void Awake()
     {
         anim = GetComponent<Animator>();
@@ -20,8 +22,9 @@ public class SOB_ButtonBullet : MonoBehaviour
     }
     public void Press()
     {
-        if (count >= 0)
+        if (count == 0)
         {
+            //soundC.playClose();
             anim.SetTrigger("Press");
             DoorRight.SetBool("Open", false);
             DoorLeft.SetBool("Open", false);
@@ -29,6 +32,7 @@ public class SOB_ButtonBullet : MonoBehaviour
         }
         else
         {
+            soundC.playOpen();
             anim.SetTrigger("Press");
             DoorRight.SetBool("Open", true);
             DoorLeft.SetBool("Open", true);

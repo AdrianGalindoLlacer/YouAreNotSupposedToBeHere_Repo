@@ -53,7 +53,6 @@ public class PSC_PlayerController1 : MonoBehaviour
 
     private void Update()
     {
-        //AnimatorManager();
         Transform origen = Interactor != null ? Interactor : transform;
 
         Collider[] collisions = Physics.OverlapSphere(origen.position, RadioInter, InteractLayer);
@@ -118,6 +117,7 @@ public class PSC_PlayerController1 : MonoBehaviour
         {
             Robot.SetActive(false);
             RobotThrow.transform.SetPositionAndRotation(Spawn.position, transform.rotation);
+            controller.soundenabled = true;
             Block = false;
         }
         else
@@ -125,6 +125,7 @@ public class PSC_PlayerController1 : MonoBehaviour
             Robot.SetActive(false);
             RobotThrow.transform.SetPositionAndRotation(Spawn.position, transform.rotation);
             controller.Walk = true;
+            controller.soundenabled = true;
             Block = false;
         }
     }
@@ -135,6 +136,7 @@ public class PSC_PlayerController1 : MonoBehaviour
         RobotThrow.transform.position = Origin.transform.position;
         Robot.SetActive(true);
         HoldRobot = true;
+        controller.soundenabled = false;
         Block = false;
     }
 
