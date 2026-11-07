@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 492775842761159798}
   - component: {fileID: 4847733985532062368}
   m_Layer: 0
-  m_Name: UI_PopUp
+  m_Name: PUI_PopUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

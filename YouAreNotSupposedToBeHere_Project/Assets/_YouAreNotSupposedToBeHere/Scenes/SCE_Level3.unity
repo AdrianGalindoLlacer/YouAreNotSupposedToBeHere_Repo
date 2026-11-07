@@ -6267,6 +6267,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 384463615}
   m_SourcePrefab: {fileID: 100100000, guid: 6935ea1d8d1437c4ea429c38fa9d9268, type: 3}
+--- !u!114 &423813497 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4365678436053764786, guid: 6cf332435d23c4a4c986caf61c3d1280, type: 3}
+  m_PrefabInstance: {fileID: 1069437676}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!1001 &426269152
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6606,6 +6617,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8162083f9fdb26499fbc0bce7c5e430, type: 3}
+--- !u!114 &460977509 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4152792271083319890, guid: 6cf332435d23c4a4c986caf61c3d1280, type: 3}
+  m_PrefabInstance: {fileID: 1069437676}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!1 &466276039 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9201763062009260917, guid: 905fcc9e5e192394d8fe66abc9f25468, type: 3}
@@ -9415,6 +9437,7 @@ GameObject:
   - component: {fileID: 671727814}
   - component: {fileID: 671727819}
   - component: {fileID: 671727820}
+  - component: {fileID: 671727821}
   m_Layer: 0
   m_Name: Robot
   m_TagString: Robot
@@ -9528,7 +9551,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74e16abe0fd8b5e4bbe01b1572d9f01d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SOB_Robot
+  soundC: {fileID: 1606551290}
   speed: 2
+  soundenabled: 0
   Walk: 0
   sound: 0
 --- !u!54 &671727819
@@ -9556,7 +9581,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!95 &671727820
 Animator:
@@ -9580,6 +9605,103 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!82 &671727821
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 671727813}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &672609991
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14699,6 +14821,10 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7903869939215457896, guid: 6cf332435d23c4a4c986caf61c3d1280, type: 3}
+      propertyPath: audiosource
+      value: 
+      objectReference: {fileID: 671727821}
     - target: {fileID: 8310582368245143039, guid: 6cf332435d23c4a4c986caf61c3d1280, type: 3}
       propertyPath: m_LocalPosition.x
       value: -954
@@ -18709,6 +18835,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3407669157858248091, guid: 056720647904fb7498c3bbe7cb9f4958, type: 3}
   m_PrefabInstance: {fileID: 1325512805}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1328687152 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6604241516015688539, guid: 6cf332435d23c4a4c986caf61c3d1280, type: 3}
+  m_PrefabInstance: {fileID: 1069437676}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1001 &1330011294
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19264,7 +19401,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UI_P1
   Controller: {fileID: 1376797924}
-  RobotSprite: {fileID: 0}
+  RobotSprite: {fileID: 460977509}
 --- !u!1001 &1376913982
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19835,6 +19972,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8332023862700450377, guid: 5306afa55051da844a0224d79ff01989, type: 3}
   m_PrefabInstance: {fileID: 1414269260}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1422652544 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6976635932405812088, guid: 6cf332435d23c4a4c986caf61c3d1280, type: 3}
+  m_PrefabInstance: {fileID: 1069437676}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!1001 &1450001344
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20786,6 +20934,17 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.3000002, y: 2, z: 2}
   m_Center: {x: 0.15, y: 1, z: -1}
+--- !u!114 &1510801099 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1805029181479832157, guid: 6cf332435d23c4a4c986caf61c3d1280, type: 3}
+  m_PrefabInstance: {fileID: 1069437676}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1001 &1515163571
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22040,6 +22199,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8534296234779209007, guid: 931aa08f22692f44f98f2b98a806de5a, type: 3}
   m_PrefabInstance: {fileID: 1595643512}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1606551290 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7903869939215457896, guid: 6cf332435d23c4a4c986caf61c3d1280, type: 3}
+  m_PrefabInstance: {fileID: 1069437676}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 253e028a36a981c499889e8dea3bbe7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SOB_RobotSoundController
 --- !u!1001 &1606940536
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22469,6 +22639,28 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.3000002, y: 2, z: 2}
   m_Center: {x: 0.15, y: 1, z: -1}
+--- !u!114 &1663052654 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4737659241762742687, guid: 6cf332435d23c4a4c986caf61c3d1280, type: 3}
+  m_PrefabInstance: {fileID: 1069437676}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e392600b2f2ac9c428a459b51295327b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MAN_SceneManager
+--- !u!114 &1663052655 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6123701162043784709, guid: 6cf332435d23c4a4c986caf61c3d1280, type: 3}
+  m_PrefabInstance: {fileID: 1069437676}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f93abbefee1993a498b0a6a8edcb1f8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MAN_Health
 --- !u!1 &1673262449
 GameObject:
   m_ObjectHideFlags: 0
@@ -25552,7 +25744,7 @@ PrefabInstance:
     - target: {fileID: 1861016121259311425, guid: ecb84ce7fbf3ba946aa3b2c4b2813c7c, type: 3}
       propertyPath: Health
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1663052655}
     - target: {fileID: 1861016121259311425, guid: ecb84ce7fbf3ba946aa3b2c4b2813c7c, type: 3}
       propertyPath: Origin
       value: 
@@ -25564,7 +25756,7 @@ PrefabInstance:
     - target: {fileID: 1861016121259311425, guid: ecb84ce7fbf3ba946aa3b2c4b2813c7c, type: 3}
       propertyPath: Manager
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1663052654}
     - target: {fileID: 1861016121259311425, guid: ecb84ce7fbf3ba946aa3b2c4b2813c7c, type: 3}
       propertyPath: RadioInter
       value: 1
@@ -25703,7 +25895,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6703316769511463311, guid: ecb84ce7fbf3ba946aa3b2c4b2813c7c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7557874308227640538, guid: ecb84ce7fbf3ba946aa3b2c4b2813c7c, type: 3}
       propertyPath: m_Name
@@ -29649,19 +29841,19 @@ PrefabInstance:
     - target: {fileID: 2022010739006258382, guid: 2f27a7929a9863b48ba8a26b1a307bb9, type: 3}
       propertyPath: Bullets
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1510801099}
     - target: {fileID: 2022010739006258382, guid: 2f27a7929a9863b48ba8a26b1a307bb9, type: 3}
       propertyPath: PostIts
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1328687152}
     - target: {fileID: 2022010739006258382, guid: 2f27a7929a9863b48ba8a26b1a307bb9, type: 3}
       propertyPath: BulletSprite
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1422652544}
     - target: {fileID: 2022010739006258382, guid: 2f27a7929a9863b48ba8a26b1a307bb9, type: 3}
       propertyPath: SBulletSprite
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 423813497}
     - target: {fileID: 4214631817674145111, guid: 2f27a7929a9863b48ba8a26b1a307bb9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.667268
@@ -29753,7 +29945,7 @@ PrefabInstance:
     - target: {fileID: 9111803320937247920, guid: 2f27a7929a9863b48ba8a26b1a307bb9, type: 3}
       propertyPath: Health
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1663052655}
     - target: {fileID: 9111803320937247920, guid: 2f27a7929a9863b48ba8a26b1a307bb9, type: 3}
       propertyPath: damage
       value: 0.005
@@ -29761,7 +29953,7 @@ PrefabInstance:
     - target: {fileID: 9111803320937247920, guid: 2f27a7929a9863b48ba8a26b1a307bb9, type: 3}
       propertyPath: Manager
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1663052654}
     - target: {fileID: 9111803320937247920, guid: 2f27a7929a9863b48ba8a26b1a307bb9, type: 3}
       propertyPath: SBullet
       value: 
