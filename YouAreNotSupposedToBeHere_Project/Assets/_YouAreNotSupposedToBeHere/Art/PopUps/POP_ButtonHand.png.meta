@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a93d56c96ea15d3459962027cca3384f
+guid: 89f5175570e8a54429f74e6cd07adc3d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -95,12 +95,78 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: POP_ButtonHand_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 420
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db778b6afd6880041a78dd5593595fd9
+      internalID: -1822844838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: POP_ButtonHand_1
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 420
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab4b6d9e75611c94db7f3725212a2a3e
+      internalID: 1097431870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: POP_ButtonHand_2
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 420
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79273d315d1c8b44b8300a9a627521b4
+      internalID: -1314744017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 75266a8f522bc5d419821569f024a319
     internalID: 0
     vertices: []
     indices: 
@@ -108,8 +174,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
-    nameFileIdTable: {}
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":1920.0,"y":1080.0},"gridSpriteOffset":{"x":0.0,"y":420.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      POP_ButtonHand_0: -1822844838
+      POP_ButtonHand_1: 1097431870
+      POP_ButtonHand_2: -1314744017
+      POP_ButtonHand_3: 1495724645
+      POP_ButtonHand_4: -1486792496
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
