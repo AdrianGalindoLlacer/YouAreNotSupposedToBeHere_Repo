@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class ENE_Camera : MonoBehaviour
 {
+    [SerializeField] MAN_CameraSoundController soundC;
     Animator anim;
     [SerializeField] GameObject postit; //Guarda el objeto hijo el cual se le pone en la lente a la camara
     [SerializeField] GameObject Vision; //Variable que guarda su rango de "daño"
@@ -12,6 +13,7 @@ public class ENE_Camera : MonoBehaviour
     private void Awake()
     {
         anim = GetComponent<Animator>();
+        soundC.playIdle();
     }
 
     private void OnCollisionEnter(Collision collision)

@@ -657,6 +657,8 @@ GameObject:
   - component: {fileID: 5090207858645990206}
   - component: {fileID: 7903869939215457896}
   - component: {fileID: 8491235478691255749}
+  - component: {fileID: 3791557402819687989}
+  - component: {fileID: 1211745584681962875}
   - component: {fileID: 396125882796904661}
   - component: {fileID: 2131657041625691813}
   m_Layer: 5
@@ -714,8 +716,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7d4bb74a6f3d9848a3d5de0ceaa2eed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MAN_Player1SoundController
-  audiosource: {fileID: 4057640935051527574, guid: ecb84ce7fbf3ba946aa3b2c4b2813c7c, type: 3}
+  audiosource: {fileID: 0}
   Walk: {fileID: 8300000, guid: b68544c7d2361b440befe9471c61a20f, type: 3}
+  Lay: {fileID: 0}
+  Push: {fileID: 0}
+  Grab: {fileID: 0}
+  GameOver: {fileID: 0}
+--- !u!114 &3791557402819687989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3915945090328641280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 894fbef4ed023084bb56883135805bad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MAN_CameraSoundController
+  audiosource: {fileID: 0}
+  Idle: {fileID: 0}
+--- !u!114 &1211745584681962875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3915945090328641280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a4af91e6bdf0ce49add7d12e9a13d46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MAN_GuardSoundController
+  audiosource: {fileID: 0}
+  Walk: {fileID: 8300000, guid: b68544c7d2361b440befe9471c61a20f, type: 3}
+  Lay: {fileID: 0}
+  Grab: {fileID: 0}
 --- !u!114 &396125882796904661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -728,9 +764,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af8b436ba74be3a45ad688c138592ad8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MAN_Player1SoundController
-  audiosource: {fileID: 4131451974910030359, guid: 2f27a7929a9863b48ba8a26b1a307bb9, type: 3}
+  audiosource: {fileID: 0}
   Walk: {fileID: 8300000, guid: b68544c7d2361b440befe9471c61a20f, type: 3}
   Shoot: {fileID: 8300000, guid: 4642e8383626baf4780251f76c06ed90, type: 3}
+  Hide: {fileID: 0}
+  Slide: {fileID: 0}
+  GameOver: {fileID: 0}
 --- !u!114 &2131657041625691813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -743,8 +782,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 264d5acea93148c4ca72fdd8ac3b27d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MAN_DoorSoundController
-  audiosource: {fileID: 461356015075971599}
+  audiosource: {fileID: 0}
   Open: {fileID: 8300000, guid: 38f26adecdc976d45bac88c0e1abaf90, type: 3}
+  Close: {fileID: 0}
 --- !u!1 &4380022423528641396
 GameObject:
   m_ObjectHideFlags: 0
