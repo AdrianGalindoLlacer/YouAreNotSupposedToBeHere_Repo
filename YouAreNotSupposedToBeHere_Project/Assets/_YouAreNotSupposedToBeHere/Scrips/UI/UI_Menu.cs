@@ -8,10 +8,6 @@ public class UI_Menu : MonoBehaviour
     {
         SceneManager.LoadScene("SCE_Level3");
     }
-    public void Play4()
-    {
-        SceneManager.LoadScene("SCE_Level4");
-    }
 
     public void Exit()
     {

@@ -4510,7 +4510,7 @@ GameObject:
   - component: {fileID: 930822352126815894}
   m_Layer: 0
   m_Name: SK_Player 2
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4698,9 +4698,9 @@ MonoBehaviour:
   Hide: 0
   damage: 0.005
   Interactor: {fileID: 6712741509530878820}
-  ShootPoint: {fileID: 0}
-  Bullet: {fileID: 2513578034814074839, guid: db6d1f886cd90614788aad44c5133787, type: 3}
-  SBullet: {fileID: 1470991805733261501, guid: e0c064c56947e4b40b4d58c7392ad63c, type: 3}
+  ShootPoint: {fileID: 7225258382618685559}
+  Bullet: {fileID: 7382211685943528489, guid: 5dc4c0e8938720847b06d3f3ffd664be, type: 3}
+  SBullet: {fileID: 2778678802649467440, guid: 731985b229a4c1a46a9c9a47b20aab41, type: 3}
   Health: {fileID: 0}
   Manager: {fileID: 0}
   soundC: {fileID: 0}
@@ -4742,7 +4742,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!136 &3795814394392951681
 CapsuleCollider:
@@ -4780,7 +4780,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
   m_Actions: {fileID: -944628639613478452, guid: 4a6d15a80eacd6945b6f7535fce2835f, type: 3}
-  m_NotificationBehavior: 0
+  m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
@@ -4791,7 +4791,87 @@ MonoBehaviour:
   m_ControlsChangedEvent:
     m_PersistentCalls:
       m_Calls: []
-  m_ActionEvents: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a7762f48-3168-4266-b712-ae99666d9a9c
+    m_ActionName: 'Player1Inputs/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: fefbcdc0-231b-4a4b-87ba-580d4080c5b6
+    m_ActionName: 'Player1Inputs/Toy[/Keyboard/q]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0ff00d26-ecb7-4172-988d-e1f46ae83339
+    m_ActionName: 'Player1Inputs/Interact[/Keyboard/e]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1cb5acdc-4692-4a0b-939a-4fea4964afb6
+    m_ActionName: 'Player1Inputs/Pause[/Keyboard/escape]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8509875713934063473}
+        m_TargetAssemblyTypeName: PSC_PlayerController2, Assembly-CSharp
+        m_MethodName: OnMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 808e7296-8104-4789-9454-69ac25032d44
+    m_ActionName: 'Player2Inputs/Movement[/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4451796648525863602}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 28a128ba-70f4-423b-87c4-d19c722b5021
+    m_ActionName: 'Player2Inputs/Pause[/Keyboard/p]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8509875713934063473}
+        m_TargetAssemblyTypeName: PSC_PlayerController2, Assembly-CSharp
+        m_MethodName: OnInteract
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 89e16d1b-65ac-4992-9ed8-6df8eaa38923
+    m_ActionName: 'Player2Inputs/Interact[/Keyboard/rightShift]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8509875713934063473}
+        m_TargetAssemblyTypeName: PSC_PlayerController2, Assembly-CSharp
+        m_MethodName: Onshot
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 0b6b7da4-7cd3-41b5-8424-32ce4b2075fe
+    m_ActionName: 'Player2Inputs/Toy[/Keyboard/enter]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player2Inputs

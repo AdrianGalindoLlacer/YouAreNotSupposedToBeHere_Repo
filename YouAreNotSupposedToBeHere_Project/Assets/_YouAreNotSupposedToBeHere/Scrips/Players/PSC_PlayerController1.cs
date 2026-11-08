@@ -12,7 +12,7 @@ public class PSC_PlayerController1 : MonoBehaviour
     [SerializeField] LayerMask InteractLayer; //Capa donde el interactor buscara colisiones
     [SerializeField] EN_IntTags interact = EN_IntTags.Null; //Variable que guarda los tipos de colisiones con las que interactua el interactor
     [SerializeField] float RadioInter = 0.1f; //Radio de busqueda del interactor
-    private bool Block; // Bool que bloque el movimiento por completo del jugador
+    [SerializeField]private bool Block; // Bool que bloque el movimiento por completo del jugador
 
     [Header("mechanics")]
     public bool HoldRobot = true; //bool que guarda si el jugador lleva el robot
@@ -27,6 +27,7 @@ public class PSC_PlayerController1 : MonoBehaviour
     [SerializeField] Transform Interactor; //transform del interactor
     [SerializeField] GameObject Robot; //el robot que el jugador lleva
     [SerializeField] Transform Spawn; //transform donde el robot aparecera
+    [SerializeField] GameObject RobotStand;
     [SerializeField] GameObject Origin;
     [SerializeField] GameObject RobotThrow; //El robot que el jugador deja
     [SerializeField] MAN_Health Health;
@@ -122,7 +123,6 @@ public class PSC_PlayerController1 : MonoBehaviour
             Robot.SetActive(false);
             RobotThrow.transform.SetPositionAndRotation(Spawn.position, transform.rotation);
             controller.soundenabled = true;
-            Block = false;
         }
         else
         {
@@ -132,7 +132,6 @@ public class PSC_PlayerController1 : MonoBehaviour
             RobotThrow.transform.SetPositionAndRotation(Spawn.position, transform.rotation);
             controller.Walk = true;
             controller.soundenabled = true;
-            Block = false;
         }
     }
 
@@ -141,11 +140,11 @@ public class PSC_PlayerController1 : MonoBehaviour
         soundC.StopSound();
         soundC.playGrab();
         controller.Walk = false;
+        RobotStand.SetActive(false);
         RobotThrow.transform.position = Origin.transform.position;
         Robot.SetActive(true);
         HoldRobot = true;
         controller.soundenabled = false;
-        Block = false;
     }
 
     void Rotate()
@@ -198,6 +197,11 @@ public class PSC_PlayerController1 : MonoBehaviour
         }
     }
 
+    public void unblock()
+    {
+        Block = !Block;
+    }
+
     #region Input Methods
     public void OnMove(InputAction.CallbackContext context)
     {
@@ -220,36 +224,40 @@ public class PSC_PlayerController1 : MonoBehaviour
     public void OnInteract(InputAction.CallbackContext context)
     {
         if (!context.performed) return;
-
-        if (Interact == EN_IntTags.Buttons)
-        {
-            if (interactCollider.TryGetComponent(out SOB_Button button))
+        //if (Block)
+        //{
+            if (Interact == EN_IntTags.Buttons)
             {
-                Debug.Log("Boton");
-                button.Press();
-                anim.SetTrigger("Button");
+                Block = true;
+                if (interactCollider.TryGetComponent(out SOB_Button button))
+                {
+                    Debug.Log("Boton");
+                    button.Press();
+                    anim.SetTrigger("Button");
+                }
             }
-        }
-        else if (Interact == EN_IntTags.Robot)
-        {
-            Debug.Log("Robot");
-            anim.SetTrigger("GrabF");
+            else if (Interact == EN_IntTags.Robot)
+            {
+                Block = true;
+                Debug.Log("Robot");
+                anim.SetTrigger("GrabF");
 
-        }
-        else if (Interact == EN_IntTags.Stand)
-        {
-            Debug.Log("Robot");
-            anim.SetTrigger("GrabS");
+            }
+            else if (Interact == EN_IntTags.Stand)
+            {
+                Block = true;
+                Debug.Log("Robot");
+                anim.SetTrigger("GrabS");
 
-        }
-        else if (HoldRobot)
-        {
-            Block = true;
-            Debug.Log("WalkMode");
-            WalkRobot = !WalkRobot;
-            anim.SetTrigger("Change");
-        }
-
+            }
+            else if (HoldRobot)
+            {
+                Block = true;
+                Debug.Log("WalkMode");
+                WalkRobot = !WalkRobot;
+                anim.SetTrigger("Change");
+            }
+        //}
     }
 
     public void OnLay(InputAction.CallbackContext context)

@@ -258,7 +258,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4737659241762742687}
         m_TargetAssemblyTypeName: MAN_SceneManager, Assembly-CSharp
         m_MethodName: Exit
         m_Mode: 1
@@ -782,7 +782,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 264d5acea93148c4ca72fdd8ac3b27d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MAN_DoorSoundController
-  audiosource: {fileID: 0}
+  audiosource: {fileID: 461356015075971599}
   Open: {fileID: 8300000, guid: 38f26adecdc976d45bac88c0e1abaf90, type: 3}
   Close: {fileID: 0}
 --- !u!1 &4380022423528641396
@@ -2164,7 +2164,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4737659241762742687}
         m_TargetAssemblyTypeName: MAN_SceneManager, Assembly-CSharp
         m_MethodName: Restart
         m_Mode: 1
@@ -2242,6 +2242,8 @@ MonoBehaviour:
   UI: {fileID: 7355396057137726120}
   GameoverCanva: {fileID: 361543566615350392}
   GameOverDuration: 1
+  count: 0
+  next_Level: 
 --- !u!1 &7355396057137726120
 GameObject:
   m_ObjectHideFlags: 0
@@ -2715,7 +2717,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4737659241762742687}
         m_TargetAssemblyTypeName: MAN_SceneManager, Assembly-CSharp
         m_MethodName: Resume
         m_Mode: 1
