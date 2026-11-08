@@ -130,7 +130,6 @@ public class PSC_PlayerController2 : MonoBehaviour
             Ammo--;
             SOB_Bullet controller = Bullet.GetComponent<SOB_Bullet>();
             controller.Move = true;
-            Block = false;
         }
         else
         {
@@ -140,7 +139,6 @@ public class PSC_PlayerController2 : MonoBehaviour
             Ammo--;
             SOB_Bullet controller = SBullet.GetComponent<SOB_Bullet>();
             controller.Move = true;
-            Block = false;
         }
     }
 
@@ -165,6 +163,12 @@ public class PSC_PlayerController2 : MonoBehaviour
             }
         }
     }
+
+    public void unblock()
+    {
+        Block = !Block;
+    }
+
     #region Input Methods
     public void OnMove(InputAction.CallbackContext context)
     {
@@ -187,12 +191,13 @@ public class PSC_PlayerController2 : MonoBehaviour
     public void OnInteract(InputAction.CallbackContext context)
     {
         if (!context.performed) return;
-
+        //if (Block)
+        //{
         if (Interact == EN_IntTags.Buttons)
         {
+            Block = true;
             if (interactCollider.TryGetComponent(out SOB_Button button))
             {
-                Debug.Log("Boton");
                 button.Press();
                 anim.SetTrigger("Button");
             }
@@ -201,14 +206,12 @@ public class PSC_PlayerController2 : MonoBehaviour
         {
             Hide = false;
             Block = true;
-            Debug.Log("NEscondite");
             anim.SetBool("Hide", false);
         }
         else if (Interact == EN_IntTags.Hideout)
         {
-            Hide = true;
-            Debug.Log("Escondite");
             Block = true;
+            Hide = true;
             anim.SetBool("Hide", true);
             soundC.StopSound();
             soundC.playHide();
@@ -223,15 +226,14 @@ public class PSC_PlayerController2 : MonoBehaviour
             {
                 Slide.Slide();
             }
-            Debug.Log("Tobogan");
         }
         else if (SpecialAmmo > 0)
         {
-            Debug.Log("Postit");
-            PostIt = !PostIt;
             Block = true;
+            PostIt = !PostIt;
             anim.SetTrigger("change");
         }
+        //}
     }
 
     public void Onshot(InputAction.CallbackContext context)
@@ -241,14 +243,13 @@ public class PSC_PlayerController2 : MonoBehaviour
 
         if (Ammo <= 0)
         {
-            anim.SetTrigger("NoAmmo");
             Block = true;
+            anim.SetTrigger("NoAmmo");
         }
         else
         {
-
-            anim.SetTrigger("Shoot");
             Block = true;
+            anim.SetTrigger("Shoot");
         }
     }
 

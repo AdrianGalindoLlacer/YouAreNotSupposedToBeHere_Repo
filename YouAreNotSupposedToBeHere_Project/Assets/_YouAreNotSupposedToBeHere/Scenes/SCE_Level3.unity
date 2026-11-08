@@ -6032,7 +6032,7 @@ PrefabInstance:
     - target: {fileID: 19751456128532506, guid: 6935ea1d8d1437c4ea429c38fa9d9268, type: 3}
       propertyPath: StandRobot
       value: 
-      objectReference: {fileID: 1008110961}
+      objectReference: {fileID: 0}
     - target: {fileID: 19751456128532506, guid: 6935ea1d8d1437c4ea429c38fa9d9268, type: 3}
       propertyPath: RobotTarget
       value: 
@@ -8922,11 +8922,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1740298230347338628, guid: 04105b324348f264e806772329ed25d2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.51
+      value: 25.1
       objectReference: {fileID: 0}
     - target: {fileID: 1740298230347338628, guid: 04105b324348f264e806772329ed25d2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.64
+      value: 5.7
       objectReference: {fileID: 0}
     - target: {fileID: 3026416225350519445, guid: 04105b324348f264e806772329ed25d2, type: 3}
       propertyPath: m_PlayOnAwake
@@ -8940,9 +8940,17 @@ PrefabInstance:
       propertyPath: soundC
       value: 
       objectReference: {fileID: 1606551290}
+    - target: {fileID: 7088855140673071434, guid: 04105b324348f264e806772329ed25d2, type: 3}
+      propertyPath: m_Size.y
+      value: 0.43837062
+      objectReference: {fileID: 0}
+    - target: {fileID: 7088855140673071434, guid: 04105b324348f264e806772329ed25d2, type: 3}
+      propertyPath: m_Center.y
+      value: 0.21918531
+      objectReference: {fileID: 0}
     - target: {fileID: 7305386910735843684, guid: 04105b324348f264e806772329ed25d2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.2
+      value: -11
       objectReference: {fileID: 0}
     - target: {fileID: 7305386910735843684, guid: 04105b324348f264e806772329ed25d2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -10220,11 +10228,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 2919623487268305190, guid: 905fcc9e5e192394d8fe66abc9f25468, type: 3}
   m_PrefabInstance: {fileID: 766540017}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &772317970 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 720346489740404844, guid: 76890a475f052a24db598feca676213d, type: 3}
-  m_PrefabInstance: {fileID: 2056393960}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &777789916 stripped
 Transform:
@@ -13912,11 +13915,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8332023862700450377, guid: 5306afa55051da844a0224d79ff01989, type: 3}
   m_PrefabInstance: {fileID: 1004858480}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1008110961 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5201508875411426820, guid: 7cd17531d191a4f4a89a3e7beb330ad6, type: 3}
-  m_PrefabInstance: {fileID: 1313904845}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1009750693
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17428,7 +17426,7 @@ PrefabInstance:
     - target: {fileID: 3945075675326126640, guid: 76890a475f052a24db598feca676213d, type: 3}
       propertyPath: Passage
       value: 
-      objectReference: {fileID: 772317970}
+      objectReference: {fileID: 2056393962}
     - target: {fileID: 6661743358412596428, guid: 76890a475f052a24db598feca676213d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.699998
@@ -24235,7 +24233,7 @@ PrefabInstance:
     - target: {fileID: 8279699840870756063, guid: 9bd27250acae80f4ca2b15d0a00da341, type: 3}
       propertyPath: RobotStand
       value: 
-      objectReference: {fileID: 1008110961}
+      objectReference: {fileID: 0}
     - target: {fileID: 8279699840870756063, guid: 9bd27250acae80f4ca2b15d0a00da341, type: 3}
       propertyPath: RobotThrow
       value: 
@@ -33258,6 +33256,11 @@ PrefabInstance:
 --- !u!4 &2056393961 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6661743358412596428, guid: 76890a475f052a24db598feca676213d, type: 3}
+  m_PrefabInstance: {fileID: 2056393960}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2056393962 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 720346489740404844, guid: 76890a475f052a24db598feca676213d, type: 3}
   m_PrefabInstance: {fileID: 2056393960}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2062742000

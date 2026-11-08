@@ -188,7 +188,7 @@ public class PSC_PlayerController1 : MonoBehaviour
             if (Health.Health <= 0 && !Dcount)
             {
                 Dcount = true;
-                //anim.SetTrigger("GameOver");
+                anim.SetTrigger("GameOver");
                 soundC.StopSound();
                 soundC.playGO();
                 Manager.gameover();
