@@ -162,7 +162,6 @@ public class PSC_PlayerController2 : MonoBehaviour
                 soundC.StopSound();
                 soundC.playGO();
                 Manager.gameover();
-
             }
         }
     }
