@@ -5,8 +5,9 @@ public class MAN_Player2SoundController : MonoBehaviour
     [SerializeField] AudioSource audiosource;
     [SerializeField] AudioClip Walk;
     [SerializeField] AudioClip Shoot;
-    //[SerializeField] AudioClip Hide;
-    //[SerializeField] AudioClip Slide;
+    [SerializeField] AudioClip Hide;
+    [SerializeField] AudioClip Slide;
+    [SerializeField] AudioClip GameOver;
     private void PlayLooped(AudioClip clip)
     {
         // Si ya está sonando este mismo clip, no hacemos nada (evita reinicios/cortes)
@@ -33,12 +34,20 @@ public class MAN_Player2SoundController : MonoBehaviour
         audiosource.PlayOneShot(Shoot);
     }
 
-    //public void playHide()
-    //{
-    //    audiosource.PlayOneShot(Hide);
-    //}
-    //public void playSlide()
-    //{
-    //    audiosource.PlayOneShot(Slide);
-    //}
+    public void playHide()
+    {
+        audiosource.PlayOneShot(Hide);
+    }
+
+    public void playSlide()
+    {
+        audiosource.PlayOneShot(Slide);
+    }
+
+    public void playGO()
+    {
+        audiosource.PlayOneShot(GameOver);
+    }
+
+
 }
