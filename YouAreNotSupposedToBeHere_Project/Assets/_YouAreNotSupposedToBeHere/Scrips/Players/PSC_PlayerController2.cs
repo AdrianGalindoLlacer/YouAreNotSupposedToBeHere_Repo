@@ -191,8 +191,8 @@ public class PSC_PlayerController2 : MonoBehaviour
     public void OnInteract(InputAction.CallbackContext context)
     {
         if (!context.performed) return;
-        //if (Block)
-        //{
+        if (!Block)
+        {
         if (Interact == EN_IntTags.Buttons)
         {
             Block = true;
@@ -233,7 +233,7 @@ public class PSC_PlayerController2 : MonoBehaviour
             PostIt = !PostIt;
             anim.SetTrigger("Change");
         }
-        //}
+        }
     }
 
     public void Onshot(InputAction.CallbackContext context)

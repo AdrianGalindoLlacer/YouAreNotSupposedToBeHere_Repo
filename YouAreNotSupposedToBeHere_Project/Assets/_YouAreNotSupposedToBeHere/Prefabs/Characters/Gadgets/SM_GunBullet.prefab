@@ -56,6 +56,18 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Bullet
       objectReference: {fileID: 0}
+    - target: {fileID: 8756455422590775582, guid: 7b14875959f729b40a4cbbee955ded95, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8756455422590775582, guid: 7b14875959f729b40a4cbbee955ded95, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d0d8d0a26390df443a93483c14b34cd7, type: 2}
+    - target: {fileID: 8756455422590775582, guid: 7b14875959f729b40a4cbbee955ded95, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 9101678567240595024, guid: 7b14875959f729b40a4cbbee955ded95, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.5
@@ -98,7 +110,7 @@ PrefabInstance:
       addedObject: {fileID: 4681033234105158930}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7b14875959f729b40a4cbbee955ded95, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5330528592894615051}
+      addedObject: {fileID: 5310093929487887736}
   m_SourcePrefab: {fileID: 100100000, guid: 7b14875959f729b40a4cbbee955ded95, type: 3}
 --- !u!1 &7382211685943528489 stripped
 GameObject:
@@ -241,6 +253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d042bc51ef8166408287b21ac945c09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SOB_Bullet
+  soundC: {fileID: 4681033234105158930}
   speed: 8
   Health: {fileID: 0}
   Manager: {fileID: 0}
@@ -259,7 +272,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MAN_BulletSoundController
   audiosource: {fileID: 2541170174917430368}
   Impact: {fileID: 0}
---- !u!136 &5330528592894615051
+--- !u!136 &5310093929487887736
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -279,6 +292,6 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.23760018
-  m_Height: 0.7807121
+  m_Height: 1.3015385
   m_Direction: 1
-  m_Center: {x: 0, y: -0.15275586, z: 0}
+  m_Center: {x: 0, y: 0.07939547, z: 0}

@@ -7,7 +7,7 @@ public class SOB_ButtonBullet : MonoBehaviour
     private Animator anim;
     [SerializeField] Animator DoorRight;
     [SerializeField] Animator DoorLeft;
-    private int count = 1; //Variable que guarda el estado en el que esta el boton (Cambiable por un bool)
+    private bool count = true; //Variable que guarda el estado en el que esta el boton (Cambiable por un bool)
     void Awake()
     {
         anim = GetComponent<Animator>();
@@ -17,26 +17,27 @@ public class SOB_ButtonBullet : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Bullet") || collision.gameObject.CompareTag("SBullet"))
         {
+            count = !count;
             Press();
         }
     }
     public void Press()
     {
-        if (count == 0)
+        if (count)
         {
-            soundC.playClose();
-            anim.SetTrigger("Press");
+            Debug.Log("clos");
+            //soundC.playClose();
             DoorRight.SetBool("Open", false);
             DoorLeft.SetBool("Open", false);
-            count++;
+            //anim.SetTrigger("Press");
         }
         else
         {
-            soundC.playOpen();
-            anim.SetTrigger("Press");
+            Debug.Log("openpli");
+            //soundC.playOpen();
             DoorRight.SetBool("Open", true);
             DoorLeft.SetBool("Open", true);
-            count--;
+            //anim.SetTrigger("Press");
         }
     }
 

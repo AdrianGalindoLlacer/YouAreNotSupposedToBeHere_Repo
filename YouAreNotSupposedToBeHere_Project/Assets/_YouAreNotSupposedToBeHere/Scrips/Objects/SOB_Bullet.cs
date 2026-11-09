@@ -11,16 +11,7 @@ public class SOB_Bullet : MonoBehaviour
 
     private void Update()
     {
-        if (!Move)
-        {
-            transform.position = Vector3.zero;
-            return;
-
-        }
-        else
-        {
             transform.Translate(speed * Time.deltaTime * Vector3.forward);
-        }
     }
 
     private void OnCollisionEnter(Collision other)
@@ -30,8 +21,8 @@ public class SOB_Bullet : MonoBehaviour
             gameObject.SetActive(false);
             if (soundenabled)
             {
-                soundC.playImpact();
-                soundenabled = false;
+                //soundC.playImpact();
+                //soundenabled = false;
             }
         }
         if (other.gameObject.CompareTag("Guard"))
