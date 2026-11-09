@@ -10,8 +10,10 @@ public class MAN_SceneManager : MonoBehaviour
     [SerializeField] GameObject PauseMenu;
     [SerializeField] GameObject UI;
     [SerializeField] CanvasGroup GameoverCanva;
+    [SerializeField] float GameFadeIn = 1f;
     [SerializeField] float GameOverDuration = 1f;
     private float GOtime = 0f;
+    private float GOduration = 0f;
     private int count;
     private bool Paused = false;
     private string exit = "SCE_Menu";
@@ -60,13 +62,17 @@ public class MAN_SceneManager : MonoBehaviour
         GameoverCanva.blocksRaycasts = true;
 
 
-        while (GOtime < GameOverDuration)
+        while (GOtime < GameFadeIn)
         {
             GOtime += Time.deltaTime;
-            GameoverCanva.alpha = Mathf.Clamp01(GOtime / GameOverDuration);
+            GameoverCanva.alpha = Mathf.Clamp01(GOtime / GameFadeIn);
             yield return null;
         }
-        GameoverCanva.alpha = 1f;
+        while (GOduration < GameOverDuration)
+        {
+            GOduration += Time.deltaTime;
+            yield return null;
+        }
         Restart();
     }
 
