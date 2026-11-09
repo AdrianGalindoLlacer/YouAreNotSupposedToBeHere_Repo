@@ -1412,11 +1412,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9063278808084496460, guid: 6b66263d716679b4f885a61c67230381, type: 3}
   m_PrefabInstance: {fileID: 118047667}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &118423382 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4872765249294073138, guid: 6935ea1d8d1437c4ea429c38fa9d9268, type: 3}
-  m_PrefabInstance: {fileID: 410818037}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &121731738
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6036,7 +6031,7 @@ PrefabInstance:
     - target: {fileID: 19751456128532506, guid: 6935ea1d8d1437c4ea429c38fa9d9268, type: 3}
       propertyPath: Vision
       value: 
-      objectReference: {fileID: 118423382}
+      objectReference: {fileID: 410818038}
     - target: {fileID: 19751456128532506, guid: 6935ea1d8d1437c4ea429c38fa9d9268, type: 3}
       propertyPath: soundC
       value: 
@@ -6047,6 +6042,10 @@ PrefabInstance:
       objectReference: {fileID: 616726779}
     - target: {fileID: 19751456128532506, guid: 6935ea1d8d1437c4ea429c38fa9d9268, type: 3}
       propertyPath: RobotStand
+      value: 
+      objectReference: {fileID: 1228715611}
+    - target: {fileID: 19751456128532506, guid: 6935ea1d8d1437c4ea429c38fa9d9268, type: 3}
+      propertyPath: StandRobot
       value: 
       objectReference: {fileID: 1228715611}
     - target: {fileID: 19751456128532506, guid: 6935ea1d8d1437c4ea429c38fa9d9268, type: 3}
@@ -6106,6 +6105,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6935ea1d8d1437c4ea429c38fa9d9268, type: 3}
+--- !u!1 &410818038 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2755565858294373500, guid: 6935ea1d8d1437c4ea429c38fa9d9268, type: 3}
+  m_PrefabInstance: {fileID: 410818037}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &426269152
 PrefabInstance:
   m_ObjectHideFlags: 0
