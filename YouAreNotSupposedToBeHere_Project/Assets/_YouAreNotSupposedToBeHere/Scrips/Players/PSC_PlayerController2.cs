@@ -231,7 +231,7 @@ public class PSC_PlayerController2 : MonoBehaviour
         {
             Block = true;
             PostIt = !PostIt;
-            anim.SetTrigger("change");
+            anim.SetTrigger("Change");
         }
         //}
     }

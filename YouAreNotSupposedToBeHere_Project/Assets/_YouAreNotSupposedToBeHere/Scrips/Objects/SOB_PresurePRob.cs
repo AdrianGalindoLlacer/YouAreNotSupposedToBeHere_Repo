@@ -5,7 +5,7 @@ public class SOB_PresurePRob : MonoBehaviour
 {
     [SerializeField] MAN_DoorSoundController soundC;
     Animator anim;
-    private int count = 0;
+    [SerializeField]private int count = 0;
     [SerializeField] Animator DoorRight;
     [SerializeField] Animator DoorLeft;
     [SerializeField] GameObject Robot; //Robot que se lanza y se deja caer por el mapa
@@ -19,7 +19,7 @@ public class SOB_PresurePRob : MonoBehaviour
     }
     private void Press()
     {
-        if (count > 0)
+        if (count == 0)
         {
             soundC.playClose();
             anim.SetBool("Press", false);
@@ -47,6 +47,7 @@ public class SOB_PresurePRob : MonoBehaviour
             count++;
             Press();
             RobotCont.Walk = false;
+            RobotCont.soundenabled = false;
             Robot.transform.position = Origin.transform.position;
             RobotStand.SetActive(true);
         }

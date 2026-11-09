@@ -4699,8 +4699,8 @@ MonoBehaviour:
   damage: 0.005
   Interactor: {fileID: 6712741509530878820}
   ShootPoint: {fileID: 7225258382618685559}
-  Bullet: {fileID: 7382211685943528489, guid: 5dc4c0e8938720847b06d3f3ffd664be, type: 3}
-  SBullet: {fileID: 2778678802649467440, guid: 731985b229a4c1a46a9c9a47b20aab41, type: 3}
+  Bullet: {fileID: 0}
+  SBullet: {fileID: 0}
   Health: {fileID: 0}
   Manager: {fileID: 0}
   soundC: {fileID: 0}
