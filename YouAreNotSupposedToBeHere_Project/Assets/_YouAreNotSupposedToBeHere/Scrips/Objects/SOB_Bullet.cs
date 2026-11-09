@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SOB_Bullet : MonoBehaviour
 {
-    //[SerializeField] MAN_BulletSoundController soundC;
+    [SerializeField] MAN_BulletSoundController soundC;
     [SerializeField] float speed = 3f;
     [SerializeField] MAN_Health Health;
     [SerializeField] MAN_SceneManager Manager;
@@ -30,7 +30,7 @@ public class SOB_Bullet : MonoBehaviour
             gameObject.SetActive(false);
             if (soundenabled)
             {
-                //soundC.playImpact();
+                soundC.playImpact();
                 soundenabled = false;
             }
         }

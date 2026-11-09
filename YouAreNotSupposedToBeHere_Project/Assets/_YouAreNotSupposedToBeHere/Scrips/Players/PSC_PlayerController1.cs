@@ -224,8 +224,8 @@ public class PSC_PlayerController1 : MonoBehaviour
     public void OnInteract(InputAction.CallbackContext context)
     {
         if (!context.performed) return;
-        //if (Block)
-        //{
+        if (Block)
+        {
             if (Interact == EN_IntTags.Buttons)
             {
                 Block = true;
@@ -257,7 +257,7 @@ public class PSC_PlayerController1 : MonoBehaviour
                 WalkRobot = !WalkRobot;
                 anim.SetTrigger("Change");
             }
-        //}
+        }
     }
 
     public void OnLay(InputAction.CallbackContext context)
