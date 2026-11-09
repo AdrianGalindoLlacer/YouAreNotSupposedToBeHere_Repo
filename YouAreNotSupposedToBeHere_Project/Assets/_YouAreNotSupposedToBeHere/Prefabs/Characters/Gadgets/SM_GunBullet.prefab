@@ -203,7 +203,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 64
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!114 &1238665588780922816
 MonoBehaviour:
@@ -217,7 +217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d042bc51ef8166408287b21ac945c09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SOB_Bullet
-  speed: 3
+  speed: 8
   Health: {fileID: 0}
   Manager: {fileID: 0}
   Move: 1
@@ -255,6 +255,6 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.23760018
-  m_Height: 0.47520036
+  m_Height: 0.7807121
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: -0.15275586, z: 0}

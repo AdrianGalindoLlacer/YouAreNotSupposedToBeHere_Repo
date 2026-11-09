@@ -4,8 +4,8 @@ using UnityEngine;
 public class SOB_Slide : MonoBehaviour
 {
 
-    private Animator enter;
-    private Animator exit;
+    [SerializeField] private Animator enter;
+    [SerializeField] private Animator exit;
     [SerializeField] Transform goal; // Variable que guarda el transform del empty en el que el jugador se teletransportara
     [SerializeField] GameObject Player; // Variable que guarda el player que se transportara
     [SerializeField] GameObject fakePlayerEnter;
@@ -14,11 +14,11 @@ public class SOB_Slide : MonoBehaviour
 
     private Coroutine slideRoutine;
 
-    private void Awake()
-    {
-        enter = fakePlayerEnter.GetComponent<Animator>();
-        exit = fakePlayerExit.GetComponent<Animator>();
-    }
+    //private void Awake()
+    //{
+    //    enter = fakePlayerEnter.GetComponent<Animator>();
+    //    exit = fakePlayerExit.GetComponent<Animator>();
+    //}
 
     public void Transport()
     {
