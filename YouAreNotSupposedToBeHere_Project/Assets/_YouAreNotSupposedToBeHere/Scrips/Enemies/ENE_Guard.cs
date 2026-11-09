@@ -85,8 +85,8 @@ public class ENE_Guard : MonoBehaviour
     }
     private void Pick()
     {
-        //soundenabled = true;
-        //soundC.playGrab();
+        soundenabled = true;
+        soundC.playGrab();
         animationSenable = false;
         Target.sound = false;
         RobotHold.SetActive(true);
@@ -95,8 +95,8 @@ public class ENE_Guard : MonoBehaviour
 
     private void Lay()
     {
-        //soundenabled = true;
-        //soundC.playLay();
+        soundenabled = true;
+        soundC.playLay();
         animationSenable = false;
         RobotHold.SetActive(false);
         StandRobot.SetActive(true);
@@ -149,7 +149,6 @@ public class ENE_Guard : MonoBehaviour
             Blocked();
             Vision.SetActive(false);
             anim.SetTrigger("Pick");
-            Block = true;
             Hold = true;
             chase = false;
         }

@@ -27,7 +27,7 @@ public class SOB_Bullet : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Wall") || other.gameObject.CompareTag("Robot"))
         {
-            Move = false;
+            gameObject.SetActive(false);
             if (soundenabled)
             {
                 //soundC.playImpact();
