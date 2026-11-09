@@ -3961,8 +3961,8 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 148767860321814539, guid: 98e96ba433d1d504dbfec12193f40964, type: 3}
-  - {fileID: -8190944603884334828, guid: 98e96ba433d1d504dbfec12193f40964, type: 3}
+  - {fileID: 2100000, guid: 4d5c7e83336097745a968fbc7b524d63, type: 2}
+  - {fileID: 2100000, guid: 4d5c7e83336097745a968fbc7b524d63, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11538,6 +11538,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_3mCameraRange
       objectReference: {fileID: 0}
+    - target: {fileID: 302160913350946952, guid: dc605fac2da918644824d7a2dad81f76, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1090083888743317399, guid: dc605fac2da918644824d7a2dad81f76, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.010000006
@@ -11611,6 +11615,10 @@ PrefabInstance:
     - target: {fileID: 6020449169580021590, guid: 472c6f9050f3abf458dc366e83a70962, type: 3}
       propertyPath: m_Name
       value: SM_2mCameraRange
+      objectReference: {fileID: 0}
+    - target: {fileID: 6020449169580021590, guid: 472c6f9050f3abf458dc366e83a70962, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8201658445819992091, guid: 472c6f9050f3abf458dc366e83a70962, type: 3}
       propertyPath: m_LocalScale.x
@@ -11689,6 +11697,10 @@ PrefabInstance:
     - target: {fileID: 4872765249294073138, guid: b82ad0eae1fe81046bf55f865700eee0, type: 3}
       propertyPath: m_Name
       value: SM_4mCameraRange
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872765249294073138, guid: b82ad0eae1fe81046bf55f865700eee0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6332155209007856945, guid: b82ad0eae1fe81046bf55f865700eee0, type: 3}
       propertyPath: m_LocalScale.x
