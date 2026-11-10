@@ -55,16 +55,19 @@ public class SOB_Robot : MonoBehaviour
             anim.SetTrigger("Idle");
             Walk = false;
             sound = false;
+            soundenabled = false;
         }
         if (collision.gameObject.CompareTag("Guard"))
         {
             anim.SetTrigger("Trip");
             Walk = false;
+            soundenabled = false;
         }
         if (collision.gameObject.CompareTag("Bullet"))
         {
             anim.SetTrigger("Sinergy");
             sound = true;
+            soundenabled = false;
         }
     }
 

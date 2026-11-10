@@ -77,6 +77,7 @@ public class ENE_Guard : MonoBehaviour
                 anim.SetBool("Walk", false);
                 patrol = patrolstate;
                 soundenabled = true;
+                Vision.SetActive(true);
                 return;
             }
             transform.position = Vector3.MoveTowards(transform.position, GOrigin.transform.position, speed * Time.deltaTime);

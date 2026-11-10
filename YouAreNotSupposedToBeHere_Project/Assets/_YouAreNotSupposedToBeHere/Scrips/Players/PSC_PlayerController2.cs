@@ -12,7 +12,7 @@ public class PSC_PlayerController2 : MonoBehaviour
     [SerializeField] LayerMask InteractLayer; //Capa donde el interactor buscara colisiones
     [SerializeField] EN_IntTags interact = EN_IntTags.Null; //Variable que guarda los tipos de colisiones con las que interactua el interactor
     [SerializeField] float RadioInter = 0.1f; //Radio de busqueda del interactor
-    private bool Block; // Bool que bloque el movimiento por completo del jugador
+    public bool Block; // Bool que bloque el movimiento por completo del jugador
 
     [Header("mechanics")]
     public int Ammo; //Municion del arma total
@@ -164,6 +164,22 @@ public class PSC_PlayerController2 : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Guard"))
+        {
+            if (!Dcount)
+            {
+                Health.Health = 0;
+                Dcount = true;
+                anim.SetTrigger("GameOver");
+                soundC.StopSound();
+                soundC.playGO();
+                Manager.gameover();
+            }
+        }
+    }
+
     public void unblock()
     {
         Block = !Block;
@@ -202,17 +218,11 @@ public class PSC_PlayerController2 : MonoBehaviour
                     button.Press();
                 }
             }
-        else if (Hide)
-        {
-            Hide = false;
-            Block = true;
-            anim.SetBool("Hide", false);
-        }
         else if (Interact == EN_IntTags.Hideout)
         {
             Block = true;
             Hide = true;
-            anim.SetBool("Hide", true);
+            anim.SetTrigger("Hide");
             soundC.StopSound();
             soundC.playHide();
             if (interactCollider.TryGetComponent(out SOB_Hideout Hideout))
@@ -233,6 +243,12 @@ public class PSC_PlayerController2 : MonoBehaviour
             PostIt = !PostIt;
             anim.SetTrigger("Change");
         }
+        }
+        else if (Hide)
+        {
+            Hide = false;
+            Block = true;
+            anim.SetTrigger("UnHide");
         }
     }
 

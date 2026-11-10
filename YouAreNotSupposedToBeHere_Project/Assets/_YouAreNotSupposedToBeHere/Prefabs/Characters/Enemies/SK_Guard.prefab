@@ -8904,7 +8904,7 @@ GameObject:
   - component: {fileID: 5683191375899275044}
   m_Layer: 0
   m_Name: SK_Guard
-  m_TagString: Untagged
+  m_TagString: Guard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

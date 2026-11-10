@@ -51,6 +51,8 @@ public class MAN_SceneManager : MonoBehaviour
 
     public void gameover()
     {
+        P1.Block = false;
+        P2.Block = false;
         P1.enabled = false;
         P2.enabled = false;
         StartCoroutine(GameOverFade());

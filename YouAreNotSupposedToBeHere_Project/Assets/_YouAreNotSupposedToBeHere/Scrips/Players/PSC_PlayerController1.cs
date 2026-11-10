@@ -13,7 +13,7 @@ public class PSC_PlayerController1 : MonoBehaviour
     [SerializeField] LayerMask InteractLayer; //Capa donde el interactor buscara colisiones
     [SerializeField] EN_IntTags interact = EN_IntTags.Null; //Variable que guarda los tipos de colisiones con las que interactua el interactor
     [SerializeField] float RadioInter = 0.1f; //Radio de busqueda del interactor
-    [SerializeField]private bool Block; // Bool que bloque el movimiento por completo del jugador
+    public bool Block; // Bool que bloque el movimiento por completo del jugador
 
     [Header("mechanics")]
     public bool HoldRobot = true; //bool que guarda si el jugador lleva el robot
@@ -120,7 +120,7 @@ public class PSC_PlayerController1 : MonoBehaviour
         if (!WalkRobot)
         {
             soundC.StopSound();
-            //soundC.playLay();
+            soundC.playLay();
             Robot.SetActive(false);
             RobotThrow.transform.SetPositionAndRotation(Spawn.position, transform.rotation);
             controller.soundenabled = true;
@@ -128,7 +128,7 @@ public class PSC_PlayerController1 : MonoBehaviour
         else
         {
             soundC.StopSound();
-            //soundC.playLay();
+            soundC.playLay();
             Robot.SetActive(false);
             RobotThrow.transform.SetPositionAndRotation(Spawn.position, transform.rotation);
             controller.Walk = true;
@@ -169,7 +169,19 @@ public class PSC_PlayerController1 : MonoBehaviour
             anim.SetBool("Push", true);
             soundC.playPush();
         }
-    }
+        if (collision.gameObject.CompareTag("Guard"))
+        {
+            if (!Dcount)
+            {
+                Health.Health = 0;
+                Dcount = true;
+                anim.SetTrigger("GameOver");
+                soundC.StopSound();
+                soundC.playGO();
+                Manager.gameover();
+            }
+        }
+}
 
     private void OnCollisionExit(Collision collision)
     {
@@ -197,6 +209,7 @@ public class PSC_PlayerController1 : MonoBehaviour
             }
         }
     }
+
 
     public void unblock()
     {

@@ -23,6 +23,7 @@ public class SOB_Bullet : MonoBehaviour
         }
         if (other.gameObject.CompareTag("Guard"))
         {
+            Health.Health = 0;
             soundC.playImpact();
             Manager.gameover();
         }
