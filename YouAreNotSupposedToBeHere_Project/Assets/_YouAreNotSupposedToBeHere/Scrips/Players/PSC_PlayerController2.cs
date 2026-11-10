@@ -195,13 +195,13 @@ public class PSC_PlayerController2 : MonoBehaviour
         {
         if (Interact == EN_IntTags.Buttons)
         {
-            Block = true;
-            if (interactCollider.TryGetComponent(out SOB_Button button))
-            {
-                button.Press();
+                Block = true;
                 anim.SetTrigger("Button");
+                if (interactCollider.TryGetComponent(out SOB_Button button))
+                {
+                    button.Press();
+                }
             }
-        }
         else if (Hide)
         {
             Hide = false;

@@ -50,7 +50,7 @@ public class SOB_Robot : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Wall"))
+        if (collision.gameObject.CompareTag("Wall")  || collision.gameObject.CompareTag("Obstacle"))
         {
             anim.SetTrigger("Idle");
             Walk = false;
@@ -67,4 +67,6 @@ public class SOB_Robot : MonoBehaviour
             sound = true;
         }
     }
+
+
 }

@@ -5,12 +5,13 @@ public class SOB_Slide : MonoBehaviour
 {
 
     [SerializeField] private Animator enter;
-    [SerializeField] private Animator exit;
+    //[SerializeField] private Animator exit;
     [SerializeField] Transform goal; // Variable que guarda el transform del empty en el que el jugador se teletransportara
     [SerializeField] GameObject Player; // Variable que guarda el player que se transportara
     [SerializeField] GameObject fakePlayerEnter;
-    [SerializeField] GameObject fakePlayerExit;
+    //[SerializeField] GameObject fakePlayerExit;
     [SerializeField] float Timer = 8f; // duracion de la rutina
+    [SerializeField] private MAN_SlideSoundController soundC;
 
     private Coroutine slideRoutine;
 
@@ -34,12 +35,13 @@ public class SOB_Slide : MonoBehaviour
 
     public void eventEnt()
     {
+        soundC.playEnter();
         slideRoutine = StartCoroutine(SlideTimerRoutine());
     }
 
     public void eventExi()
     {
-        fakePlayerExit.SetActive(false);
+        //fakePlayerExit.SetActive(false);
         Player.SetActive(true);
     }
 
@@ -53,9 +55,9 @@ public class SOB_Slide : MonoBehaviour
     private IEnumerator SlideTimerRoutine()
     {
         yield return new WaitForSeconds(Timer);
-        eventEnt();
         fakePlayerEnter.SetActive(false);
-        fakePlayerExit.SetActive(true);
-        exit.SetTrigger("SlideExit");//esta animacion tendra un evento de animacion que hara que se active EventExi y Transport
+        //fakePlayerExit.SetActive(true);
+        Player.SetActive(true);
+        //exit.SetTrigger("SlideExit");//esta animacion tendra un evento de animacion que hara que se active EventExi y Transport
     }
 }

@@ -8890,11 +8890,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1740298230347338628, guid: 04105b324348f264e806772329ed25d2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 25.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1740298230347338628, guid: 04105b324348f264e806772329ed25d2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3026416225350519445, guid: 04105b324348f264e806772329ed25d2, type: 3}
       propertyPath: m_PlayOnAwake
@@ -24616,6 +24616,10 @@ PrefabInstance:
       value: 179.99998
       objectReference: {fileID: 0}
     - target: {fileID: 9186641799870196079, guid: 9bd27250acae80f4ca2b15d0a00da341, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9186641799870196079, guid: 9bd27250acae80f4ca2b15d0a00da341, type: 3}
       propertyPath: m_Constraints
       value: 116
       objectReference: {fileID: 0}
@@ -31529,6 +31533,10 @@ PrefabInstance:
     - target: {fileID: 6385796533448504448, guid: b8c8d93827475d14eb87076690c0c4c6, type: 3}
       propertyPath: m_Constraints
       value: 116
+      objectReference: {fileID: 0}
+    - target: {fileID: 6385796533448504448, guid: b8c8d93827475d14eb87076690c0c4c6, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8509875713934063473, guid: b8c8d93827475d14eb87076690c0c4c6, type: 3}
       propertyPath: Health

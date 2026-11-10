@@ -22,7 +22,7 @@ public class Man_RobotSoundManager: MonoBehaviour
 
     public void playNormal()
     {
-        PlayLooped(RobotSound);
+        audiosource.PlayOneShot(RobotSound);
     }
 
     public void playWalk()
