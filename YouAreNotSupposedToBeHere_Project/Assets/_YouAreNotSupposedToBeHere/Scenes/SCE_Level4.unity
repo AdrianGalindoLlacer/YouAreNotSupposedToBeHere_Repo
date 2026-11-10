@@ -32273,6 +32273,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4064381810182871302, guid: f6a6caee7a00268448ad173a23419e99, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4449212766066188094, guid: f6a6caee7a00268448ad173a23419e99, type: 3}
       propertyPath: m_Size.x
       value: 3
@@ -33042,6 +33046,10 @@ PrefabInstance:
       propertyPath: Manager
       value: 
       objectReference: {fileID: 996908673}
+    - target: {fileID: 4681033234105158930, guid: 5dc4c0e8938720847b06d3f3ffd664be, type: 3}
+      propertyPath: Impact
+      value: 
+      objectReference: {fileID: 8300000, guid: 4642e8383626baf4780251f76c06ed90, type: 3}
     - target: {fileID: 7382211685943528489, guid: 5dc4c0e8938720847b06d3f3ffd664be, type: 3}
       propertyPath: m_Name
       value: SM_GunBullet
