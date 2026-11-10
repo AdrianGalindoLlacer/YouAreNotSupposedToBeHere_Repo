@@ -76,6 +76,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1e1af53149dca504db8049ff07f1f2ec, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8369619438517901746}
+    - targetCorrespondingSourceObject: {fileID: 7598681974044683970, guid: 1e1af53149dca504db8049ff07f1f2ec, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6928411574461919731}
   m_SourcePrefab: {fileID: 100100000, guid: 1e1af53149dca504db8049ff07f1f2ec, type: 3}
 --- !u!1 &267119843614741949 stripped
 GameObject:
@@ -150,6 +153,33 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2870012460009761299, guid: 1e1af53149dca504db8049ff07f1f2ec, type: 3}
   m_PrefabInstance: {fileID: 1113631302614018284}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7352013391277884974 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7598681974044683970, guid: 1e1af53149dca504db8049ff07f1f2ec, type: 3}
+  m_PrefabInstance: {fileID: 1113631302614018284}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &6928411574461919731
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7352013391277884974}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -4644454119831931045, guid: 1e1af53149dca504db8049ff07f1f2ec, type: 3}
 --- !u!1001 &7245955248992000345
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -160,11 +190,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 448827569008460687, guid: da4e0a464d10b9e42b16bc0a862921a1, type: 3}
       propertyPath: m_Name
-      value: SK_GwenNSRobot
+      value: SK_PlateRobot
       objectReference: {fileID: 0}
     - target: {fileID: 448827569008460687, guid: da4e0a464d10b9e42b16bc0a862921a1, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 448827569008460687, guid: da4e0a464d10b9e42b16bc0a862921a1, type: 3}
+      propertyPath: m_TagString
+      value: Robot
       objectReference: {fileID: 0}
     - target: {fileID: 968659742477424949, guid: da4e0a464d10b9e42b16bc0a862921a1, type: 3}
       propertyPath: m_LocalPosition.x
@@ -209,13 +243,54 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 448827569008460687, guid: da4e0a464d10b9e42b16bc0a862921a1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7655626641989277091}
+    - targetCorrespondingSourceObject: {fileID: 448827569008460687, guid: da4e0a464d10b9e42b16bc0a862921a1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4522239172779504374}
   m_SourcePrefab: {fileID: 100100000, guid: da4e0a464d10b9e42b16bc0a862921a1, type: 3}
 --- !u!1 &7112384080136461014 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 448827569008460687, guid: da4e0a464d10b9e42b16bc0a862921a1, type: 3}
   m_PrefabInstance: {fileID: 7245955248992000345}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &7655626641989277091
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7112384080136461014}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.5016488, y: 0.4205324, z: 1}
+  m_Center: {x: -0, y: 0.17966118, z: 0}
+--- !u!114 &4522239172779504374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7112384080136461014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e21df05ed50cd542bf8f2f3363a9837, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SOB_RobotPlate
+  DoorRight: {fileID: 0}
+  DoorLeft: {fileID: 0}
 --- !u!4 &7637985189169004652 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 968659742477424949, guid: da4e0a464d10b9e42b16bc0a862921a1, type: 3}
