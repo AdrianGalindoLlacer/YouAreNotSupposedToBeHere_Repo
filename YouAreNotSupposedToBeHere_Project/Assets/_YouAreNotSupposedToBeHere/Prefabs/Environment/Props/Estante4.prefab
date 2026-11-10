@@ -3914,7 +3914,7 @@ GameObject:
   - component: {fileID: 6274644000105745507}
   m_Layer: 0
   m_Name: SM_LongShelfMain
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4010,8 +4010,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.65, y: 1.4, z: 2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.5926382, y: 1.4, z: 2}
+  m_Center: {x: 0.02868089, y: 0, z: 0}
 --- !u!1 &4952191627235494270
 GameObject:
   m_ObjectHideFlags: 0

@@ -1630,6 +1630,18 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 13fbc0e52168bc64ea3d29e4ee2a7279, type: 2}
+    - target: {fileID: 7812175345518638573, guid: 86f4abb6af19fe84aafbecceffa7c902, type: 3}
+      propertyPath: m_Size.x
+      value: 0.5871552
+      objectReference: {fileID: 0}
+    - target: {fileID: 7812175345518638573, guid: 86f4abb6af19fe84aafbecceffa7c902, type: 3}
+      propertyPath: m_Center.x
+      value: 0.03142239
+      objectReference: {fileID: 0}
+    - target: {fileID: 8763040238104476245, guid: 86f4abb6af19fe84aafbecceffa7c902, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

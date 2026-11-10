@@ -15,6 +15,7 @@ TagManager:
   - Wall
   - Vision
   - Stand
+  - Obstacle
   layers:
   - Default
   - TransparentFX

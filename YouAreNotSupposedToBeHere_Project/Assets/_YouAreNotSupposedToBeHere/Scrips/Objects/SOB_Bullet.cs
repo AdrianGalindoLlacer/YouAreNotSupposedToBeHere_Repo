@@ -16,7 +16,7 @@ public class SOB_Bullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("Wall") || other.gameObject.CompareTag("Robot"))
+        if (other.gameObject.CompareTag("Wall") || other.gameObject.CompareTag("Robot") || other.gameObject.CompareTag("Obstacle") || other.gameObject.CompareTag("Buttons"))
         {
             gameObject.SetActive(false);
             if (soundenabled)
@@ -29,5 +29,19 @@ public class SOB_Bullet : MonoBehaviour
         {
             Manager.gameover();
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Obstacle"))
+        {
+            gameObject.SetActive(false);
+            if (soundenabled)
+            {
+                //soundC.playImpact();
+                //soundenabled = false;
+            }
+        }
+
     }
 }
