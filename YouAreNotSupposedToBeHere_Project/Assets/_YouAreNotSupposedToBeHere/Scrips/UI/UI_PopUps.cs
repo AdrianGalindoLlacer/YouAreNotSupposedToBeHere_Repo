@@ -13,6 +13,7 @@ public class UI_PopUps : MonoBehaviour
     [SerializeField] float framerate;
     [SerializeField] Image image;
     [SerializeField] float duration = 5f;
+    [SerializeField] GameObject player; 
     private int currentFrame;
     private float timer;
 
@@ -20,7 +21,7 @@ public class UI_PopUps : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject == player)
         {
             count++;
             if (count > 0)

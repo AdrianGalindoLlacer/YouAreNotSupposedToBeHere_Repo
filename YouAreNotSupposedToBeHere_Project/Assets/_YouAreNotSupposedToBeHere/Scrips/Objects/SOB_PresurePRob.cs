@@ -5,7 +5,7 @@ public class SOB_PresurePRob : MonoBehaviour
 {
     [SerializeField] MAN_DoorSoundController soundC;
     Animator anim;
-    [SerializeField]private int count = 0;
+    public int count = 0;
     [SerializeField] Animator DoorRight;
     [SerializeField] Animator DoorLeft;
     [SerializeField] GameObject Robot; //Robot que se lanza y se deja caer por el mapa
@@ -18,11 +18,11 @@ public class SOB_PresurePRob : MonoBehaviour
     {
         anim = GetComponent<Animator>();
     }
-    private void Press()
+    public void Press()
     {
         if (count == 0)
         {
-            if (!pressed) soundC.playClose();
+            if (pressed) soundC.playClose();
             pressed = false;
             anim.SetBool("Press", false);
             DoorRight.SetBool("Open", false);
@@ -30,7 +30,7 @@ public class SOB_PresurePRob : MonoBehaviour
         }
         else
         {
-            if (pressed) soundC.playOpen();
+            if (!pressed) soundC.playOpen();
             pressed = true;
             anim.SetBool("Press", true);
             DoorRight.SetBool("Open", true);

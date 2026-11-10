@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 27fa140a7a507ac40b0879a68d4c4098
-      internalID: -271385283
+      spriteID: 4e244eb388e9ef745b451e9006552762
+      internalID: 475864549
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54ef52400957c7c43820ac81a8a90fe1
-      internalID: -1914743476
+      spriteID: 79a375d386e877d4d9ed8f9e6835a9ce
+      internalID: -257813580
       vertices: []
       indices: 
       edges: []
@@ -156,8 +156,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2fbf36cb6dc3a0489e51f75ca1fc064
-      internalID: -1027878405
+      spriteID: 3c67b3badbdd54c49a339375d54d14fd
+      internalID: -751306334
       vertices: []
       indices: 
       edges: []
@@ -166,7 +166,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: b96ca327b4ad56a409e35bdee497ead6
+    spriteID: 10fa9a092bea0384f827ee477094f50e
     internalID: 0
     vertices: []
     indices: 
@@ -178,11 +178,11 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":1920.0,"y":1080.0},"gridSpriteOffset":{"x":0.0,"y":420.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      POP_PressurePlateBig_0: -271385283
-      POP_PressurePlateBig_1: -1914743476
-      POP_PressurePlateBig_2: -1027878405
-      POP_PressurePlateBig_3: 1035437708
-      POP_PressurePlateBig_4: 1947095127
+      POP_PressurePlateBig_0: 475864549
+      POP_PressurePlateBig_1: -257813580
+      POP_PressurePlateBig_2: -751306334
+      POP_PressurePlateBig_3: -1374341648
+      POP_PressurePlateBig_4: 1754507078
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

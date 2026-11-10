@@ -4,13 +4,12 @@ using UnityEngine;
 public class SOB_RobotPlate : MonoBehaviour
 {
 
-    [SerializeField] Animator DoorRight;
-    [SerializeField] Animator DoorLeft;
+    [SerializeField] SOB_PresurePRob Plate;
 
     public void pick()
     {
-        DoorRight.SetBool("Open", false);
-        DoorLeft.SetBool("Open", false);
+        Plate.count--;
+        Plate.Press();
         gameObject.SetActive(false);
     }
 }
