@@ -231,7 +231,7 @@ public class PSC_PlayerController1 : MonoBehaviour
             {
                 Block = true;
                 anim.SetTrigger("Button");
-                if (interactCollider.TryGetComponent(out SOB_Button button) || interactCollider.TryGetComponent(out SOB_ButtonBullet buttonG))
+                if (interactCollider.TryGetComponent(out SOB_Button button))
                 {
                     Debug.Log("Boton");
                     button.Press();

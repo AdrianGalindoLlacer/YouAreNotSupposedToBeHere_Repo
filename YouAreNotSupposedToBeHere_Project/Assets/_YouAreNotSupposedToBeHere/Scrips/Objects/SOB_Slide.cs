@@ -55,7 +55,6 @@ public class SOB_Slide : MonoBehaviour
     private IEnumerator SlideTimerRoutine()
     {
         yield return new WaitForSeconds(Timer);
-        eventEnt();
         fakePlayerEnter.SetActive(false);
         //fakePlayerExit.SetActive(true);
         Player.SetActive(true);

@@ -201,10 +201,6 @@ public class PSC_PlayerController2 : MonoBehaviour
                 {
                     button.Press();
                 }
-                if (interactCollider.TryGetComponent(out SOB_ButtonBullet buttonG))
-                {
-                    buttonG.Press();
-                }
             }
         else if (Hide)
         {
