@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 public class UI_PopUps : MonoBehaviour
 {
@@ -11,8 +12,11 @@ public class UI_PopUps : MonoBehaviour
     [SerializeField] Sprite[] popUpframes;
     [SerializeField] float framerate;
     [SerializeField] Image image;
+    [SerializeField] float duration = 5f;
     private int currentFrame;
     private float timer;
+
+    private Coroutine PopUpRoutine;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -22,14 +26,20 @@ public class UI_PopUps : MonoBehaviour
             if (count > 0)
             {
                 popUp.SetActive(true);
+                popUp.SetActive(true);
                 currentFrame = 0;
                 timer = 0f;
-
                 image.sprite = popUpframes[0];
+                PopUpRoutine = StartCoroutine(PopUpDurationRoutine());
             }
         }
     }
 
+    private IEnumerator PopUpDurationRoutine()
+    {
+        yield return new WaitForSeconds(duration);
+        popUp.SetActive(false);
+    }
 
 
     private void OnTriggerExit(Collider other)

@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -229,18 +230,23 @@ public class PSC_PlayerController1 : MonoBehaviour
             if (Interact == EN_IntTags.Buttons)
             {
                 Block = true;
-                if (interactCollider.TryGetComponent(out SOB_Button button))
+                anim.SetTrigger("Button");
+                if (interactCollider.TryGetComponent(out SOB_Button button) || interactCollider.TryGetComponent(out SOB_ButtonBullet buttonG))
                 {
                     Debug.Log("Boton");
                     button.Press();
-                    anim.SetTrigger("Button");
                 }
             }
             else if (Interact == EN_IntTags.Robot)
             {
+                if (interactCollider.TryGetComponent(out SOB_RobotPlate RobotPlate))
+                {
+                    RobotPlate.pick();
+                }
                 Block = true;
                 Debug.Log("Robot");
                 anim.SetTrigger("GrabF");
+
 
             }
             else if (Interact == EN_IntTags.Stand)

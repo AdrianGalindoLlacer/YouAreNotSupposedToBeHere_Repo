@@ -18,15 +18,12 @@ public class SOB_Bullet : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Wall") || other.gameObject.CompareTag("Robot") || other.gameObject.CompareTag("Obstacle") || other.gameObject.CompareTag("Buttons"))
         {
+                soundC.playImpact();
             gameObject.SetActive(false);
-            if (soundenabled)
-            {
-                //soundC.playImpact();
-                //soundenabled = false;
-            }
         }
         if (other.gameObject.CompareTag("Guard"))
         {
+            soundC.playImpact();
             Manager.gameover();
         }
     }
@@ -36,11 +33,7 @@ public class SOB_Bullet : MonoBehaviour
         if (other.gameObject.CompareTag("Obstacle"))
         {
             gameObject.SetActive(false);
-            if (soundenabled)
-            {
-                //soundC.playImpact();
-                //soundenabled = false;
-            }
+                soundC.playImpact();
         }
 
     }

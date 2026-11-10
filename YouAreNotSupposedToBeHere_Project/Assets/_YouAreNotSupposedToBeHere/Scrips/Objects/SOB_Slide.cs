@@ -11,6 +11,7 @@ public class SOB_Slide : MonoBehaviour
     [SerializeField] GameObject fakePlayerEnter;
     //[SerializeField] GameObject fakePlayerExit;
     [SerializeField] float Timer = 8f; // duracion de la rutina
+    [SerializeField] private MAN_SlideSoundController soundC;
 
     private Coroutine slideRoutine;
 
@@ -34,6 +35,7 @@ public class SOB_Slide : MonoBehaviour
 
     public void eventEnt()
     {
+        soundC.playEnter();
         slideRoutine = StartCoroutine(SlideTimerRoutine());
     }
 

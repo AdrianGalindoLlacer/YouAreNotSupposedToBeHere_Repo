@@ -190,7 +190,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 448827569008460687, guid: da4e0a464d10b9e42b16bc0a862921a1, type: 3}
       propertyPath: m_Name
-      value: SK_GwenNSRobot
+      value: SK_PlateRobot
       objectReference: {fileID: 0}
     - target: {fileID: 448827569008460687, guid: da4e0a464d10b9e42b16bc0a862921a1, type: 3}
       propertyPath: m_IsActive
@@ -247,6 +247,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 448827569008460687, guid: da4e0a464d10b9e42b16bc0a862921a1, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7655626641989277091}
+    - targetCorrespondingSourceObject: {fileID: 448827569008460687, guid: da4e0a464d10b9e42b16bc0a862921a1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4522239172779504374}
   m_SourcePrefab: {fileID: 100100000, guid: da4e0a464d10b9e42b16bc0a862921a1, type: 3}
 --- !u!1 &7112384080136461014 stripped
 GameObject:
@@ -274,6 +277,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.5016488, y: 0.4205324, z: 1}
   m_Center: {x: -0, y: 0.17966118, z: 0}
+--- !u!114 &4522239172779504374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7112384080136461014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e21df05ed50cd542bf8f2f3363a9837, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SOB_RobotPlate
+  DoorRight: {fileID: 0}
+  DoorLeft: {fileID: 0}
 --- !u!4 &7637985189169004652 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 968659742477424949, guid: da4e0a464d10b9e42b16bc0a862921a1, type: 3}
