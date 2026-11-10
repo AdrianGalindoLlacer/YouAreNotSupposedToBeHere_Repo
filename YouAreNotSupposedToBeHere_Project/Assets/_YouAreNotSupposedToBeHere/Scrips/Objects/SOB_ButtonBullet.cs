@@ -26,18 +26,18 @@ public class SOB_ButtonBullet : MonoBehaviour
         if (count)
         {
             Debug.Log("clos");
-            //soundC.playClose();
+            soundC.playClose();
             DoorRight.SetBool("Open", false);
             DoorLeft.SetBool("Open", false);
-            //anim.SetTrigger("Press");
+            anim.SetTrigger("Press");
         }
         else
         {
             Debug.Log("openpli");
-            //soundC.playOpen();
+            soundC.playOpen();
             DoorRight.SetBool("Open", true);
             DoorLeft.SetBool("Open", true);
-            //anim.SetTrigger("Press");
+            anim.SetTrigger("Press");
         }
     }
 

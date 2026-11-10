@@ -777,9 +777,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SOB_RobotSoundController
   audiosource: {fileID: 0}
-  RobotSound: {fileID: 8300000, guid: de70c068063a86040805254671d60826, type: 3}
+  RobotSound: {fileID: 0}
   RobotWalk: {fileID: 8300000, guid: 5b626aa9c50d929419e95dba00bcd2d0, type: 3}
-  Synergy: {fileID: 8300000, guid: b33b1733b59b11f4fa295a295c43ad7f, type: 3}
+  Synergy: {fileID: 8300000, guid: de70c068063a86040805254671d60826, type: 3}
 --- !u!114 &8491235478691255749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -794,10 +794,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MAN_Player1SoundController
   audiosource: {fileID: 0}
   Walk: {fileID: 8300000, guid: b68544c7d2361b440befe9471c61a20f, type: 3}
-  Lay: {fileID: 0}
-  Push: {fileID: 0}
-  Grab: {fileID: 0}
-  GameOver: {fileID: 0}
+  Lay: {fileID: 8300000, guid: 8680c67dbe51a4041bdab6b5540f4353, type: 3}
+  Push: {fileID: 8300000, guid: 49f73b0a1a4a0a3459cf423f72e0be5f, type: 3}
+  Grab: {fileID: 8300000, guid: 2aca465312cfc674e8d861d630ec7ae5, type: 3}
+  GameOver: {fileID: 8300000, guid: 4eafd78c93bed7745bc12442c7fabf70, type: 3}
 --- !u!114 &3791557402819687989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -826,8 +826,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MAN_GuardSoundController
   audiosource: {fileID: 0}
   Walk: {fileID: 8300000, guid: b68544c7d2361b440befe9471c61a20f, type: 3}
-  Lay: {fileID: 0}
-  Grab: {fileID: 0}
+  Lay: {fileID: 8300000, guid: 8680c67dbe51a4041bdab6b5540f4353, type: 3}
+  Grab: {fileID: 8300000, guid: 2aca465312cfc674e8d861d630ec7ae5, type: 3}
 --- !u!114 &396125882796904661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -843,9 +843,9 @@ MonoBehaviour:
   audiosource: {fileID: 0}
   Walk: {fileID: 8300000, guid: b68544c7d2361b440befe9471c61a20f, type: 3}
   Shoot: {fileID: 8300000, guid: 4642e8383626baf4780251f76c06ed90, type: 3}
-  Hide: {fileID: 0}
-  Slide: {fileID: 0}
-  GameOver: {fileID: 0}
+  Hide: {fileID: 8300000, guid: cb2e7fc78aeecd0499f78f089fd68eb1, type: 3}
+  Slide: {fileID: 8300000, guid: 131ef13e762e40b4799e737a963fc1e5, type: 3}
+  GameOver: {fileID: 8300000, guid: 4eafd78c93bed7745bc12442c7fabf70, type: 3}
 --- !u!114 &2131657041625691813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -860,7 +860,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MAN_DoorSoundController
   audiosource: {fileID: 461356015075971599}
   Open: {fileID: 8300000, guid: 38f26adecdc976d45bac88c0e1abaf90, type: 3}
-  Close: {fileID: 0}
+  Close: {fileID: 8300000, guid: 38f26adecdc976d45bac88c0e1abaf90, type: 3}
 --- !u!1 &4380022423528641396
 GameObject:
   m_ObjectHideFlags: 0

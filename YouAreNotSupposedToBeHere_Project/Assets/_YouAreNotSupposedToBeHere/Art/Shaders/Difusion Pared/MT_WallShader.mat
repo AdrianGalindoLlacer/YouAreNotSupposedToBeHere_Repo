@@ -34,7 +34,7 @@ Material:
     - _Metallic: 0
     - _MinAlpha: 0
     - _OccluderMargin: 0
-    - _Smoothness: 0.5
+    - _Smoothness: 0
     m_Colors:
     - _BaseColor: {r: 0.07450981, g: 0.14509805, b: 0.43137258, a: 1}
   m_BuildTextureStacks: []

@@ -2423,7 +2423,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 133b44d867f725c4280716589261bbcf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3213,8 +3213,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.3, y: 0.5, z: 0.3}
-  m_Center: {x: 0, y: 0.25, z: 0}
+  m_Size: {x: 0.27631217, y: 0.4161997, z: 0.3}
+  m_Center: {x: 0, y: 0.20809986, z: 0}
 --- !u!65 &4144566565663798340
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9939,9 +9939,25 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 116
       objectReference: {fileID: 0}
+    - target: {fileID: 583347402518472704, guid: 0c3940f46b65d1a4da6683fbda100290, type: 3}
+      propertyPath: m_Size.x
+      value: 0.27631217
+      objectReference: {fileID: 0}
+    - target: {fileID: 583347402518472704, guid: 0c3940f46b65d1a4da6683fbda100290, type: 3}
+      propertyPath: m_Size.y
+      value: 0.4161997
+      objectReference: {fileID: 0}
+    - target: {fileID: 583347402518472704, guid: 0c3940f46b65d1a4da6683fbda100290, type: 3}
+      propertyPath: m_Center.y
+      value: 0.20809986
+      objectReference: {fileID: 0}
     - target: {fileID: 5150058933482976274, guid: 0c3940f46b65d1a4da6683fbda100290, type: 3}
       propertyPath: m_Name
       value: SK_Robot
+      objectReference: {fileID: 0}
+    - target: {fileID: 5390038991563606589, guid: 0c3940f46b65d1a4da6683fbda100290, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5490873094428176040, guid: 0c3940f46b65d1a4da6683fbda100290, type: 3}
       propertyPath: m_LocalPosition.x

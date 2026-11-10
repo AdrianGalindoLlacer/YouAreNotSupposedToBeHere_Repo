@@ -119,7 +119,7 @@ public class PSC_PlayerController1 : MonoBehaviour
         if (!WalkRobot)
         {
             soundC.StopSound();
-            soundC.playLay();
+            //soundC.playLay();
             Robot.SetActive(false);
             RobotThrow.transform.SetPositionAndRotation(Spawn.position, transform.rotation);
             controller.soundenabled = true;
@@ -127,7 +127,7 @@ public class PSC_PlayerController1 : MonoBehaviour
         else
         {
             soundC.StopSound();
-            soundC.playLay();
+            //soundC.playLay();
             Robot.SetActive(false);
             RobotThrow.transform.SetPositionAndRotation(Spawn.position, transform.rotation);
             controller.Walk = true;

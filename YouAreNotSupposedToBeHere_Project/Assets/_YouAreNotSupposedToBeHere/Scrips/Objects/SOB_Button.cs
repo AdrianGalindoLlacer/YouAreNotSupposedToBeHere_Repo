@@ -17,7 +17,7 @@ public class SOB_Button : MonoBehaviour
     {
         if (count == 0)
         {
-            //soundC.playClose();
+            soundC.playClose();
             anim.SetTrigger("Press");
             DoorRight.SetBool("Open", false);
             DoorLeft.SetBool("Open", false);
