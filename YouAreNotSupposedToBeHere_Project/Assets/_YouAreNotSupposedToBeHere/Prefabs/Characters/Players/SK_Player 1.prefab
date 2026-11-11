@@ -7961,10 +7961,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UI_P1
   Controller: {fileID: 8279699840870756063}
   Frame: {fileID: 0}
-  RobotSprite: {fileID: 0}
+  RobotSprite: {fileID: 21300000, guid: 6e11050a14d067d45b10d2e4d94af074, type: 3}
   RobotWalk:
-  - {fileID: 73705428, guid: 7de677be82850134885a9e1df3c60192, type: 3}
-  - {fileID: -1358196336, guid: 7de677be82850134885a9e1df3c60192, type: 3}
+  - {fileID: 73705428, guid: 5e8f9d97e6d573f4cbb7982e8a45fa1b, type: 3}
+  - {fileID: -1358196336, guid: 5e8f9d97e6d573f4cbb7982e8a45fa1b, type: 3}
   framerate: 1
 --- !u!114 &1570305629947498390
 MonoBehaviour:

@@ -863,7 +863,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MAN_EnemySoundController
   audiosource: {fileID: 461356015075971599}
-  GameOver: {fileID: 0}
+  GameOver: {fileID: 8300000, guid: 4eafd78c93bed7745bc12442c7fabf70, type: 3}
 --- !u!114 &1211745584681962875
 MonoBehaviour:
   m_ObjectHideFlags: 0

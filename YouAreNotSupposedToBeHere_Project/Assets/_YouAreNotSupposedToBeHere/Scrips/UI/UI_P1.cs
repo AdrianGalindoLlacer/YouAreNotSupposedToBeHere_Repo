@@ -21,6 +21,10 @@ public class UI_P1 : MonoBehaviour
         {
             Frame.color = Color.white;
         }
+        if (!Controller.WalkRobot)
+        {
+            Frame.sprite = RobotSprite;
+        }
         if (Controller.WalkRobot)
         {
             timer += Time.deltaTime;
@@ -35,10 +39,5 @@ public class UI_P1 : MonoBehaviour
             }
             Frame.sprite = RobotWalk[currentFrame];
         }
-        else
-        {
-            Frame.sprite = RobotSprite;
-        }
-
     }
 }
