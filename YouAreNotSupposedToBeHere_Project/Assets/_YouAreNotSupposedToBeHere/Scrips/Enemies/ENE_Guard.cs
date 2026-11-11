@@ -10,12 +10,13 @@ public class ENE_Guard : MonoBehaviour
 
     [Header("Movement and behavior")]
     [SerializeField] float speed = 4f;
-    //[SerializeField] float Rotate = 2f;
+    [SerializeField] float Rotate = 2f;
     [SerializeField] bool patrol = false; // Variable de la que depende que el guardia tenga o no movimiento de patruya
     [SerializeField] bool chase = false; // Variable de la que depende que el guardia este o no buscando al robot
     [SerializeField] bool Hold = false;
     [SerializeField] bool Block = false;
     private bool patrolstate;
+    private Vector3 direccion;
 
     [Header("References")]
     [SerializeField] GameObject RobotHold; // Variable que guarda el objeto del robot en su mano
@@ -43,6 +44,8 @@ public class ENE_Guard : MonoBehaviour
         if (Block) return;
         if (Target.sound)
         {
+            direccion = RobotTarget.transform.position - transform.position;
+            Quaternion rotacionObj = Quaternion.LookRotation(direccion);
             if (soundenabled && !animationSenable)
             {
                 soundC.playWalk();
@@ -50,15 +53,20 @@ public class ENE_Guard : MonoBehaviour
             anim.SetBool("Walk", true);
             patrol = false;
             chase = true;
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, rotacionObj, Rotate * Time.deltaTime);
             transform.position = Vector3.MoveTowards(transform.position, RobotTarget.transform.position, speed * Time.deltaTime);
+
         }
         else if (Hold)
         {
+            direccion = RobotStand.transform.position - transform.position;
+            Quaternion rotacionObj = Quaternion.LookRotation(direccion);
             if (soundenabled && !animationSenable)
             {
                 soundC.playWalk();
             }
             anim.SetBool("Walk", true);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, rotacionObj, Rotate * Time.deltaTime);
             transform.position = Vector3.MoveTowards(transform.position, RobotStand.transform.position, speed * Time.deltaTime);
         }
         else if (patrol)
