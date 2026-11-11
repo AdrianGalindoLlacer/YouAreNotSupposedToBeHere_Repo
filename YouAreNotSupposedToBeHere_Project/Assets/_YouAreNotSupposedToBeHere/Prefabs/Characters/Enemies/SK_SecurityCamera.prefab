@@ -2972,10 +2972,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4479511033908365314, guid: dc605fac2da918644824d7a2dad81f76, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.5
-      objectReference: {fileID: 0}
     - target: {fileID: 9092598763870675572, guid: dc605fac2da918644824d7a2dad81f76, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -3058,10 +3054,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8924052672862050403, guid: 472c6f9050f3abf458dc366e83a70962, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3080,10 +3072,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7724892871912807572}
     m_Modifications:
-    - target: {fileID: 2933928399010560921, guid: b82ad0eae1fe81046bf55f865700eee0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -2
-      objectReference: {fileID: 0}
     - target: {fileID: 4872765249294073138, guid: b82ad0eae1fe81046bf55f865700eee0, type: 3}
       propertyPath: m_Name
       value: SM_4mCameraRange

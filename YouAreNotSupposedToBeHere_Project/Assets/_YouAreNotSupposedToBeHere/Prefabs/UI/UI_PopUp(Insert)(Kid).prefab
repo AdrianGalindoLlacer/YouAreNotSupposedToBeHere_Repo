@@ -311,7 +311,7 @@ MonoBehaviour:
   - {fileID: 1097431870, guid: 89f5175570e8a54429f74e6cd07adc3d, type: 3}
   - {fileID: -1314744017, guid: 89f5175570e8a54429f74e6cd07adc3d, type: 3}
   framerate: 1.5
-  image: {fileID: 0}
+  image: {fileID: 173076217982599175}
   duration: 5
   player: {fileID: 0}
 --- !u!65 &4449212766066188094
