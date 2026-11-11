@@ -7962,7 +7962,9 @@ MonoBehaviour:
   Controller: {fileID: 8279699840870756063}
   Frame: {fileID: 0}
   RobotSprite: {fileID: 0}
-  RobotWalk: []
+  RobotWalk:
+  - {fileID: 73705428, guid: 7de677be82850134885a9e1df3c60192, type: 3}
+  - {fileID: -1358196336, guid: 7de677be82850134885a9e1df3c60192, type: 3}
   framerate: 1
 --- !u!114 &1570305629947498390
 MonoBehaviour:
