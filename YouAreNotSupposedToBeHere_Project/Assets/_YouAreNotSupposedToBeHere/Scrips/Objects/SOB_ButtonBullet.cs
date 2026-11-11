@@ -15,7 +15,7 @@ public class SOB_ButtonBullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Bullet") || collision.gameObject.CompareTag("SBullet"))
+        if (collision.gameObject.CompareTag("Bullet"))
         {
             count = !count;
             Press();

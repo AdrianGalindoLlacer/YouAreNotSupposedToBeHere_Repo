@@ -93,6 +93,45 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -112,8 +151,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4e244eb388e9ef745b451e9006552762
-      internalID: 475864549
+      spriteID: d24dc8bf092b98a48ad7acfebfcaeedb
+      internalID: 1121049778
       vertices: []
       indices: 
       edges: []
@@ -134,8 +173,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 79a375d386e877d4d9ed8f9e6835a9ce
-      internalID: -257813580
+      spriteID: 49471d3e0a5edf74388af46f0e9f7436
+      internalID: 51436555
       vertices: []
       indices: 
       edges: []
@@ -156,8 +195,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c67b3badbdd54c49a339375d54d14fd
-      internalID: -751306334
+      spriteID: 96aa0adf3a42d224993e5c7f6c89498b
+      internalID: 2134476925
       vertices: []
       indices: 
       edges: []
@@ -166,7 +205,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 10fa9a092bea0384f827ee477094f50e
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -178,11 +217,10 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":1920.0,"y":1080.0},"gridSpriteOffset":{"x":0.0,"y":420.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      POP_PressurePlateBig_0: 475864549
-      POP_PressurePlateBig_1: -257813580
-      POP_PressurePlateBig_2: -751306334
-      POP_PressurePlateBig_3: -1374341648
-      POP_PressurePlateBig_4: 1754507078
+      POP_PressurePlateBig_0: 1121049778
+      POP_PressurePlateBig_1: 51436555
+      POP_PressurePlateBig_2: 2134476925
+      POP_PressurePlateBig_3: -1361369595
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
