@@ -17,9 +17,8 @@ public class PSC_PlayerController1 : MonoBehaviour
 
     [Header("mechanics")]
     public bool HoldRobot = true; //bool que guarda si el jugador lleva el robot
-    bool WalkRobot; //Bool que guarda si el robot esta en walk
+    public bool WalkRobot; //Bool que guarda si el robot esta en walk
     [SerializeField] float damage = 0.01f;
-    private bool Dcount;
     public EN_IntTags Interact => interact;
     private Collider interactCollider; // Almacena el collider del interactor
 
@@ -57,6 +56,11 @@ public class PSC_PlayerController1 : MonoBehaviour
 
     private void Update()
     {
+        if (Health.Health <= 0 && !!Health.Dcount)
+        {
+            anim.SetTrigger("GameOver");
+            Health.Dcount = true;
+        }
         Transform origen = Interactor != null ? Interactor : transform;
 
         Collider[] collisions = Physics.OverlapSphere(origen.position, RadioInter, InteractLayer);
@@ -171,10 +175,10 @@ public class PSC_PlayerController1 : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Guard"))
         {
-            if (!Dcount)
+            if (!Health.Dcount)
             {
                 Health.Health = 0;
-                Dcount = true;
+                Health.Dcount = true;
                 anim.SetTrigger("GameOver");
                 soundC.StopSound();
                 soundC.playGO();
@@ -190,23 +194,6 @@ public class PSC_PlayerController1 : MonoBehaviour
             soundC.StopSound();
             notwsound = false;
             anim.SetBool("Push", false);
-        }
-    }
-
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.gameObject.CompareTag("Vision"))
-        {
-            Health.Health -= damage;
-            if (Health.Health <= 0 && !Dcount)
-            {
-                Dcount = true;
-                anim.SetTrigger("GameOver");
-                soundC.StopSound();
-                soundC.playGO();
-                Manager.gameover();
-
-            }
         }
     }
 

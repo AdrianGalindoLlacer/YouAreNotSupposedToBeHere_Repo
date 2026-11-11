@@ -9,6 +9,7 @@ public class MAN_Health : MonoBehaviour
     [SerializeField] Sprite[] GOframes;
     [SerializeField] float framerate;
     [SerializeField] Image GO;
+    public bool Dcount = false;
     private int currentFrame;
     private float timer;
 

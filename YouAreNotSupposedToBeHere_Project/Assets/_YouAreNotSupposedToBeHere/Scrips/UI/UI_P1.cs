@@ -5,17 +5,28 @@ using UnityEngine.UI;
 public class UI_P1 : MonoBehaviour
 {
     [SerializeField] private PSC_PlayerController1 Controller;
-    [SerializeField] private Image RobotSprite;
+    [SerializeField] Image Frame;
+    [SerializeField] Sprite RobotSprite;
+    [SerializeField] Sprite RobotWalk;
 
 
 
     private void Update()
     {
         if (!Controller.HoldRobot)
-            RobotSprite.color = Color.gray;
+            Frame.color = Color.gray;
         else
         {
-            RobotSprite.color = Color.white;
+            Frame.color = Color.white;
         }
+        if (Controller.WalkRobot)
+        {
+            Frame.sprite = RobotWalk;
+        }
+        else
+        {
+            Frame.sprite = RobotSprite;
+        }
+
     }
 }

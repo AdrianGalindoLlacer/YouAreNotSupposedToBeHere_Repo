@@ -46,6 +46,11 @@ public class PSC_PlayerController2 : MonoBehaviour
 
     private void Update()
     {
+        if (Health.Health <= 0 && !Dcount)
+        {
+            anim.SetTrigger("GameOver");
+            Dcount = true;
+        }
         //AnimatorManager();
         Transform origen = Interactor != null ? Interactor : transform;
 
@@ -131,28 +136,11 @@ public class PSC_PlayerController2 : MonoBehaviour
     //gestion del animator
     //}
 
-
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.gameObject.CompareTag("Vision"))
-        {
-            Health.Health -= damage;
-            if (Health.Health <= 0 && !Dcount)
-            {
-                Dcount = true;
-                anim.SetTrigger("GameOver");
-                soundC.StopSound();
-                soundC.playGO();
-                Manager.gameover();
-            }
-        }
-    }
-
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Guard"))
         {
-            if (!Dcount)
+            if (!Health.Dcount)
             {
                 Health.Health = 0;
                 Dcount = true;

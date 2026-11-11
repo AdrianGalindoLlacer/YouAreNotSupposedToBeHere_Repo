@@ -738,6 +738,7 @@ GameObject:
   - component: {fileID: 7903869939215457896}
   - component: {fileID: 2131657041625691813}
   - component: {fileID: 2901544147094343201}
+  - component: {fileID: 450525680118689016}
   - component: {fileID: 1211745584681962875}
   - component: {fileID: 3791557402819687989}
   m_Layer: 5
@@ -849,6 +850,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MAN_SlideSoundController
   audiosource: {fileID: 461356015075971599}
   Enter: {fileID: 8300000, guid: 131ef13e762e40b4799e737a963fc1e5, type: 3}
+--- !u!114 &450525680118689016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3915945090328641280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0a80a6d46714d946aaeab40135c0a88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MAN_EnemySoundController
+  audiosource: {fileID: 461356015075971599}
+  GameOver: {fileID: 0}
 --- !u!114 &1211745584681962875
 MonoBehaviour:
   m_ObjectHideFlags: 0
