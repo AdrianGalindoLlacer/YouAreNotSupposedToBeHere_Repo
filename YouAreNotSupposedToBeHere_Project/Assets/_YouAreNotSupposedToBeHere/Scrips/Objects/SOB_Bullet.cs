@@ -7,7 +7,6 @@ public class SOB_Bullet : MonoBehaviour
     [SerializeField] MAN_Health Health;
     [SerializeField] MAN_SceneManager Manager;
     public bool Move = false;
-    private bool soundenabled = true;
 
     private void Update()
     {

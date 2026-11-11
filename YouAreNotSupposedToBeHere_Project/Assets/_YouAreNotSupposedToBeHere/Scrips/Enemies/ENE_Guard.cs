@@ -4,7 +4,7 @@ public class ENE_Guard : MonoBehaviour
 {
     [Header("Sound and animation Management")]
     [SerializeField] MAN_GuardSoundController soundC;
-    private bool soundenabled;
+    [SerializeField] private bool soundenabled;
     private bool animationSenable;
     Animator anim;
 
@@ -80,13 +80,21 @@ public class ENE_Guard : MonoBehaviour
         }
         else
         {
+            direccion = GOrigin.transform.position - transform.position;
+            Quaternion rotacionObj = Quaternion.LookRotation(direccion);
             if (transform.position == GOrigin.transform.position)
             {
+                soundC.StopSound();
                 anim.SetBool("Walk", false);
                 patrol = patrolstate;
                 soundenabled = true;
                 Vision.SetActive(true);
                 return;
+            }
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, rotacionObj, Rotate * Time.deltaTime);
+            if (soundenabled && !animationSenable)
+            {
+                soundC.playWalk();
             }
             transform.position = Vector3.MoveTowards(transform.position, GOrigin.transform.position, speed * Time.deltaTime);
             anim.SetBool("Walk", true);

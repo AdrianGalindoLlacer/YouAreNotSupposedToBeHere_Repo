@@ -7,9 +7,7 @@ public class UI_P2 : MonoBehaviour
     //[SerializeField] private GameObject PlayerHide;
     [SerializeField] private PSC_PlayerController2 Controller;
     [SerializeField] private TMP_Text Bullets;
-    [SerializeField] private TMP_Text PostIts;
     [SerializeField] private Image BulletSprite;
-    [SerializeField] private Image SBulletSprite;
     [SerializeField] private GameObject HideSprite;
 
 
@@ -25,16 +23,6 @@ public class UI_P2 : MonoBehaviour
         {
             Bullets.text = "";
             BulletSprite.color = Color.gray;
-        }
-        if (Controller.SpecialAmmo > 0)
-        {
-            PostIts.text = Controller.SpecialAmmo.ToString();
-            SBulletSprite.color = Color.white;
-        }
-        else
-        {
-            PostIts.text = "";
-            SBulletSprite.color = Color.gray;
         }
         if (Controller.Hide)
         {

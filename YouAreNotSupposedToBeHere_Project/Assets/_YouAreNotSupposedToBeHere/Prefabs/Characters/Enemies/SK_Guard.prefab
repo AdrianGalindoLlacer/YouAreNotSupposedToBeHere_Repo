@@ -9090,6 +9090,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ENE_Guard
   soundC: {fileID: 0}
   speed: 4
+  Rotate: 200
   patrol: 0
   chase: 0
   Hold: 0
