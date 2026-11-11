@@ -27,14 +27,12 @@ public class SOB_Robot : MonoBehaviour
         {
             soundC.playSynergy();
         }
-        else if (!Walk)
+        if (!Walk)
         {
             if (soundenabled)
             {
                 soundC.playNormal();
             }
-            anim.SetBool("Movement", false);
-            anim.SetTrigger("Idle");
             return;
         }
         else if (Walk)
@@ -52,6 +50,7 @@ public class SOB_Robot : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Wall")  || collision.gameObject.CompareTag("Obstacle"))
         {
+            anim.SetBool("Movement", false);
             anim.SetTrigger("Idle");
             Walk = false;
             sound = false;
@@ -65,7 +64,6 @@ public class SOB_Robot : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Bullet"))
         {
-            anim.SetTrigger("Sinergy");
             sound = true;
             soundenabled = false;
         }
