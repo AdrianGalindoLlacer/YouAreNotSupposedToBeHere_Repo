@@ -93,45 +93,6 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WindowsStoreApps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -140,7 +101,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 420
+        y: 0
         width: 1920
         height: 1080
       alignment: 0
@@ -151,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d24dc8bf092b98a48ad7acfebfcaeedb
-      internalID: 1121049778
+      spriteID: de41e8a16e014844cbaac75f4dfc69e5
+      internalID: -833555385
       vertices: []
       indices: 
       edges: []
@@ -162,7 +123,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1920
-        y: 420
+        y: 0
         width: 1920
         height: 1080
       alignment: 0
@@ -173,8 +134,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49471d3e0a5edf74388af46f0e9f7436
-      internalID: 51436555
+      spriteID: dca37968cb39dd44e89b78ec6304e8ba
+      internalID: 511742309
       vertices: []
       indices: 
       edges: []
@@ -184,7 +145,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 3840
-        y: 420
+        y: 0
         width: 1920
         height: 1080
       alignment: 0
@@ -195,8 +156,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96aa0adf3a42d224993e5c7f6c89498b
-      internalID: 2134476925
+      spriteID: 99036e84e143a4d478363a4c9dc79897
+      internalID: 298714209
       vertices: []
       indices: 
       edges: []
@@ -205,7 +166,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: d818f95de9c7d834a864ce22fea5ec28
     internalID: 0
     vertices: []
     indices: 
@@ -215,12 +176,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":1920.0,"y":1080.0},"gridSpriteOffset":{"x":0.0,"y":420.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":1920.0,"y":1080.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      POP_PressurePlateBig_0: 1121049778
-      POP_PressurePlateBig_1: 51436555
-      POP_PressurePlateBig_2: 2134476925
-      POP_PressurePlateBig_3: -1361369595
+      POP_PressurePlateBig_0: -833555385
+      POP_PressurePlateBig_1: 511742309
+      POP_PressurePlateBig_2: 298714209
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -18,7 +18,6 @@ public class PSC_PlayerController2 : MonoBehaviour
     public int Ammo; //Municion del arma total
     [SerializeField] bool CanShoot; //Bool que impide al jugador disparar
     public bool Hide; // bool que indica que el jugador esta escondido
-    [SerializeField] float damage = 0.01f;
     public EN_IntTags Interact => interact;
     private Collider interactCollider; // Almacena el collider del interactor
     private bool Dcount;

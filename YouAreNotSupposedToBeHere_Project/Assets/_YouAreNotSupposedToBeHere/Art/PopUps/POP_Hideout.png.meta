@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fdd7b45196a787041b6b4fe6707a2ed3
+guid: 19a1c9c60c7354846bcfe5e19af68991
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,11 +97,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: POP_Postit_0
+      name: POP_Hideout_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 420
+        y: 0
         width: 1920
         height: 1080
       alignment: 0
@@ -112,18 +112,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e47dac76c79d2824c9a834103e3ad6a8
-      internalID: -95752987
+      spriteID: b07056c8143a0e243a0937c8d5d02964
+      internalID: -2054520948
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: POP_Postit_1
+      name: POP_Hideout_1
       rect:
         serializedVersion: 2
         x: 1920
-        y: 420
+        y: 0
         width: 1920
         height: 1080
       alignment: 0
@@ -134,30 +134,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c744396d22b076b47a3c913b23c0da45
-      internalID: -1532535345
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: POP_Postit_2
-      rect:
-        serializedVersion: 2
-        x: 3840
-        y: 420
-        width: 1920
-        height: 1080
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f7373f52874e4f34f86dd60033fe6620
-      internalID: -287177933
+      spriteID: 881f430004275864e9c3db67d7f89b27
+      internalID: -1896218525
       vertices: []
       indices: 
       edges: []
@@ -166,7 +144,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: f240584a08734d442a734b6d08acd00f
+    spriteID: dffbe10af9d0f404fa0c9eb3c4e8ecd5
     internalID: 0
     vertices: []
     indices: 
@@ -176,13 +154,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":1920.0,"y":1080.0},"gridSpriteOffset":{"x":0.0,"y":420.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":1920.0,"y":1080.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      POP_Postit_0: -95752987
-      POP_Postit_1: -1532535345
-      POP_Postit_2: -287177933
-      POP_Postit_3: 2097879542
-      POP_Postit_4: -459910611
+      POP_Hideout_0: -2054520948
+      POP_Hideout_1: -1896218525
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

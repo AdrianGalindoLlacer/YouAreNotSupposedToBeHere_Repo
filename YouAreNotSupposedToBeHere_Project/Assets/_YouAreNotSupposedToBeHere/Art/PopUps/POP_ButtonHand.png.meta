@@ -101,7 +101,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 420
+        y: 0
         width: 1920
         height: 1080
       alignment: 0
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db778b6afd6880041a78dd5593595fd9
-      internalID: -1822844838
+      spriteID: 1da55d2f14a005d43970d732b7d60dd6
+      internalID: -560195640
       vertices: []
       indices: 
       edges: []
@@ -123,7 +123,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1920
-        y: 420
+        y: 0
         width: 1920
         height: 1080
       alignment: 0
@@ -134,8 +134,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab4b6d9e75611c94db7f3725212a2a3e
-      internalID: 1097431870
+      spriteID: fdbb1a8087d50be448483419b523f6fc
+      internalID: 432524660
       vertices: []
       indices: 
       edges: []
@@ -145,7 +145,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 3840
-        y: 420
+        y: 0
         width: 1920
         height: 1080
       alignment: 0
@@ -156,8 +156,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 79273d315d1c8b44b8300a9a627521b4
-      internalID: -1314744017
+      spriteID: 3ed717a4fee99d145a3ab3763270d76a
+      internalID: -28774102
       vertices: []
       indices: 
       edges: []
@@ -166,7 +166,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 75266a8f522bc5d419821569f024a319
+    spriteID: 0b3ef54c3b7300d4183d46a69198e1d1
     internalID: 0
     vertices: []
     indices: 
@@ -176,13 +176,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":1920.0,"y":1080.0},"gridSpriteOffset":{"x":0.0,"y":420.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":1920.0,"y":1080.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      POP_ButtonHand_0: -1822844838
-      POP_ButtonHand_1: 1097431870
-      POP_ButtonHand_2: -1314744017
-      POP_ButtonHand_3: 1495724645
-      POP_ButtonHand_4: -1486792496
+      POP_ButtonHand_0: -560195640
+      POP_ButtonHand_1: 432524660
+      POP_ButtonHand_2: -28774102
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

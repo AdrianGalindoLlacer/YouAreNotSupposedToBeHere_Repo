@@ -18,7 +18,6 @@ public class PSC_PlayerController1 : MonoBehaviour
     [Header("mechanics")]
     public bool HoldRobot = true; //bool que guarda si el jugador lleva el robot
     public bool WalkRobot; //Bool que guarda si el robot esta en walk
-    [SerializeField] float damage = 0.01f;
     public EN_IntTags Interact => interact;
     private Collider interactCollider; // Almacena el collider del interactor
 

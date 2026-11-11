@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e4ed99e59ed0d1d4abf797f6325ff54e
+guid: 9be7a7786d97731439097e956626c96d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,11 +97,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: POP_RobotGun_0
+      name: POP_Synergy_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 420
+        y: 0
         width: 1920
         height: 1080
       alignment: 0
@@ -112,18 +112,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9aef69a5a224f054b89b441ed3e4236d
-      internalID: -201866523
+      spriteID: 8b17d4559670b924abfc26e734ea3e74
+      internalID: 754914136
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: POP_RobotGun_1
+      name: POP_Synergy_1
       rect:
         serializedVersion: 2
         x: 1920
-        y: 420
+        y: 0
         width: 1920
         height: 1080
       alignment: 0
@@ -134,18 +134,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e2546b4684549d428007e72b2a75d58
-      internalID: 927267037
+      spriteID: 6733a51c85639c942a259b20130c00b0
+      internalID: -798431635
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: POP_RobotGun_2
+      name: POP_Synergy_2
       rect:
         serializedVersion: 2
         x: 3840
-        y: 420
+        y: 0
         width: 1920
         height: 1080
       alignment: 0
@@ -156,8 +156,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ebc2b122c30715e4b9296740068e6b1e
-      internalID: -586884267
+      spriteID: 20b3abbb918692e49960780f4fdd7fb2
+      internalID: 737615314
       vertices: []
       indices: 
       edges: []
@@ -166,7 +166,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: c3647c9fb9722504eafa22135559ed2a
+    spriteID: ed1b11d8aa8636046a155b3189edea9c
     internalID: 0
     vertices: []
     indices: 
@@ -176,13 +176,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":1920.0,"y":1080.0},"gridSpriteOffset":{"x":0.0,"y":420.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":1920.0,"y":1080.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      POP_RobotGun_0: -201866523
-      POP_RobotGun_1: 927267037
-      POP_RobotGun_2: -586884267
-      POP_RobotGun_3: -189285506
-      POP_RobotGun_4: 1230507490
+      POP_Synergy_0: 754914136
+      POP_Synergy_1: -798431635
+      POP_Synergy_2: 737615314
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

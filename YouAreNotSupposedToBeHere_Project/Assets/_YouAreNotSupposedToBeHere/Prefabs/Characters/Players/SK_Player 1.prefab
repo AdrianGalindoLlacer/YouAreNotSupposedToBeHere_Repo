@@ -7937,7 +7937,7 @@ MonoBehaviour:
   RadioInter: 0.65
   Block: 0
   HoldRobot: 1
-  damage: 0.01
+  WalkRobot: 0
   Interactor: {fileID: 632774341574101200}
   Robot: {fileID: 2883775420042687599}
   Spawn: {fileID: 7575771168562825537}
@@ -7960,7 +7960,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UI_P1
   Controller: {fileID: 8279699840870756063}
+  Frame: {fileID: 0}
   RobotSprite: {fileID: 0}
+  RobotWalk: []
+  framerate: 1
 --- !u!114 &1570305629947498390
 MonoBehaviour:
   m_ObjectHideFlags: 0

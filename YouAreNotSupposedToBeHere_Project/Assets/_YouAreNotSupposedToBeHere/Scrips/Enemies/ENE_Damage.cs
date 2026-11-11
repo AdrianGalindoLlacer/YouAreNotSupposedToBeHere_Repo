@@ -4,7 +4,7 @@ using UnityEngine;
 public class ENE_Damage : MonoBehaviour
 {
     private int count = 0;
-    private float damage = 0.01f;
+    [SerializeField] float damage = 0.01f;
     [SerializeField] GameObject Alert;
     [SerializeField] MAN_SceneManager Manager;
     [SerializeField] MAN_Health Health;

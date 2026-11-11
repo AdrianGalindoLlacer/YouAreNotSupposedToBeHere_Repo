@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5ee9ec43e15bd24409e8ece4adb87572
+guid: fc91d32847735e9468e1f909c9288d9a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,11 +97,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: POP_GuardPick_0
+      name: POP_RobotPassage_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 420
+        y: 0
         width: 1920
         height: 1080
       alignment: 0
@@ -112,18 +112,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d1766a48203738469db32a32863c845
-      internalID: 1247108576
+      spriteID: 2587609a7b5a76e4b9878d7987625463
+      internalID: 2052798722
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: POP_GuardPick_1
+      name: POP_RobotPassage_1
       rect:
         serializedVersion: 2
         x: 1920
-        y: 420
+        y: 0
         width: 1920
         height: 1080
       alignment: 0
@@ -134,18 +134,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 43edc80ffd6c02a4abab755748ecac00
-      internalID: -1256970939
+      spriteID: ca4e5d4bed104194698e28527ac809a2
+      internalID: 1481444827
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: POP_GuardPick_2
+      name: POP_RobotPassage_2
       rect:
         serializedVersion: 2
         x: 3840
-        y: 420
+        y: 0
         width: 1920
         height: 1080
       alignment: 0
@@ -156,18 +156,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f59835f7b1bb784781da438a432be8f
-      internalID: 615953803
+      spriteID: f5de20e432eca6b40aab1bd9bc032bff
+      internalID: 1722323227
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: POP_GuardPick_3
+      name: POP_RobotPassage_3
       rect:
         serializedVersion: 2
         x: 5760
-        y: 420
+        y: 0
         width: 1920
         height: 1080
       alignment: 0
@@ -178,18 +178,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5bc87686ee6a34945bded73b9ed0139a
-      internalID: 1308768583
+      spriteID: 56d7fa3bafb3c9643b6d96b67457b79f
+      internalID: -374034693
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: POP_GuardPick_4
+      name: POP_RobotPassage_4
       rect:
         serializedVersion: 2
         x: 7680
-        y: 420
+        y: 0
         width: 1920
         height: 1080
       alignment: 0
@@ -200,8 +200,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: efbf7c0b1f5f9fa49b1b8f8c4af70e1b
-      internalID: 84556622
+      spriteID: 8f7be730424e20943844ea7daa57db6a
+      internalID: -58817303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: POP_RobotPassage_5
+      rect:
+        serializedVersion: 2
+        x: 9600
+        y: 0
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1c35caedcd150641b2c5d5975a78c8c
+      internalID: 1316347996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: POP_RobotPassage_6
+      rect:
+        serializedVersion: 2
+        x: 11520
+        y: 0
+        width: 1920
+        height: 1080
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28974ab27acc1cc47a7e13806fe8c590
+      internalID: 34004432
       vertices: []
       indices: 
       edges: []
@@ -210,7 +254,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 13fa073e274f4f44d8539cf9889a4f2c
+    spriteID: c6b6d9c45d5ba214cba2d62aad78afa3
     internalID: 0
     vertices: []
     indices: 
@@ -220,13 +264,15 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":1920.0,"y":1080.0},"gridSpriteOffset":{"x":0.0,"y":420.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":1920.0,"y":1080.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      POP_GuardPick_0: 1247108576
-      POP_GuardPick_1: -1256970939
-      POP_GuardPick_2: 615953803
-      POP_GuardPick_3: 1308768583
-      POP_GuardPick_4: 84556622
+      POP_RobotPassage_0: 2052798722
+      POP_RobotPassage_1: 1481444827
+      POP_RobotPassage_2: 1722323227
+      POP_RobotPassage_3: -374034693
+      POP_RobotPassage_4: -58817303
+      POP_RobotPassage_5: 1316347996
+      POP_RobotPassage_6: 34004432
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -7,8 +7,10 @@ public class UI_P1 : MonoBehaviour
     [SerializeField] private PSC_PlayerController1 Controller;
     [SerializeField] Image Frame;
     [SerializeField] Sprite RobotSprite;
-    [SerializeField] Sprite RobotWalk;
-
+    [SerializeField] Sprite[] RobotWalk;
+    [SerializeField] float framerate = 1;
+    private float timer;
+    private int currentFrame;
 
 
     private void Update()
@@ -21,7 +23,17 @@ public class UI_P1 : MonoBehaviour
         }
         if (Controller.WalkRobot)
         {
-            Frame.sprite = RobotWalk;
+            timer += Time.deltaTime;
+            float frameDuration = 1f / framerate;
+
+            if (timer >= frameDuration)
+            {
+                timer -= frameDuration;
+                currentFrame++;
+
+                if (currentFrame >= RobotWalk.Length) currentFrame = 0;
+            }
+            Frame.sprite = RobotWalk[currentFrame];
         }
         else
         {
