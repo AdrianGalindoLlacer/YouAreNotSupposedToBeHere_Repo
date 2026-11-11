@@ -16,8 +16,6 @@ public class PSC_PlayerController2 : MonoBehaviour
 
     [Header("mechanics")]
     public int Ammo; //Municion del arma total
-    public int SpecialAmmo; //PostIts que tiene el player
-    private bool PostIt; //Bool que activa el disparar postIts
     [SerializeField] bool CanShoot; //Bool que impide al jugador disparar
     public bool Hide; // bool que indica que el jugador esta escondido
     [SerializeField] float damage = 0.01f;
@@ -29,7 +27,6 @@ public class PSC_PlayerController2 : MonoBehaviour
     [SerializeField] Transform Interactor; //almacena el transform del interactor
     [SerializeField] Transform ShootPoint; //almacena el transform de donde salen las balas
     [SerializeField] GameObject Bullet; //almacena las balas
-    [SerializeField] GameObject SBullet; //almacena las balas con PostIt
     [SerializeField] MAN_Health Health;
     [SerializeField] MAN_SceneManager Manager;
     [SerializeField] MAN_Player2SoundController soundC;
@@ -121,25 +118,12 @@ public class PSC_PlayerController2 : MonoBehaviour
 
     void Shoot()
     {
-        if (PostIt)
-        {
-            soundC.StopSound();
-            soundC.playShoot();
-            Instantiate(SBullet, ShootPoint.position, transform.rotation);
-            SpecialAmmo--;
-            Ammo--;
-            SOB_Bullet controller = Bullet.GetComponent<SOB_Bullet>();
-            controller.Move = true;
-        }
-        else
-        {
             soundC.StopSound();
             soundC.playShoot();
             Instantiate(Bullet, ShootPoint.position, transform.rotation);
             Ammo--;
-            SOB_Bullet controller = SBullet.GetComponent<SOB_Bullet>();
-            controller.Move = true;
-        }
+            //SOB_Bullet controller = Bullet.GetComponent<SOB_Bullet>();
+            //controller.Move = true;
     }
 
     //private void AnimatorManager()
@@ -236,12 +220,6 @@ public class PSC_PlayerController2 : MonoBehaviour
             {
                 Slide.Slide();
             }
-        }
-        else if (SpecialAmmo > 0)
-        {
-            Block = true;
-            PostIt = !PostIt;
-            anim.SetTrigger("Change");
         }
         }
         else if (Hide)
