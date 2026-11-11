@@ -135,6 +135,22 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 683125089}
+    - target: {fileID: 2122797491193997555, guid: f6a6caee7a00268448ad173a23419e99, type: 3}
+      propertyPath: popUpframes.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2122797491193997555, guid: f6a6caee7a00268448ad173a23419e99, type: 3}
+      propertyPath: 'popUpframes.Array.data[0]'
+      value: 
+      objectReference: {fileID: -1617069496, guid: a93d56c96ea15d3459962027cca3384f, type: 3}
+    - target: {fileID: 2122797491193997555, guid: f6a6caee7a00268448ad173a23419e99, type: 3}
+      propertyPath: 'popUpframes.Array.data[1]'
+      value: 
+      objectReference: {fileID: 201716515, guid: a93d56c96ea15d3459962027cca3384f, type: 3}
+    - target: {fileID: 2122797491193997555, guid: f6a6caee7a00268448ad173a23419e99, type: 3}
+      propertyPath: 'popUpframes.Array.data[2]'
+      value: 
+      objectReference: {fileID: -1451184269, guid: a93d56c96ea15d3459962027cca3384f, type: 3}
     - target: {fileID: 2550281649877365899, guid: f6a6caee7a00268448ad173a23419e99, type: 3}
       propertyPath: m_Name
       value: UI_PopUp_Slide_Kevin
@@ -179,13 +195,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4449212766066188094, guid: f6a6caee7a00268448ad173a23419e99, type: 3}
+      propertyPath: m_Size.x
+      value: 2.6724694
+      objectReference: {fileID: 0}
     - target: {fileID: 9006986172647042356, guid: f6a6caee7a00268448ad173a23419e99, type: 3}
       propertyPath: m_LocalPosition.x
       value: -955
       objectReference: {fileID: 0}
     - target: {fileID: 9006986172647042356, guid: f6a6caee7a00268448ad173a23419e99, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.5
+      value: 1.229
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -217,7 +237,7 @@ PrefabInstance:
     - target: {fileID: 3945075675326126640, guid: 76890a475f052a24db598feca676213d, type: 3}
       propertyPath: Robot
       value: 
-      objectReference: {fileID: 1772036794}
+      objectReference: {fileID: 0}
     - target: {fileID: 3945075675326126640, guid: 76890a475f052a24db598feca676213d, type: 3}
       propertyPath: Passage
       value: 
@@ -428,7 +448,7 @@ PrefabInstance:
     - target: {fileID: 7903869939215457896, guid: 6cf332435d23c4a4c986caf61c3d1280, type: 3}
       propertyPath: audiosource
       value: 
-      objectReference: {fileID: 1772036798}
+      objectReference: {fileID: 0}
     - target: {fileID: 8310582368245143039, guid: 6cf332435d23c4a4c986caf61c3d1280, type: 3}
       propertyPath: m_LocalPosition.x
       value: -941.043
@@ -568,6 +588,22 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 370469528}
+    - target: {fileID: 2122797491193997555, guid: f6a6caee7a00268448ad173a23419e99, type: 3}
+      propertyPath: duration
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2122797491193997555, guid: f6a6caee7a00268448ad173a23419e99, type: 3}
+      propertyPath: framerate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2122797491193997555, guid: f6a6caee7a00268448ad173a23419e99, type: 3}
+      propertyPath: popUpframes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2122797491193997555, guid: f6a6caee7a00268448ad173a23419e99, type: 3}
+      propertyPath: 'popUpframes.Array.data[0]'
+      value: 
+      objectReference: {fileID: -360029108, guid: 2df66fdf03c36764f86aba038bc6ddeb, type: 3}
     - target: {fileID: 2550281649877365899, guid: f6a6caee7a00268448ad173a23419e99, type: 3}
       propertyPath: m_Name
       value: UI_PopUp_PressurePlateSmall_Gwen
@@ -2803,7 +2839,7 @@ PrefabInstance:
     - target: {fileID: 8279699840870756063, guid: 9bd27250acae80f4ca2b15d0a00da341, type: 3}
       propertyPath: RobotThrow
       value: 
-      objectReference: {fileID: 1772036794}
+      objectReference: {fileID: 0}
     - target: {fileID: 8288761482031710420, guid: 9bd27250acae80f4ca2b15d0a00da341, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 21.550674
@@ -6971,6 +7007,22 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 370469528}
+    - target: {fileID: 2122797491193997555, guid: f6a6caee7a00268448ad173a23419e99, type: 3}
+      propertyPath: popUpframes.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2122797491193997555, guid: f6a6caee7a00268448ad173a23419e99, type: 3}
+      propertyPath: 'popUpframes.Array.data[0]'
+      value: 
+      objectReference: {fileID: -2031662497, guid: adf56978aea8db9469b9e2581a3e0065, type: 3}
+    - target: {fileID: 2122797491193997555, guid: f6a6caee7a00268448ad173a23419e99, type: 3}
+      propertyPath: 'popUpframes.Array.data[1]'
+      value: 
+      objectReference: {fileID: -961590385, guid: adf56978aea8db9469b9e2581a3e0065, type: 3}
+    - target: {fileID: 2122797491193997555, guid: f6a6caee7a00268448ad173a23419e99, type: 3}
+      propertyPath: 'popUpframes.Array.data[2]'
+      value: 
+      objectReference: {fileID: 743771926, guid: adf56978aea8db9469b9e2581a3e0065, type: 3}
     - target: {fileID: 2550281649877365899, guid: f6a6caee7a00268448ad173a23419e99, type: 3}
       propertyPath: m_Name
       value: UI_PopUp_PostIt_Gwen
@@ -32179,6 +32231,22 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 683125089}
+    - target: {fileID: 2122797491193997555, guid: f6a6caee7a00268448ad173a23419e99, type: 3}
+      propertyPath: popUpframes.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2122797491193997555, guid: f6a6caee7a00268448ad173a23419e99, type: 3}
+      propertyPath: 'popUpframes.Array.data[0]'
+      value: 
+      objectReference: {fileID: -2031662497, guid: adf56978aea8db9469b9e2581a3e0065, type: 3}
+    - target: {fileID: 2122797491193997555, guid: f6a6caee7a00268448ad173a23419e99, type: 3}
+      propertyPath: 'popUpframes.Array.data[1]'
+      value: 
+      objectReference: {fileID: -961590385, guid: adf56978aea8db9469b9e2581a3e0065, type: 3}
+    - target: {fileID: 2122797491193997555, guid: f6a6caee7a00268448ad173a23419e99, type: 3}
+      propertyPath: 'popUpframes.Array.data[2]'
+      value: 
+      objectReference: {fileID: 743771926, guid: adf56978aea8db9469b9e2581a3e0065, type: 3}
     - target: {fileID: 2550281649877365899, guid: f6a6caee7a00268448ad173a23419e99, type: 3}
       propertyPath: m_Name
       value: UI_PopUp_PostIt_Kevin
@@ -32578,6 +32646,26 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 683125089}
+    - target: {fileID: 2122797491193997555, guid: f6a6caee7a00268448ad173a23419e99, type: 3}
+      propertyPath: popUpframes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2122797491193997555, guid: f6a6caee7a00268448ad173a23419e99, type: 3}
+      propertyPath: 'popUpframes.Array.data[0]'
+      value: 
+      objectReference: {fileID: -1655768609, guid: ba90eceeb1c7f8a4ab539b98a27080fe, type: 3}
+    - target: {fileID: 2122797491193997555, guid: f6a6caee7a00268448ad173a23419e99, type: 3}
+      propertyPath: 'popUpframes.Array.data[1]'
+      value: 
+      objectReference: {fileID: 32196305, guid: ba90eceeb1c7f8a4ab539b98a27080fe, type: 3}
+    - target: {fileID: 2122797491193997555, guid: f6a6caee7a00268448ad173a23419e99, type: 3}
+      propertyPath: 'popUpframes.Array.data[3]'
+      value: 
+      objectReference: {fileID: -1655768609, guid: ba90eceeb1c7f8a4ab539b98a27080fe, type: 3}
+    - target: {fileID: 2122797491193997555, guid: f6a6caee7a00268448ad173a23419e99, type: 3}
+      propertyPath: 'popUpframes.Array.data[4]'
+      value: 
+      objectReference: {fileID: 32196305, guid: ba90eceeb1c7f8a4ab539b98a27080fe, type: 3}
     - target: {fileID: 2550281649877365899, guid: f6a6caee7a00268448ad173a23419e99, type: 3}
       propertyPath: m_Name
       value: UI_PopUp_GunButton_Kevin
@@ -33456,6 +33544,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 620541241007868389, guid: cff621b2cfb74d245b901bac82e57b1d, type: 3}
+      propertyPath: Health
+      value: 
+      objectReference: {fileID: 996908674}
+    - target: {fileID: 620541241007868389, guid: cff621b2cfb74d245b901bac82e57b1d, type: 3}
+      propertyPath: Manager
+      value: 
+      objectReference: {fileID: 996908673}
     - target: {fileID: 971681199190340152, guid: cff621b2cfb74d245b901bac82e57b1d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 17.47
@@ -33572,6 +33668,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4245945977861566813, guid: cff621b2cfb74d245b901bac82e57b1d, type: 3}
+      propertyPath: Health
+      value: 
+      objectReference: {fileID: 996908674}
+    - target: {fileID: 4245945977861566813, guid: cff621b2cfb74d245b901bac82e57b1d, type: 3}
+      propertyPath: Manager
+      value: 
+      objectReference: {fileID: 996908673}
     - target: {fileID: 4877132674064970316, guid: cff621b2cfb74d245b901bac82e57b1d, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -33616,6 +33720,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: f62a6e6d1a0b6f14ea5e7c715aa8c2b3, type: 2}
+    - target: {fileID: 8189299906208635941, guid: cff621b2cfb74d245b901bac82e57b1d, type: 3}
+      propertyPath: Health
+      value: 
+      objectReference: {fileID: 996908674}
+    - target: {fileID: 8189299906208635941, guid: cff621b2cfb74d245b901bac82e57b1d, type: 3}
+      propertyPath: Manager
+      value: 
+      objectReference: {fileID: 996908673}
     - target: {fileID: 8753393327603968854, guid: cff621b2cfb74d245b901bac82e57b1d, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -33638,27 +33750,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3171049957388970356, guid: cff621b2cfb74d245b901bac82e57b1d, type: 3}
   m_PrefabInstance: {fileID: 1721323083}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1772036794 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2658099209939996800, guid: 04105b324348f264e806772329ed25d2, type: 3}
-  m_PrefabInstance: {fileID: 2047569809}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &1772036798 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 3026416225350519445, guid: 04105b324348f264e806772329ed25d2, type: 3}
-  m_PrefabInstance: {fileID: 2047569809}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1772036799 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4519776990552836441, guid: 04105b324348f264e806772329ed25d2, type: 3}
-  m_PrefabInstance: {fileID: 2047569809}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1772036794}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74e16abe0fd8b5e4bbe01b1572d9f01d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SOB_Robot
 --- !u!1001 &1789402684
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34043,7 +34134,7 @@ PrefabInstance:
     - target: {fileID: 7571569064151837556, guid: b766bcf05f8b08a4abdddf5736987700, type: 3}
       propertyPath: Robot
       value: 
-      objectReference: {fileID: 1772036794}
+      objectReference: {fileID: 0}
     - target: {fileID: 7571569064151837556, guid: b766bcf05f8b08a4abdddf5736987700, type: 3}
       propertyPath: Origin
       value: 
@@ -34063,7 +34154,7 @@ PrefabInstance:
     - target: {fileID: 7571569064151837556, guid: b766bcf05f8b08a4abdddf5736987700, type: 3}
       propertyPath: RobotCont
       value: 
-      objectReference: {fileID: 1772036799}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -34159,6 +34250,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 370469528}
+    - target: {fileID: 2122797491193997555, guid: f6a6caee7a00268448ad173a23419e99, type: 3}
+      propertyPath: popUpframes.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2550281649877365899, guid: f6a6caee7a00268448ad173a23419e99, type: 3}
       propertyPath: m_Name
       value: UI_PopUp_PushBox_Gwen

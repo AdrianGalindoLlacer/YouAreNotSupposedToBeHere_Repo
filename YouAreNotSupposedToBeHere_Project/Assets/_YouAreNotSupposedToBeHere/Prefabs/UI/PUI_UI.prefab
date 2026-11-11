@@ -2111,10 +2111,11 @@ MonoBehaviour:
   Health: 1
   image: {fileID: 5205720835359110881}
   GOframes:
-  - {fileID: -1804164300, guid: f27ea4e643f2b63419dd23058c8d6a4e, type: 3}
-  - {fileID: -399407296, guid: f27ea4e643f2b63419dd23058c8d6a4e, type: 3}
+  - {fileID: 903031463, guid: f27ea4e643f2b63419dd23058c8d6a4e, type: 3}
+  - {fileID: 2142277552, guid: f27ea4e643f2b63419dd23058c8d6a4e, type: 3}
   framerate: 1.5
   GO: {fileID: 7827637102934005504}
+  Dcount: 0
 --- !u!114 &4737659241762742687
 MonoBehaviour:
   m_ObjectHideFlags: 0
