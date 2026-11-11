@@ -93,6 +93,45 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -101,7 +140,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 420
+        y: 0
         width: 1920
         height: 1080
       alignment: 0
@@ -112,8 +151,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 159fae173d68c714791fd4a869b5a0d5
-      internalID: 1203041531
+      spriteID: 0fee447b9f4c0814a81afa465a065885
+      internalID: -516874986
       vertices: []
       indices: 
       edges: []
@@ -123,7 +162,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1920
-        y: 420
+        y: 0
         width: 1920
         height: 1080
       alignment: 0
@@ -134,8 +173,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d99d156b060b37046bc5ac9df3fb1aa5
-      internalID: 991699816
+      spriteID: 1d217a1ecfc72f944a002d529e15a0aa
+      internalID: 684355292
       vertices: []
       indices: 
       edges: []
@@ -145,7 +184,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 3840
-        y: 420
+        y: 0
         width: 1920
         height: 1080
       alignment: 0
@@ -156,8 +195,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6d2aa8533c3ce84c982de2bee22e5e8
-      internalID: -75451139
+      spriteID: b81ee2e675f3792419518148b40d01ce
+      internalID: -128546146
       vertices: []
       indices: 
       edges: []
@@ -167,7 +206,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 5760
-        y: 420
+        y: 0
         width: 1920
         height: 1080
       alignment: 0
@@ -178,8 +217,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 236901b7c24b82b478259603866a8586
-      internalID: -521465539
+      spriteID: 96fe5cb3bac88ca49bd6fee12c65219d
+      internalID: -381502447
       vertices: []
       indices: 
       edges: []
@@ -189,7 +228,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 7680
-        y: 420
+        y: 0
         width: 1920
         height: 1080
       alignment: 0
@@ -200,8 +239,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f0e2bf576d2b0446835f844bcb375a5
-      internalID: 831225063
+      spriteID: 8a0b1b9f80901224e8cb9020b36dad0f
+      internalID: 1422330509
       vertices: []
       indices: 
       edges: []
@@ -210,7 +249,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: e965157a891fa7f48a6076cce3296e3c
+    spriteID: d633312bbbe10a64a99139a0a20d0abd
     internalID: 0
     vertices: []
     indices: 
@@ -220,13 +259,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":1920.0,"y":1080.0},"gridSpriteOffset":{"x":0.0,"y":420.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":1920.0,"y":1080.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      POP_RobotTrap_0: 1203041531
-      POP_RobotTrap_1: 991699816
-      POP_RobotTrap_2: -75451139
-      POP_RobotTrap_3: -521465539
-      POP_RobotTrap_4: 831225063
+      POP_RobotTrap_0: -516874986
+      POP_RobotTrap_1: 684355292
+      POP_RobotTrap_2: -128546146
+      POP_RobotTrap_3: -381502447
+      POP_RobotTrap_4: 1422330509
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

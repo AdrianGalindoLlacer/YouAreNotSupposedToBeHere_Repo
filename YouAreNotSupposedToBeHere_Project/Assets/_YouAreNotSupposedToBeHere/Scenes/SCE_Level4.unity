@@ -3894,6 +3894,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d60711ed3b0bac48985eb358548293b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PSC_PlayerController2
+--- !u!82 &691567413 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 461356015075971599, guid: 6cf332435d23c4a4c986caf61c3d1280, type: 3}
+  m_PrefabInstance: {fileID: 132629557}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &696043805 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2701711379913006431, guid: 8e2c86919069f2d479b9b254414442b5, type: 3}
@@ -5008,7 +5013,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3930558199682875400, guid: b8c8d93827475d14eb87076690c0c4c6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5
+      value: 17.11
       objectReference: {fileID: 0}
     - target: {fileID: 3930558199682875400, guid: b8c8d93827475d14eb87076690c0c4c6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5016,7 +5021,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3930558199682875400, guid: b8c8d93827475d14eb87076690c0c4c6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1
+      value: 5.55
       objectReference: {fileID: 0}
     - target: {fileID: 3930558199682875400, guid: b8c8d93827475d14eb87076690c0c4c6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -33024,10 +33029,18 @@ PrefabInstance:
       propertyPath: Manager
       value: 
       objectReference: {fileID: 996908673}
+    - target: {fileID: 2541170174917430368, guid: 5dc4c0e8938720847b06d3f3ffd664be, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4681033234105158930, guid: 5dc4c0e8938720847b06d3f3ffd664be, type: 3}
       propertyPath: Impact
       value: 
       objectReference: {fileID: 8300000, guid: 4642e8383626baf4780251f76c06ed90, type: 3}
+    - target: {fileID: 4681033234105158930, guid: 5dc4c0e8938720847b06d3f3ffd664be, type: 3}
+      propertyPath: audiosource
+      value: 
+      objectReference: {fileID: 691567413}
     - target: {fileID: 7382211685943528489, guid: 5dc4c0e8938720847b06d3f3ffd664be, type: 3}
       propertyPath: m_Name
       value: SM_GunBullet
