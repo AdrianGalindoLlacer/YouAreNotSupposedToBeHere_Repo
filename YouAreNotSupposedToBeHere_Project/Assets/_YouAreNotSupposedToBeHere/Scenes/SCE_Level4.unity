@@ -448,7 +448,7 @@ PrefabInstance:
     - target: {fileID: 7903869939215457896, guid: 6cf332435d23c4a4c986caf61c3d1280, type: 3}
       propertyPath: audiosource
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1644896840}
     - target: {fileID: 8310582368245143039, guid: 6cf332435d23c4a4c986caf61c3d1280, type: 3}
       propertyPath: m_LocalPosition.x
       value: -941.043
@@ -1133,7 +1133,7 @@ PrefabInstance:
       value: -0.00001847839
       objectReference: {fileID: 0}
     - target: {fileID: 1841244806238270065, guid: 9bd27250acae80f4ca2b15d0a00da341, type: 3}
-      propertyPath: RobotSprite
+      propertyPath: Frame
       value: 
       objectReference: {fileID: 1568166191}
     - target: {fileID: 1858746646167374084, guid: 9bd27250acae80f4ca2b15d0a00da341, type: 3}
@@ -2839,7 +2839,7 @@ PrefabInstance:
     - target: {fileID: 8279699840870756063, guid: 9bd27250acae80f4ca2b15d0a00da341, type: 3}
       propertyPath: RobotThrow
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1644896836}
     - target: {fileID: 8288761482031710420, guid: 9bd27250acae80f4ca2b15d0a00da341, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 21.550674
@@ -33531,6 +33531,16 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7978211303409508550, guid: 60e7884bdc4bde640b268e4a5d0adf16, type: 3}
   m_PrefabInstance: {fileID: 1643197464}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1644896836 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4294429269122292300, guid: 04105b324348f264e806772329ed25d2, type: 3}
+  m_PrefabInstance: {fileID: 2047569809}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1644896840 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7763505351983073797, guid: 04105b324348f264e806772329ed25d2, type: 3}
+  m_PrefabInstance: {fileID: 2047569809}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1687693966 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6377269675545718173, guid: 80fb1e7a099107846af002ccada6da24, type: 3}
@@ -34258,6 +34268,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI_PopUp_PushBox_Gwen
       objectReference: {fileID: 0}
+    - target: {fileID: 2550281649877365899, guid: f6a6caee7a00268448ad173a23419e99, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2995649784944563679, guid: f6a6caee7a00268448ad173a23419e99, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -34344,6 +34358,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SK_RobotScripted
       objectReference: {fileID: 0}
+    - target: {fileID: 4292887400238858952, guid: 04105b324348f264e806772329ed25d2, type: 3}
+      propertyPath: soundC
+      value: 
+      objectReference: {fileID: 897814082}
     - target: {fileID: 4519776990552836441, guid: 04105b324348f264e806772329ed25d2, type: 3}
       propertyPath: soundC
       value: 
