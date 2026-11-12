@@ -9,10 +9,10 @@ EditorBuildSettings:
     path: Assets/_YouAreNotSupposedToBeHere/Scenes/Menus/SCE_Menu.unity
     guid: c9447869e8e2ff54bab31484f896b8ba
   - enabled: 1
-    path: Assets/_YouAreNotSupposedToBeHere/Scenes/SCE_Level3.unity
+    path: Assets/_YouAreNotSupposedToBeHere/Scenes/Levels/SCE_Level3.unity
     guid: 2ee250a12a9e4f24f84fbf61d1178dd3
   - enabled: 1
-    path: Assets/_YouAreNotSupposedToBeHere/Scenes/SCE_Level4.unity
+    path: Assets/_YouAreNotSupposedToBeHere/Scenes/Levels/SCE_Level4.unity
     guid: 66a58130ce140864cab0f8eb32a240c6
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
