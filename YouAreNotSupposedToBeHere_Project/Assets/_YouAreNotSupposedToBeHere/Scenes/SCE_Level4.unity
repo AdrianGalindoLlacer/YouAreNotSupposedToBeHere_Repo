@@ -610,6 +610,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3089573055330704074, guid: 6cf332435d23c4a4c986caf61c3d1280, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 80f19bc8101982648adea30011710587, type: 3}
     - target: {fileID: 3791557402819687989, guid: 6cf332435d23c4a4c986caf61c3d1280, type: 3}
       propertyPath: audiosource
       value: 
@@ -37873,16 +37877,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.39999998, y: 0.39999998, z: 0.79999995}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &1911617527 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 262977084813606029, guid: 80fb1e7a099107846af002ccada6da24, type: 3}
-  m_PrefabInstance: {fileID: 8317984545902603417}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &1911617530 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 7249048890169101103, guid: 80fb1e7a099107846af002ccada6da24, type: 3}
-  m_PrefabInstance: {fileID: 8317984545902603417}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1946192552
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39469,7 +39463,7 @@ PrefabInstance:
     - target: {fileID: 688626824692904161, guid: aeccf0c575350a34ead6889d54f45d0d, type: 3}
       propertyPath: exit
       value: 
-      objectReference: {fileID: 1911617530}
+      objectReference: {fileID: 0}
     - target: {fileID: 688626824692904161, guid: aeccf0c575350a34ead6889d54f45d0d, type: 3}
       propertyPath: goal
       value: 
@@ -39489,7 +39483,7 @@ PrefabInstance:
     - target: {fileID: 688626824692904161, guid: aeccf0c575350a34ead6889d54f45d0d, type: 3}
       propertyPath: fakePlayerExit
       value: 
-      objectReference: {fileID: 1911617527}
+      objectReference: {fileID: 0}
     - target: {fileID: 717945524149596528, guid: aeccf0c575350a34ead6889d54f45d0d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: -10.886307
@@ -41025,7 +41019,7 @@ PrefabInstance:
     - target: {fileID: 4862437959128340948, guid: aeccf0c575350a34ead6889d54f45d0d, type: 3}
       propertyPath: exit
       value: 
-      objectReference: {fileID: 1911617530}
+      objectReference: {fileID: 0}
     - target: {fileID: 4862437959128340948, guid: aeccf0c575350a34ead6889d54f45d0d, type: 3}
       propertyPath: goal
       value: 
@@ -41045,7 +41039,7 @@ PrefabInstance:
     - target: {fileID: 4862437959128340948, guid: aeccf0c575350a34ead6889d54f45d0d, type: 3}
       propertyPath: fakePlayerExit
       value: 
-      objectReference: {fileID: 1911617527}
+      objectReference: {fileID: 0}
     - target: {fileID: 4890561443090352982, guid: aeccf0c575350a34ead6889d54f45d0d, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
