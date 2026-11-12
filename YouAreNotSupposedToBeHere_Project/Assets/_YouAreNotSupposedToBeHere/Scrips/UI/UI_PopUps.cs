@@ -23,16 +23,14 @@ public class UI_PopUps : MonoBehaviour
     {
         if (other.gameObject == player)
         {
-            count++;
-            if (count > 0)
-            {
-                popUp.SetActive(true);
                 popUp.SetActive(true);
                 currentFrame = 0;
                 timer = 0f;
                 image.sprite = popUpframes[0];
-                PopUpRoutine = StartCoroutine(PopUpDurationRoutine());
-            }
+                if (duration > 0)
+                {
+                    PopUpRoutine = StartCoroutine(PopUpDurationRoutine());
+                }
         }
     }
 
@@ -45,13 +43,9 @@ public class UI_PopUps : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject == player)
         {
-            count--;
-            if (count == 0)
-            {
-                popUp.SetActive(false);
-            }
+            popUp.SetActive(false);
         }
     }
 
