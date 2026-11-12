@@ -109,6 +109,10 @@ public class MAN_SceneManager : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             count--;
+            if(count <= 0)
+            {
+                count = 0;
+            }
         }
     }
     #region Input Methods

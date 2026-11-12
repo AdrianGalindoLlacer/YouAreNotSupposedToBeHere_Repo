@@ -19197,18 +19197,6 @@ PrefabInstance:
       propertyPath: framerate
       value: 1.5
       objectReference: {fileID: 0}
-    - target: {fileID: 6123701162043784709, guid: 6cf332435d23c4a4c986caf61c3d1280, type: 3}
-      propertyPath: GOframes.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6123701162043784709, guid: 6cf332435d23c4a4c986caf61c3d1280, type: 3}
-      propertyPath: 'GOframes.Array.data[0]'
-      value: 
-      objectReference: {fileID: -1804164300, guid: f27ea4e643f2b63419dd23058c8d6a4e, type: 3}
-    - target: {fileID: 6123701162043784709, guid: 6cf332435d23c4a4c986caf61c3d1280, type: 3}
-      propertyPath: 'GOframes.Array.data[1]'
-      value: 
-      objectReference: {fileID: -399407296, guid: f27ea4e643f2b63419dd23058c8d6a4e, type: 3}
     - target: {fileID: 6816962958779355842, guid: 6cf332435d23c4a4c986caf61c3d1280, type: 3}
       propertyPath: m_Size.x
       value: 10.558714
@@ -19239,7 +19227,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8310582368245143039, guid: 6cf332435d23c4a4c986caf61c3d1280, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -539.907
+      value: -539.68
       objectReference: {fileID: 0}
     - target: {fileID: 8310582368245143039, guid: 6cf332435d23c4a4c986caf61c3d1280, type: 3}
       propertyPath: m_LocalPosition.z
