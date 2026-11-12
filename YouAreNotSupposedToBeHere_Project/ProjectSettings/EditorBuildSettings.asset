@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/_YouAreNotSupposedToBeHere/Scenes/Menus/SCE_Menu.unity
     guid: c9447869e8e2ff54bab31484f896b8ba
   - enabled: 1
+    path: Assets/_YouAreNotSupposedToBeHere/Scenes/Menus/SCE_Cinematica.unity
+    guid: 2278002027c7c114396661b1cf081219
+  - enabled: 1
     path: Assets/_YouAreNotSupposedToBeHere/Scenes/Menus/SCE_Tutorial.unity
     guid: 606eb016e741a4a4f9eb10e1b61ae575
   - enabled: 1
