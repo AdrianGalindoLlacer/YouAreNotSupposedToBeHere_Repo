@@ -19,9 +19,6 @@ public class MAN_SceneManager : MonoBehaviour
     private string exit = "SCE_Menu";
 
 
-
-
-
     public void Restart()
     {
         Scene Actual = SceneManager.GetActiveScene();

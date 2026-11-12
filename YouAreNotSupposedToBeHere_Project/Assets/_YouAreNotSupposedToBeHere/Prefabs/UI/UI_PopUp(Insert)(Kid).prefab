@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 6567484065406475261}
   - component: {fileID: 8966119868050146239}
   m_Layer: 0
-  m_Name: PopUpBG
+  m_Name: PopUp_BG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 2780344242516935658}
   - component: {fileID: 7506855461012605919}
   m_Layer: 0
-  m_Name: PopUpBGInterior
+  m_Name: PopUp_BG_Interior
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -306,10 +306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UI_PopUps
   popUp: {fileID: 4064381810182871302}
-  popUpframes:
-  - {fileID: -1822844838, guid: 89f5175570e8a54429f74e6cd07adc3d, type: 3}
-  - {fileID: 1097431870, guid: 89f5175570e8a54429f74e6cd07adc3d, type: 3}
-  - {fileID: -1314744017, guid: 89f5175570e8a54429f74e6cd07adc3d, type: 3}
+  popUpframes: []
   framerate: 1.5
   image: {fileID: 173076217982599175}
   duration: 0
