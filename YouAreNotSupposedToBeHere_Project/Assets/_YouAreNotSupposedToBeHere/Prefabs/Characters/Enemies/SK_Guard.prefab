@@ -8152,7 +8152,7 @@ GameObject:
   - component: {fileID: 4808647572426778058}
   - component: {fileID: 5924256650548109568}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Alert
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9314,9 +9314,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.56754893
-  m_Height: 2.094285
+  m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: 1.0487032, z: 0}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!54 &299338658626629666
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9339,7 +9339,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 116
