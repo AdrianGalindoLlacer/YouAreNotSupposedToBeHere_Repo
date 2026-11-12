@@ -55,7 +55,7 @@ public class PSC_PlayerController1 : MonoBehaviour
 
     private void Update()
     {
-        if (Health.Health <= 0 && !!Health.Dcount)
+        if (Health.Health <= 0 && !Health.Dcount)
         {
             anim.SetTrigger("GameOver");
             Health.Dcount = true;

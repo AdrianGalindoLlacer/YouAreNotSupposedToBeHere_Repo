@@ -634,14 +634,6 @@ PrefabInstance:
       propertyPath: m_FillAmount
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6123701162043784709, guid: 6cf332435d23c4a4c986caf61c3d1280, type: 3}
-      propertyPath: GO
-      value: 
-      objectReference: {fileID: 132629558}
-    - target: {fileID: 6123701162043784709, guid: 6cf332435d23c4a4c986caf61c3d1280, type: 3}
-      propertyPath: image
-      value: 
-      objectReference: {fileID: 132629558}
     - target: {fileID: 6816962958779355842, guid: 6cf332435d23c4a4c986caf61c3d1280, type: 3}
       propertyPath: m_Size.x
       value: 6.944351
@@ -687,17 +679,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6cf332435d23c4a4c986caf61c3d1280, type: 3}
---- !u!114 &132629558 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5205720835359110881, guid: 6cf332435d23c4a4c986caf61c3d1280, type: 3}
-  m_PrefabInstance: {fileID: 132629557}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!4 &132790029 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 839970912543398689, guid: 8e2c86919069f2d479b9b254414442b5, type: 3}
@@ -43064,11 +43045,11 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 429286625}
   - {fileID: 2143812147}
   - {fileID: 1721323083}
   - {fileID: 132629557}
   - {fileID: 1002372781}
-  - {fileID: 429286625}
   - {fileID: 570728540}
   - {fileID: 370469527}
   - {fileID: 822812246}

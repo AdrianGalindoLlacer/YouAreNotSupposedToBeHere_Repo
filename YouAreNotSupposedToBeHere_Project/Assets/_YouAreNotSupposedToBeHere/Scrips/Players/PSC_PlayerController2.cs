@@ -45,11 +45,6 @@ public class PSC_PlayerController2 : MonoBehaviour
 
     private void Update()
     {
-        if (Health.Health <= 0 && !Dcount)
-        {
-            anim.SetTrigger("GameOver");
-            Dcount = true;
-        }
         //AnimatorManager();
         Transform origen = Interactor != null ? Interactor : transform;
 
