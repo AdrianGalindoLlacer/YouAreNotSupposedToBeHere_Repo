@@ -136,6 +136,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 683125089}
     - target: {fileID: 2122797491193997555, guid: f6a6caee7a00268448ad173a23419e99, type: 3}
+      propertyPath: duration
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2122797491193997555, guid: f6a6caee7a00268448ad173a23419e99, type: 3}
       propertyPath: popUpframes.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -2783,7 +2787,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6027447187065742251, guid: 9bd27250acae80f4ca2b15d0a00da341, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.26
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6027447187065742251, guid: 9bd27250acae80f4ca2b15d0a00da341, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2791,7 +2795,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6027447187065742251, guid: 9bd27250acae80f4ca2b15d0a00da341, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 11.82
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 6027447187065742251, guid: 9bd27250acae80f4ca2b15d0a00da341, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3338,10 +3342,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 996908673}
     - target: {fileID: 8279699840870756063, guid: 9bd27250acae80f4ca2b15d0a00da341, type: 3}
-      propertyPath: RadioInter
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 8279699840870756063, guid: 9bd27250acae80f4ca2b15d0a00da341, type: 3}
       propertyPath: RobotStand
       value: 
       objectReference: {fileID: 595774879}
@@ -3349,10 +3349,6 @@ PrefabInstance:
       propertyPath: RobotThrow
       value: 
       objectReference: {fileID: 1644896836}
-    - target: {fileID: 8279699840870756063, guid: 9bd27250acae80f4ca2b15d0a00da341, type: 3}
-      propertyPath: RotationSpeed
-      value: 60
-      objectReference: {fileID: 0}
     - target: {fileID: 8288761482031710420, guid: 9bd27250acae80f4ca2b15d0a00da341, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 21.550674
@@ -7274,10 +7270,6 @@ PrefabInstance:
     - target: {fileID: 8509875713934063473, guid: b8c8d93827475d14eb87076690c0c4c6, type: 3}
       propertyPath: SpecialAmmo
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8509875713934063473, guid: b8c8d93827475d14eb87076690c0c4c6, type: 3}
-      propertyPath: RotationSpeed
-      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 8566122346864435037, guid: b8c8d93827475d14eb87076690c0c4c6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -37333,6 +37325,10 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2814865319469672043, guid: cff621b2cfb74d245b901bac82e57b1d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.03
+      objectReference: {fileID: 0}
     - target: {fileID: 2870902904821546238, guid: cff621b2cfb74d245b901bac82e57b1d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 17.98
@@ -38479,15 +38475,27 @@ PrefabInstance:
       objectReference: {fileID: 370469528}
     - target: {fileID: 2122797491193997555, guid: f6a6caee7a00268448ad173a23419e99, type: 3}
       propertyPath: popUpframes.Array.size
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2122797491193997555, guid: f6a6caee7a00268448ad173a23419e99, type: 3}
+      propertyPath: 'popUpframes.Array.data[0]'
+      value: 
+      objectReference: {fileID: -2106290289, guid: bea458be90ffecc408fb4de32e8a7534, type: 3}
+    - target: {fileID: 2122797491193997555, guid: f6a6caee7a00268448ad173a23419e99, type: 3}
+      propertyPath: 'popUpframes.Array.data[1]'
+      value: 
+      objectReference: {fileID: -33732438, guid: bea458be90ffecc408fb4de32e8a7534, type: 3}
+    - target: {fileID: 2122797491193997555, guid: f6a6caee7a00268448ad173a23419e99, type: 3}
+      propertyPath: 'popUpframes.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1300184783, guid: bea458be90ffecc408fb4de32e8a7534, type: 3}
     - target: {fileID: 2550281649877365899, guid: f6a6caee7a00268448ad173a23419e99, type: 3}
       propertyPath: m_Name
       value: UI_PopUp_PushBox_Gwen
       objectReference: {fileID: 0}
     - target: {fileID: 2550281649877365899, guid: f6a6caee7a00268448ad173a23419e99, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2995649784944563679, guid: f6a6caee7a00268448ad173a23419e99, type: 3}
       propertyPath: m_LocalPosition.x

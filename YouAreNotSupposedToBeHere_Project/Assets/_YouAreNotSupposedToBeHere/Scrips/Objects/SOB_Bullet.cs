@@ -32,8 +32,8 @@ public class SOB_Bullet : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Obstacle"))
         {
+            soundC.playImpact();
             gameObject.SetActive(false);
-                soundC.playImpact();
         }
 
     }

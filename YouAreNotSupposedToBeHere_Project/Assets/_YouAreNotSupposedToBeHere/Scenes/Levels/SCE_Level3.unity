@@ -4700,6 +4700,10 @@ PrefabInstance:
       propertyPath: Manager
       value: 
       objectReference: {fileID: 953466024}
+    - target: {fileID: 4681033234105158930, guid: 5dc4c0e8938720847b06d3f3ffd664be, type: 3}
+      propertyPath: audiosource
+      value: 
+      objectReference: {fileID: 1026816207}
     - target: {fileID: 7382211685943528489, guid: 5dc4c0e8938720847b06d3f3ffd664be, type: 3}
       propertyPath: m_Name
       value: SM_GunBullet
@@ -6785,6 +6789,10 @@ PrefabInstance:
     - target: {fileID: 3608566989217546096, guid: 6935ea1d8d1437c4ea429c38fa9d9268, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3621566160569605247, guid: 6935ea1d8d1437c4ea429c38fa9d9268, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 3633088980875972083, guid: 6935ea1d8d1437c4ea429c38fa9d9268, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -17348,6 +17356,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27d8a2113e1c2c447908adcf61371796, type: 3}
+--- !u!82 &1026816207 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 461356015075971599, guid: 6cf332435d23c4a4c986caf61c3d1280, type: 3}
+  m_PrefabInstance: {fileID: 1069437676}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1034510330
 PrefabInstance:
   m_ObjectHideFlags: 0
