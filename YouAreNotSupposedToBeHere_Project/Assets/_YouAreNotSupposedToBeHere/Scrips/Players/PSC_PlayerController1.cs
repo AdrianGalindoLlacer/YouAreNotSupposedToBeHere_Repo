@@ -16,8 +16,6 @@ public class PSC_PlayerController1 : MonoBehaviour
     public bool Block; // Bool que bloque el movimiento por completo del jugador
 
     [Header("mechanics")]
-    public bool HoldRobot = true; //bool que guarda si el jugador lleva el robot
-    public bool WalkRobot; //Bool que guarda si el robot esta en walk
     public EN_IntTags Interact => interact;
     private Collider interactCollider; // Almacena el collider del interactor
 
@@ -33,6 +31,7 @@ public class PSC_PlayerController1 : MonoBehaviour
     [SerializeField] MAN_SceneManager Manager;
     [SerializeField] MAN_Player1SoundController soundC;
     private bool notwsound;
+    PSC_PlayerShoot1 shoot;
     SOB_Robot controller;
     Rigidbody rb;
     Animator anim;
@@ -43,6 +42,7 @@ public class PSC_PlayerController1 : MonoBehaviour
 
     private void Awake()
     {
+        shoot = GetComponent<PSC_PlayerShoot1>();
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
     }
@@ -117,28 +117,6 @@ public class PSC_PlayerController1 : MonoBehaviour
         Rotate();
     }
 
-    void Lay()
-    {
-        HoldRobot = false;
-        if (!WalkRobot)
-        {
-            soundC.StopSound();
-            soundC.playLay();
-            Robot.SetActive(false);
-            RobotThrow.transform.SetPositionAndRotation(Spawn.position, transform.rotation);
-            controller.soundenabled = true;
-        }
-        else
-        {
-            soundC.StopSound();
-            soundC.playLay();
-            Robot.SetActive(false);
-            RobotThrow.transform.SetPositionAndRotation(Spawn.position, transform.rotation);
-            controller.Walk = true;
-            controller.soundenabled = true;
-        }
-    }
-
     private void Grab()
     {
         soundC.StopSound();
@@ -147,7 +125,7 @@ public class PSC_PlayerController1 : MonoBehaviour
         RobotStand.SetActive(false);
         RobotThrow.transform.position = Origin.transform.position;
         Robot.SetActive(true);
-        HoldRobot = true;
+        shoot.HoldRobot = true;
         controller.soundenabled = false;
     }
 
@@ -255,29 +233,13 @@ public class PSC_PlayerController1 : MonoBehaviour
                 anim.SetTrigger("GrabS");
 
             }
-            else if (HoldRobot)
+            else if (shoot.HoldRobot)
             {
                 Block = true;
                 Debug.Log("WalkMode");
-                WalkRobot = !WalkRobot;
+                shoot.WalkRobot = !shoot.WalkRobot;
                 anim.SetTrigger("Change");
             }
-        }
-    }
-
-    public void OnLay(InputAction.CallbackContext context)
-    {
-        if (!context.performed) return;
-
-        if (!HoldRobot)
-        {
-            anim.SetTrigger("NoRobot");
-            Block = true;
-        }
-        else
-        {
-            anim.SetTrigger("Lay");
-            Block = true;
         }
     }
 
