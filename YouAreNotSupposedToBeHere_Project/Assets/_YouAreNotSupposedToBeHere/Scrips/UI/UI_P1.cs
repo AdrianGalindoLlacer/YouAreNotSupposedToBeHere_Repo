@@ -4,13 +4,18 @@ using UnityEngine.UI;
 
 public class UI_P1 : MonoBehaviour
 {
-    [SerializeField] private PSC_PlayerController1 Controller;
+    PSC_PlayerShoot1 Controller;
     [SerializeField] Image Frame;
     [SerializeField] Sprite RobotSprite;
     [SerializeField] Sprite[] RobotWalk;
     [SerializeField] float framerate = 1;
     private float timer;
     private int currentFrame;
+
+    private void Awake()
+    {
+        Controller = GetComponent<PSC_PlayerShoot1>();
+    }
 
 
     private void Update()
