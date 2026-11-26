@@ -13,6 +13,7 @@ public class PSC_PlayerController2 : MonoBehaviour
     [SerializeField] EN_IntTags interact = EN_IntTags.Null; //Variable que guarda los tipos de colisiones con las que interactua el interactor
     [SerializeField] float RadioInter = 0.1f; //Radio de busqueda del interactor
     public bool Block; // Bool que bloque el movimiento por completo del jugador
+    private bool Run;
 
     [Header("mechanics")]
     public int Ammo; //Municion del arma total
@@ -25,10 +26,12 @@ public class PSC_PlayerController2 : MonoBehaviour
     [Header("Referencias a componentes")]
     [SerializeField] Transform Interactor; //almacena el transform del interactor
     [SerializeField] Transform ShootPoint; //almacena el transform de donde salen las balas
-    [SerializeField] GameObject Bullet; //almacena las balas
-    [SerializeField] MAN_Health Health;
-    [SerializeField] MAN_SceneManager Manager;
-    [SerializeField] MAN_Player2SoundController soundC;
+    GameObject Bullet; //almacena las balas
+    private GameObject Manager;
+    MAN_Health Health;
+    MAN_SceneManager ManagerS;
+    private GameObject sound;
+    MAN_Player2SoundController soundC;
     private bool notwsound;
     Rigidbody rb; //almacena el rigidbody del jugador
     Animator anim; //almacena el animator del jugador
@@ -39,6 +42,12 @@ public class PSC_PlayerController2 : MonoBehaviour
 
     private void Awake()
     {
+        Manager = GameObject.Find("Manager");
+        sound = GameObject.Find("SoundManager");
+        Bullet = GameObject.Find("SM_GunBullet");
+        ManagerS = Manager.GetComponent<MAN_SceneManager>();
+        Health = Manager.GetComponent<MAN_Health>();
+        soundC = sound.GetComponent<MAN_Player2SoundController>();
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
     }
@@ -141,7 +150,7 @@ public class PSC_PlayerController2 : MonoBehaviour
                 anim.SetTrigger("GameOver");
                 soundC.StopSound();
                 soundC.playGO();
-                Manager.gameover();
+                ManagerS.gameover();
             }
         }
     }
@@ -156,6 +165,10 @@ public class PSC_PlayerController2 : MonoBehaviour
     {
         if (Block) return;
         moveInput = context.ReadValue<Vector2>();
+        if (Run & context.performed)
+        {
+            anim.SetBool("Run", true);
+        }
         if (context.performed)
         {
             anim.SetBool("Move", true);
@@ -164,6 +177,7 @@ public class PSC_PlayerController2 : MonoBehaviour
         }
         else if (context.canceled)
         {
+            anim.SetBool("Run", false);
             anim.SetBool("Move", false);
             //Habria que comprobar si el sonido que se esta haciendo en el manager es el de walk para si lo es que lo detenga
             soundC.StopSound();

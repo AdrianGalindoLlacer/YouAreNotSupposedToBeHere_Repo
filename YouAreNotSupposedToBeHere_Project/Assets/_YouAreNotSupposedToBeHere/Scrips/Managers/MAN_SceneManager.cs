@@ -1,22 +1,43 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.XR;
 using UnityEngine.SceneManagement;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class MAN_SceneManager : MonoBehaviour
 {
-    [SerializeField] PSC_PlayerController1 P1;
-    [SerializeField] PSC_PlayerController2 P2;
+    [Header("Pause")]
     [SerializeField] GameObject PauseMenu;
     [SerializeField] GameObject UI;
+    private bool Paused = false;
+    private string exit = "SCE_Menu";
+
+    [Header("Referencias Players")]
+    private GameObject P1;
+    private GameObject P2;
+    private PSC_PlayerController1 P1Controller;
+    private PSC_PlayerController2 P2Controller;
+    private PSC_PlayerShoot1 P1Shoot;
+    //private PSC_PlayerShoot2 P2Shoot;
+
+    [Header("GameOver")]
     [SerializeField] CanvasGroup GameoverCanva;
     [SerializeField] float GameFadeIn = 1f;
     [SerializeField] float GameOverDuration = 1f;
     private float GOtime = 0f;
     private float GOduration = 0f;
     private int count;
-    private bool Paused = false;
-    private string exit = "SCE_Menu";
+
+    private void Awake()
+    {
+        P1 = GameObject.Find("SK_Player1");
+        P2 = GameObject.Find("SK_Player2");
+        P1Controller = P1.GetComponent<PSC_PlayerController1>();
+        P2Controller = P2.GetComponent<PSC_PlayerController2>();
+        P1Shoot = P1.GetComponent<PSC_PlayerShoot1>();
+        //P2Shoot = P2.GetComponent<PSC_PlayerShoot2>();
+    }
 
 
     public void Restart()
@@ -24,8 +45,8 @@ public class MAN_SceneManager : MonoBehaviour
         Scene Actual = SceneManager.GetActiveScene();
         SceneManager.LoadScene(Actual.name);
         Time.timeScale = 1;
-        P1.enabled = true;
-        P2.enabled = true;
+        P1Controller.enabled = true;
+        P2Controller.enabled = true;
     }
     public void NextScene()
     {
@@ -39,8 +60,8 @@ public class MAN_SceneManager : MonoBehaviour
         PauseMenu.SetActive(true);
         UI.SetActive(false);
         Time.timeScale = 0;
-        P1.enabled = false;
-        P2.enabled = false;
+        P1Controller.enabled = false;
+        P2Controller.enabled = false;
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
         Paused = true;
@@ -48,10 +69,10 @@ public class MAN_SceneManager : MonoBehaviour
 
     public void gameover()
     {
-        P1.Block = false;
-        P2.Block = false;
-        P1.enabled = false;
-        P2.enabled = false;
+        P1Controller.Block = false;
+        P2Controller.Block = false;
+        P1Controller.enabled = false;
+        P2Controller.enabled = false;
         StartCoroutine(GameOverFade());
     }
 
@@ -80,8 +101,8 @@ public class MAN_SceneManager : MonoBehaviour
         PauseMenu.SetActive(false);
         UI.SetActive(true);
         Time.timeScale = 1;
-        P1.enabled = true;
-        P2.enabled = true;
+        P1Controller.enabled = true;
+        P2Controller.enabled = true;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         Paused = false;
@@ -97,7 +118,7 @@ public class MAN_SceneManager : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             count++;
-            if (count == 2 && P1.HoldRobot)
+            if (count == 2 && P1Shoot.HoldRobot)
             {
                 NextScene();
             }

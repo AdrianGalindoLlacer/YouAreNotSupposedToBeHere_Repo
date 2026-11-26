@@ -14,6 +14,7 @@ public class PSC_PlayerController1 : MonoBehaviour
     [SerializeField] EN_IntTags interact = EN_IntTags.Null; //Variable que guarda los tipos de colisiones con las que interactua el interactor
     [SerializeField] float RadioInter = 0.1f; //Radio de busqueda del interactor
     public bool Block; // Bool que bloque el movimiento por completo del jugador
+    private bool Run;
 
     [Header("mechanics")]
     public EN_IntTags Interact => interact;
@@ -22,19 +23,20 @@ public class PSC_PlayerController1 : MonoBehaviour
 
     [Header("Referencias a componentes")]
     [SerializeField] Transform Interactor; //transform del interactor
-    [SerializeField] GameObject Robot; //el robot que el jugador lleva
-    [SerializeField] Transform Spawn; //transform donde el robot aparecera
     [SerializeField] GameObject RobotStand;
-    [SerializeField] GameObject Origin;
-    [SerializeField] GameObject RobotThrow; //El robot que el jugador deja
-    [SerializeField] MAN_Health Health;
-    [SerializeField] MAN_SceneManager Manager;
-    [SerializeField] MAN_Player1SoundController soundC;
+    private GameObject Robot; //el robot que el jugador lleva
+    private GameObject Origin;
+    private GameObject RobotThrow; //El robot que el jugador deja
+    private GameObject Manager;
+    private MAN_Health Health;
+    private MAN_SceneManager ManagerS;
+    private GameObject sound;
+    private MAN_Player1SoundController soundC;
     private bool notwsound;
-    PSC_PlayerShoot1 shoot;
-    SOB_Robot controller;
-    Rigidbody rb;
-    Animator anim;
+    private PSC_PlayerShoot1 shoot;
+    private SOB_Robot controller;
+    private Rigidbody rb;
+    private Animator anim;
 
 
 
@@ -42,6 +44,14 @@ public class PSC_PlayerController1 : MonoBehaviour
 
     private void Awake()
     {
+        Robot = GameObject.Find("SK_GwenRobotNoRig");
+        Manager = GameObject.Find("Manager");
+        sound = GameObject.Find("SoundManager");
+        Origin = GameObject.Find("SK_RobotScripted");
+        RobotThrow = GameObject.Find("SK_Robot");
+        ManagerS = Manager.GetComponent<MAN_SceneManager>();
+        Health = Manager.GetComponent<MAN_Health>();
+        soundC = sound.GetComponent<MAN_Player1SoundController>();
         shoot = GetComponent<PSC_PlayerShoot1>();
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
@@ -159,7 +169,7 @@ public class PSC_PlayerController1 : MonoBehaviour
                 anim.SetTrigger("GameOver");
                 soundC.StopSound();
                 soundC.playGO();
-                Manager.gameover();
+                ManagerS.gameover();
             }
         }
 }
@@ -185,6 +195,10 @@ public class PSC_PlayerController1 : MonoBehaviour
     {
         if (Block) return;
         moveInput = context.ReadValue<Vector2>();
+        if (Run & context.performed)
+        {
+            anim.SetBool("Run", true);
+        }
         if (context.performed)
         {
             anim.SetBool("Move", true);
@@ -193,6 +207,7 @@ public class PSC_PlayerController1 : MonoBehaviour
         }
         else if (context.canceled)
         {
+            anim.SetBool("Run", false);
             anim.SetBool("Move", false);
             //Habria que comprobar si el sonido que se esta haciendo en el manager es el de walk para si lo es que lo detenga
             soundC.StopSound();
