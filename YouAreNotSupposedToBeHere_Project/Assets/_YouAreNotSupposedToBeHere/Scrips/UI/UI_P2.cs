@@ -5,18 +5,25 @@ using UnityEngine.UI;
 public class UI_P2 : MonoBehaviour
 {
     //[SerializeField] private GameObject PlayerHide;
-    [SerializeField] private PSC_PlayerController2 Controller;
+    private PSC_PlayerShoot2 PShoot;
+    private PSC_PlayerController2 PControl;
     [SerializeField] private TMP_Text Bullets;
     [SerializeField] private Image BulletSprite;
-    [SerializeField] private GameObject HideSprite;
+    private GameObject HideSprite;
 
-
+    private void Awake()
+    {
+        Bullets = GameObject.Find("Ammo_Text").GetComponent<TMP_Text>();
+        PShoot = GetComponent<PSC_PlayerShoot2>();
+        PControl = GetComponent<PSC_PlayerController2>();
+        HideSprite = GameObject.Find("Hide");
+    }
 
     private void Update()
     {
-        if (Controller.Ammo > 0)
+        if (PShoot.Ammo > 0)
         {
-            Bullets.text = Controller.Ammo.ToString();
+            Bullets.text = PShoot.Ammo.ToString();
             BulletSprite.color = Color.white;
         }
         else
@@ -24,7 +31,7 @@ public class UI_P2 : MonoBehaviour
             Bullets.text = "";
             BulletSprite.color = Color.gray;
         }
-        if (Controller.Hide)
+        if (PControl.Hide)
         {
             HideSprite.SetActive(true);
         }

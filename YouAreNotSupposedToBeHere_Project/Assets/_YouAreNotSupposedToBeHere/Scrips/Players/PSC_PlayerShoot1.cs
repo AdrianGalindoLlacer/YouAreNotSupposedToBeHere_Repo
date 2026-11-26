@@ -28,8 +28,8 @@ public class PSC_PlayerShoot1 : MonoBehaviour
         Robot = GameObject.Find("SK_GwenRobotNoRig");
         Spawn = GameObject.Find("RobotSpawn");
         sound = GameObject.Find("SoundManager");
-        soundC = sound.GetComponent<MAN_Player1SoundController>();
         RobotThrow = GameObject.Find("SK_Robot");
+        soundC = sound.GetComponent<MAN_Player1SoundController>();
         player = GetComponent<PSC_PlayerController1>();
         anim = GetComponent<Animator>();
     }

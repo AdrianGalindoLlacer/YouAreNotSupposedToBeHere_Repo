@@ -7,34 +7,29 @@ public class PSC_PlayerController2 : MonoBehaviour
     [Header("Movement")]
     public float Speed = 3f;
     [SerializeField] float MaxForce = 1f; //Fuerza de arranque
-    [SerializeField] Vector2 moveInput;
     [SerializeField] float RotationSpeed = 10f; // Velocidad de rotacion
     [SerializeField] LayerMask InteractLayer; //Capa donde el interactor buscara colisiones
     [SerializeField] EN_IntTags interact = EN_IntTags.Null; //Variable que guarda los tipos de colisiones con las que interactua el interactor
     [SerializeField] float RadioInter = 0.1f; //Radio de busqueda del interactor
+    Vector2 moveInput;
     public bool Block; // Bool que bloque el movimiento por completo del jugador
     private bool Run;
 
     [Header("mechanics")]
-    public int Ammo; //Municion del arma total
     [SerializeField] bool CanShoot; //Bool que impide al jugador disparar
     public bool Hide; // bool que indica que el jugador esta escondido
     public EN_IntTags Interact => interact;
     private Collider interactCollider; // Almacena el collider del interactor
-    private bool Dcount;
 
     [Header("Referencias a componentes")]
-    [SerializeField] Transform Interactor; //almacena el transform del interactor
-    [SerializeField] Transform ShootPoint; //almacena el transform de donde salen las balas
-    GameObject Bullet; //almacena las balas
-    private GameObject Manager;
-    MAN_Health Health;
-    MAN_SceneManager ManagerS;
-    private GameObject sound;
-    MAN_Player2SoundController soundC;
+    private Transform Interactor; //almacena el transform del interactor
+    private MAN_Health Health;
+    private MAN_SceneManager ManagerS;
+    private MAN_Player2SoundController soundC;
     private bool notwsound;
-    Rigidbody rb; //almacena el rigidbody del jugador
-    Animator anim; //almacena el animator del jugador
+    private Rigidbody rb; //almacena el rigidbody del jugador
+    private Animator anim; //almacena el animator del jugador
+    private PSC_PlayerShoot2 shoot; //almacena el script de disparo del jugador
 
 
 
@@ -42,12 +37,11 @@ public class PSC_PlayerController2 : MonoBehaviour
 
     private void Awake()
     {
-        Manager = GameObject.Find("Manager");
-        sound = GameObject.Find("SoundManager");
-        Bullet = GameObject.Find("SM_GunBullet");
-        ManagerS = Manager.GetComponent<MAN_SceneManager>();
-        Health = Manager.GetComponent<MAN_Health>();
-        soundC = sound.GetComponent<MAN_Player2SoundController>();
+        Interactor = transform.Find("Interactor");
+        ManagerS = GameObject.Find("Manager").GetComponent<MAN_SceneManager>();
+        Health = GameObject.Find("Manager").GetComponent<MAN_Health>();
+        soundC = GameObject.Find("SoundManager").GetComponent<MAN_Player2SoundController>();
+        shoot = GetComponent<PSC_PlayerShoot2>();
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
     }
@@ -124,16 +118,6 @@ public class PSC_PlayerController2 : MonoBehaviour
         }
     }
 
-    void Shoot()
-    {
-            soundC.StopSound();
-            soundC.playShoot();
-            Instantiate(Bullet, ShootPoint.position, transform.rotation);
-            Ammo--;
-            //SOB_Bullet controller = Bullet.GetComponent<SOB_Bullet>();
-            //controller.Move = true;
-    }
-
     //private void AnimatorManager()
     //{
     //gestion del animator
@@ -143,15 +127,7 @@ public class PSC_PlayerController2 : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Guard"))
         {
-            if (!Health.Dcount)
-            {
-                Health.Health = 0;
-                Dcount = true;
-                anim.SetTrigger("GameOver");
-                soundC.StopSound();
-                soundC.playGO();
-                ManagerS.gameover();
-            }
+            Health.Health = 0;
         }
     }
 
@@ -165,7 +141,7 @@ public class PSC_PlayerController2 : MonoBehaviour
     {
         if (Block) return;
         moveInput = context.ReadValue<Vector2>();
-        if (Run & context.performed)
+        if (Run)
         {
             anim.SetBool("Run", true);
         }
@@ -223,23 +199,6 @@ public class PSC_PlayerController2 : MonoBehaviour
             Hide = false;
             Block = true;
             anim.SetTrigger("UnHide");
-        }
-    }
-
-    public void Onshot(InputAction.CallbackContext context)
-    {
-        if (Block) return;
-        if (!context.performed) return;
-
-        if (Ammo <= 0)
-        {
-            Block = true;
-            anim.SetTrigger("NoAmmo");
-        }
-        else
-        {
-            Block = true;
-            anim.SetTrigger("Shoot");
         }
     }
 

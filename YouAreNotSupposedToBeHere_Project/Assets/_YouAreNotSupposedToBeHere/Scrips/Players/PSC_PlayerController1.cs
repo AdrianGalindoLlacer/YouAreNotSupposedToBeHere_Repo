@@ -15,6 +15,7 @@ public class PSC_PlayerController1 : MonoBehaviour
     [SerializeField] float RadioInter = 0.1f; //Radio de busqueda del interactor
     public bool Block; // Bool que bloque el movimiento por completo del jugador
     private bool Run;
+    private bool notwsound;
 
     [Header("mechanics")]
     public EN_IntTags Interact => interact;
@@ -22,17 +23,15 @@ public class PSC_PlayerController1 : MonoBehaviour
 
 
     [Header("Referencias a componentes")]
-    [SerializeField] Transform Interactor; //transform del interactor
+    private GameObject Interacto;
+    private Transform Interactor; //transform del interactor
     [SerializeField] GameObject RobotStand;
     private GameObject Robot; //el robot que el jugador lleva
     private GameObject Origin;
     private GameObject RobotThrow; //El robot que el jugador deja
-    private GameObject Manager;
     private MAN_Health Health;
     private MAN_SceneManager ManagerS;
-    private GameObject sound;
     private MAN_Player1SoundController soundC;
-    private bool notwsound;
     private PSC_PlayerShoot1 shoot;
     private SOB_Robot controller;
     private Rigidbody rb;
@@ -44,14 +43,13 @@ public class PSC_PlayerController1 : MonoBehaviour
 
     private void Awake()
     {
+        Interactor = transform.Find("Interactor");
         Robot = GameObject.Find("SK_GwenRobotNoRig");
-        Manager = GameObject.Find("Manager");
-        sound = GameObject.Find("SoundManager");
         Origin = GameObject.Find("SK_RobotScripted");
         RobotThrow = GameObject.Find("SK_Robot");
-        ManagerS = Manager.GetComponent<MAN_SceneManager>();
-        Health = Manager.GetComponent<MAN_Health>();
-        soundC = sound.GetComponent<MAN_Player1SoundController>();
+        ManagerS = GameObject.Find("Manager").GetComponent<MAN_SceneManager>();
+        Health = GameObject.Find("Manager").GetComponent<MAN_Health>();
+        soundC = GameObject.Find("SoundManager").GetComponent<MAN_Player1SoundController>();
         shoot = GetComponent<PSC_PlayerShoot1>();
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
@@ -162,15 +160,7 @@ public class PSC_PlayerController1 : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Guard"))
         {
-            if (!Health.Dcount)
-            {
-                Health.Health = 0;
-                Health.Dcount = true;
-                anim.SetTrigger("GameOver");
-                soundC.StopSound();
-                soundC.playGO();
-                ManagerS.gameover();
-            }
+            Health.Health = 0;
         }
 }
 
@@ -195,7 +185,7 @@ public class PSC_PlayerController1 : MonoBehaviour
     {
         if (Block) return;
         moveInput = context.ReadValue<Vector2>();
-        if (Run & context.performed)
+        if (Run)
         {
             anim.SetBool("Run", true);
         }
