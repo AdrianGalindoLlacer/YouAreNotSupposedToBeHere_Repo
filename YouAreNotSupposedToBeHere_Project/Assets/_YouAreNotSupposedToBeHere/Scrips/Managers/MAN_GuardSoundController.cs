@@ -6,6 +6,8 @@ public class MAN_GuardSoundController : MonoBehaviour
     [SerializeField] AudioClip Walk;
     [SerializeField] AudioClip Lay;
     [SerializeField] AudioClip Grab;
+
+
     private void PlayLooped(AudioClip clip)
     {
         // Si ya está sonando este mismo clip, no hacemos nada (evita reinicios/cortes)

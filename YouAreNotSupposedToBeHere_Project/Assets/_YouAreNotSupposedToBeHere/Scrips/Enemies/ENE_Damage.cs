@@ -23,11 +23,6 @@ public class ENE_Damage : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             Health.Health -= damage;
-            if (Health.Health <= 0 && !Health.Dcount)
-            {
-                Health.Dcount = true;
-                Manager.gameover();
-            }
         }
     }
 

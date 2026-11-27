@@ -19,7 +19,7 @@ public class MAN_SceneManager : MonoBehaviour
     private PSC_PlayerController1 P1Controller;
     private PSC_PlayerController2 P2Controller;
     private PSC_PlayerShoot1 P1Shoot;
-    //private PSC_PlayerShoot2 P2Shoot;
+    private PSC_PlayerShoot2 P2Shoot;
 
     [Header("GameOver")]
     [SerializeField] CanvasGroup GameoverCanva;
@@ -36,7 +36,7 @@ public class MAN_SceneManager : MonoBehaviour
         P1Controller = P1.GetComponent<PSC_PlayerController1>();
         P2Controller = P2.GetComponent<PSC_PlayerController2>();
         P1Shoot = P1.GetComponent<PSC_PlayerShoot1>();
-        //P2Shoot = P2.GetComponent<PSC_PlayerShoot2>();
+        P2Shoot = P2.GetComponent<PSC_PlayerShoot2>();
     }
 
 

@@ -2,12 +2,17 @@ using UnityEngine;
 
 public class MAN_Player1SoundController : MonoBehaviour
 {
-    [SerializeField] AudioSource audiosource;
+    AudioSource audiosource;
     [SerializeField] AudioClip Walk;
     [SerializeField] AudioClip Lay;
     [SerializeField] AudioClip Push;
     [SerializeField] AudioClip Grab;
-    [SerializeField] AudioClip GameOver;
+
+
+    private void Awake()
+    {
+        audiosource = GameObject.Find("SK_Player1").GetComponent<AudioSource>();
+    }
     private void PlayLooped(AudioClip clip)
     {
         // Si ya está sonando este mismo clip, no hacemos nada (evita reinicios/cortes)
@@ -42,10 +47,5 @@ public class MAN_Player1SoundController : MonoBehaviour
     public void playGrab()
     {
         audiosource.PlayOneShot(Grab);
-    }
-
-    public void playGO()
-    {
-        audiosource.PlayOneShot(GameOver);
     }
 }

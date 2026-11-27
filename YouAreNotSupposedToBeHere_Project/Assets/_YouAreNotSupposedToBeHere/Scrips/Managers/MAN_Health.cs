@@ -9,11 +9,12 @@ public class MAN_Health : MonoBehaviour
     [SerializeField] float framerate;
     public bool Dcount = false;
     public float Health = 1f;
-    private MAN_SceneManager manager;
-    private Image image;
-    private Image GO;
+    [SerializeField] MAN_SceneManager manager;
+    [SerializeField] Image image;
+    [SerializeField] Image GO;
     private int currentFrame;
-    private float timer;
+    public float timer;
+    private MAN_SoundController soundC;
 
     [Header("Players")]
     private GameObject Player1;
@@ -31,8 +32,7 @@ public class MAN_Health : MonoBehaviour
         P2 = Player2.GetComponent<PSC_PlayerController2>();
         anim1 = Player1.GetComponent<Animator>();
         anim2 = Player2.GetComponent<Animator>();
-        image = GameObject.Find("Life").GetComponent<Image>();
-        GO = GameObject.Find("GameOver").GetComponent<Image>();
+
         manager = GetComponent<MAN_SceneManager>();
     }
 
@@ -44,7 +44,7 @@ public class MAN_Health : MonoBehaviour
             Dcount = true;
             anim1.SetTrigger("GameOver");
             anim2.SetTrigger("GameOver");
-            soundC.PlayGO();
+            soundC.playGO();
             manager.gameover();
             timer += Time.deltaTime;
             float frameDuration = 1f / framerate;

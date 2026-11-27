@@ -8,4 +8,5 @@ public enum EN_IntTags
     Hideout,
     Robot,
     Stand,
+    Box,
 }

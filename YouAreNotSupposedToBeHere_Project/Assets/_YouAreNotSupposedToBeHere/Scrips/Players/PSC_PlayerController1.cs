@@ -7,6 +7,7 @@ public class PSC_PlayerController1 : MonoBehaviour
     #region General variables
     [Header("Movement")]
     [SerializeField] float Speed = 3f;
+    [SerializeField] float SprintSpeed = 6f;
     [SerializeField] float MaxForce = 1f; //Fuerza de arranque
     [SerializeField] Vector2 moveInput;
     [SerializeField] float RotationSpeed = 10f; // Velocidad de rotacion
@@ -23,14 +24,12 @@ public class PSC_PlayerController1 : MonoBehaviour
 
 
     [Header("Referencias a componentes")]
-    private GameObject Interacto;
-    private Transform Interactor; //transform del interactor
+    [SerializeField] private Transform Interactor; //transform del interactor
     [SerializeField] GameObject RobotStand;
-    private GameObject Robot; //el robot que el jugador lleva
+    [SerializeField] private GameObject Robot; //el robot que el jugador lleva
     private GameObject Origin;
     private GameObject RobotThrow; //El robot que el jugador deja
     private MAN_Health Health;
-    private MAN_SceneManager ManagerS;
     private MAN_Player1SoundController soundC;
     private PSC_PlayerShoot1 shoot;
     private SOB_Robot controller;
@@ -43,13 +42,10 @@ public class PSC_PlayerController1 : MonoBehaviour
 
     private void Awake()
     {
-        Interactor = transform.Find("Interactor");
-        Robot = GameObject.Find("SK_GwenRobotNoRig");
         Origin = GameObject.Find("SK_RobotScripted");
-        RobotThrow = GameObject.Find("SK_Robot");
-        ManagerS = GameObject.Find("Manager").GetComponent<MAN_SceneManager>();
-        Health = GameObject.Find("Manager").GetComponent<MAN_Health>();
-        soundC = GameObject.Find("SoundManager").GetComponent<MAN_Player1SoundController>();
+        RobotThrow = FindFirstObjectByType<SOB_Robot>().gameObject;
+        Health = FindFirstObjectByType<MAN_Health>();
+        soundC = FindFirstObjectByType<MAN_Player1SoundController>();
         shoot = GetComponent<PSC_PlayerShoot1>();
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
@@ -97,6 +93,7 @@ public class PSC_PlayerController1 : MonoBehaviour
         if (col.CompareTag("Robot")) return EN_IntTags.Robot;
         if (col.CompareTag("Buttons")) return EN_IntTags.Buttons;
         if (col.CompareTag("Stand")) return EN_IntTags.Stand;
+        if (col.CompareTag("Box")) return EN_IntTags.Box;
         return EN_IntTags.Null;
     }
 

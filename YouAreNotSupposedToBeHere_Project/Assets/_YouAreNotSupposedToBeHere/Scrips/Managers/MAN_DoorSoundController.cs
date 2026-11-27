@@ -6,6 +6,7 @@ public class MAN_DoorSoundController : MonoBehaviour
     [SerializeField] AudioClip Open;
     [SerializeField] AudioClip Close;
 
+
     public void playOpen()
     {
         audiosource.PlayOneShot(Open);

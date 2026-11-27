@@ -5,23 +5,19 @@ public class PSC_PlayerShoot2 : MonoBehaviour
 {
     public int Ammo = 3;
 
-    private GameObject shootP;
-    private Transform ShootPoint;
+    [SerializeField] private Transform ShootPoint;
     private PSC_PlayerController2 P1;
     private GameObject Bullet; //almacena las balas
-    private GameObject sound;
     private MAN_Player2SoundController soundC;
     private Animator anim; //almacena el animator del jugador
 
 
     private void Awake()
     {
-        shootP = GameObject.Find("ShootPoint");
-        sound = GameObject.Find("SoundManager");
-        Bullet = GameObject.Find("SM_GunBullet");
-        ShootPoint = shootP.transform.Find("ShootPoint");
+        P1 = GetComponent<PSC_PlayerController2>();
+        Bullet = FindFirstObjectByType<SOB_Bullet>().gameObject;
         anim = GetComponent<Animator>();
-        soundC = sound.GetComponent<MAN_Player2SoundController>();
+        soundC = FindFirstObjectByType<MAN_Player2SoundController>();
     }
     void Shoot()
     {

@@ -5,7 +5,8 @@ public class PSC_PlayerController2 : MonoBehaviour
 {
     #region General variables
     [Header("Movement")]
-    public float Speed = 3f;
+    [SerializeField] float Speed = 3f;
+    [SerializeField] float SprintSpeed = 6f;
     [SerializeField] float MaxForce = 1f; //Fuerza de arranque
     [SerializeField] float RotationSpeed = 10f; // Velocidad de rotacion
     [SerializeField] LayerMask InteractLayer; //Capa donde el interactor buscara colisiones
@@ -22,9 +23,8 @@ public class PSC_PlayerController2 : MonoBehaviour
     private Collider interactCollider; // Almacena el collider del interactor
 
     [Header("Referencias a componentes")]
-    private Transform Interactor; //almacena el transform del interactor
+    [SerializeField] private Transform Interactor; //almacena el transform del interactor
     private MAN_Health Health;
-    private MAN_SceneManager ManagerS;
     private MAN_Player2SoundController soundC;
     private bool notwsound;
     private Rigidbody rb; //almacena el rigidbody del jugador
@@ -37,10 +37,8 @@ public class PSC_PlayerController2 : MonoBehaviour
 
     private void Awake()
     {
-        Interactor = transform.Find("Interactor");
-        ManagerS = GameObject.Find("Manager").GetComponent<MAN_SceneManager>();
-        Health = GameObject.Find("Manager").GetComponent<MAN_Health>();
-        soundC = GameObject.Find("SoundManager").GetComponent<MAN_Player2SoundController>();
+        Health = FindFirstObjectByType<MAN_Health>();
+        soundC = FindFirstObjectByType<MAN_Player2SoundController>();
         shoot = GetComponent<PSC_PlayerShoot2>();
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();

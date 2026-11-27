@@ -3,8 +3,14 @@ using UnityEngine.Audio;
 
 public class MAN_CameraSoundController : MonoBehaviour
 {
-    [SerializeField] AudioSource audiosource;
+    AudioSource audiosource;
     [SerializeField] AudioClip Idle;
+
+    private void Awake()
+    {
+        if (GameObject.Find("SK_SecurityCamera") == null)
+        audiosource = GameObject.Find("SK_SecurityCamera").GetComponent<AudioSource>();
+    }
 
     private void PlayLooped(AudioClip clip)
     {

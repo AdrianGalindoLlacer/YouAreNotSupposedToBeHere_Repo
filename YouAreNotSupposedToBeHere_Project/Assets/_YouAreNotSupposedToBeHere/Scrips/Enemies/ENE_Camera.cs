@@ -4,6 +4,7 @@ using UnityEngine;
 public class ENE_Camera : MonoBehaviour
 {
     [SerializeField] MAN_CameraSoundController soundC;
+    private bool animated = false;
     Animator anim;
     [SerializeField] GameObject Vision; //Variable que guarda su rango de "daño"
     [SerializeField] float stunTime = 8f; //Duracion del PostIt en la lente
@@ -13,6 +14,7 @@ public class ENE_Camera : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         soundC.playIdle();
+        if (animated) anim.SetBool("Idle", true);
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -21,7 +23,6 @@ public class ENE_Camera : MonoBehaviour
         {
             anim.SetTrigger("Hit");
             stunroutine = StartCoroutine(StunRoutine());
-
         }
     }
 

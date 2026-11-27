@@ -24,12 +24,14 @@ public class ENE_Guard : MonoBehaviour
     [SerializeField] GameObject RobotStand; // Variable que guarda el stand en el que dejara el muñeco
     [SerializeField] GameObject StandRobot; //Variable que guarda el objeto del robot en el stand
     [SerializeField] GameObject Vision; // Variable que guarda su rango de "daño"
-    [SerializeField] GameObject ROrigin;
+    GameObject ROrigin;
     [SerializeField] GameObject GOrigin;
     private SOB_Robot Target;
 
     private void Awake()
     {
+
+        GOrigin = GameObject.Find("SK_Guard");
         anim = GetComponent<Animator>();
         Target = RobotTarget.GetComponent<SOB_Robot>();
         patrolstate = patrol;
